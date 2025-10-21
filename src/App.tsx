@@ -8,6 +8,7 @@ import Services from "./pages/Services";
 import CaseStudies from "./pages/CaseStudies";
 import Blog from "./pages/Blog";
 import Tools from "./pages/Tools";
+import Calculator from "./pages/Calculator";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Cookies from "./pages/Cookies";
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/tools" element={<Tools />} />
+          <Route path="/calculator" element={<Calculator />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/cookies" element={<Cookies />} />

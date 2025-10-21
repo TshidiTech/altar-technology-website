@@ -42,6 +42,9 @@ export const Header = () => {
             <Link to="/tools" className="text-sm font-medium hover:text-primary transition-colors">
               Tools
             </Link>
+            <Link to="/calculator" className="text-sm font-medium hover:text-primary transition-colors">
+              Calculator
+            </Link>
             <Button onClick={scrollToForm} className="bg-gradient-primary hover:shadow-glow transition-all">
               Start Campaign
             </Button>
@@ -74,6 +77,9 @@ export const Header = () => {
               </Link>
               <Link to="/tools" className="text-sm font-medium hover:text-primary transition-colors">
                 Tools
+              </Link>
+              <Link to="/calculator" className="text-sm font-medium hover:text-primary transition-colors">
+                Calculator
               </Link>
               <Button onClick={scrollToForm} className="bg-gradient-primary hover:shadow-glow transition-all w-full">
                 Start Campaign
