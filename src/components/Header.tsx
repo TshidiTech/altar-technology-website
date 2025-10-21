@@ -2,13 +2,24 @@ import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ConstructionBanner } from "./ConstructionBanner";
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const scrollToForm = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const formSection = document.getElementById('lead-form');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4">
+    <header className="fixed top-0 left-0 right-0 z-50">
+      <ConstructionBanner />
+      <div className="bg-background/95 backdrop-blur-sm border-b border-border">
+        <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
             Brand Hype
@@ -31,7 +42,7 @@ export const Header = () => {
             <Link to="/tools" className="text-sm font-medium hover:text-primary transition-colors">
               Tools
             </Link>
-            <Button className="bg-gradient-primary hover:shadow-glow transition-all">
+            <Button onClick={scrollToForm} className="bg-gradient-primary hover:shadow-glow transition-all">
               Start Campaign
             </Button>
           </nav>
@@ -64,12 +75,13 @@ export const Header = () => {
               <Link to="/tools" className="text-sm font-medium hover:text-primary transition-colors">
                 Tools
               </Link>
-              <Button className="bg-gradient-primary hover:shadow-glow transition-all w-full">
+              <Button onClick={scrollToForm} className="bg-gradient-primary hover:shadow-glow transition-all w-full">
                 Start Campaign
               </Button>
             </div>
           </nav>
         )}
+        </div>
       </div>
     </header>
   );

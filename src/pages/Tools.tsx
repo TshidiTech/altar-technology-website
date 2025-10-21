@@ -34,19 +34,6 @@ const tools = [
     ]
   },
   {
-    name: "Website Builder",
-    description: "Build stunning, conversion-optimized websites for your brand or influencer profile with our drag-and-drop builder.",
-    icon: Globe,
-    status: "Coming Soon",
-    color: "from-purple-500 to-pink-500",
-    features: [
-      "Pre-designed templates",
-      "Mobile responsive",
-      "SEO optimized",
-      "Analytics integration"
-    ]
-  },
-  {
     name: "Brand Kit Creator",
     description: "Design consistent brand assets including logos, color palettes, and typography guidelines for cohesive branding.",
     icon: Palette,
@@ -58,12 +45,28 @@ const tools = [
       "Typography pairing",
       "Brand guidelines export"
     ]
+  }
+];
+
+const addOnServices = [
+  {
+    name: "Website Builder",
+    description: "Build stunning, conversion-optimized websites for your brand or influencer profile with our drag-and-drop builder.",
+    icon: Globe,
+    status: "Add-On Service",
+    color: "from-purple-500 to-pink-500",
+    features: [
+      "Pre-designed templates",
+      "Mobile responsive",
+      "SEO optimized",
+      "Analytics integration"
+    ]
   },
   {
     name: "Performance Analytics Dashboard",
     description: "Track all your social media metrics in one place. Get actionable insights and recommendations to improve your performance.",
     icon: TrendingUp,
-    status: "Coming Soon",
+    status: "Add-On Service",
     color: "from-cyan-500 to-blue-500",
     features: [
       "Multi-platform tracking",
@@ -76,7 +79,7 @@ const tools = [
     name: "Viral Content Predictor",
     description: "Use AI to predict which content ideas have the highest potential to go viral before you create them.",
     icon: Zap,
-    status: "Coming Soon",
+    status: "Add-On Service",
     color: "from-pink-500 to-red-500",
     features: [
       "Trend analysis",
@@ -117,6 +120,7 @@ export default function Tools() {
       {/* Tools Grid */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-black text-center mb-12">AI-Powered Tools</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tools.map((tool, index) => {
               const Icon = tool.icon;
@@ -163,6 +167,65 @@ export default function Tools() {
                       disabled
                     >
                       Notify Me When Available
+                    </Button>
+                  </div>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Add-On Services Section */}
+      <section className="py-24 bg-muted">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-black text-center mb-12">Add-On Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {addOnServices.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <Card 
+                  key={index}
+                  className="p-8 hover:shadow-card transition-all duration-300 hover:-translate-y-1 border-2 border-border hover:border-primary/20 relative overflow-hidden group"
+                >
+                  <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${service.color} opacity-10 rounded-bl-full`} />
+                  
+                  <div className="relative space-y-6">
+                    <div className="flex items-start justify-between">
+                      <div className={`p-3 rounded-xl bg-gradient-to-br ${service.color} bg-opacity-10`}>
+                        <Icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <Badge variant="outline" className="border-secondary/30 text-secondary">
+                        {service.status}
+                      </Badge>
+                    </div>
+
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3">{service.name}</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+
+                    <div className="space-y-2">
+                      <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
+                        Key Features
+                      </h4>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-center gap-2 text-sm">
+                            <div className={`h-1.5 w-1.5 rounded-full bg-gradient-to-br ${service.color}`} />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <Button 
+                      className="w-full bg-muted hover:bg-muted/80 text-foreground"
+                      disabled
+                    >
+                      Contact for Details
                     </Button>
                   </div>
                 </Card>

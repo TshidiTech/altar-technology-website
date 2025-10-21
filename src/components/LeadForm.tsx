@@ -113,7 +113,7 @@ export const LeadForm = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-dark text-dark-foreground">
+    <section id="lead-form" className="py-24 bg-dark text-dark-foreground scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">

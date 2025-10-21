@@ -7,7 +7,115 @@ import { MessageCircle, X, Send } from "lucide-react";
 const faqs: Record<string, { answer: string; relatedQuestions: string[] }> = {
   "What services do you offer?": {
     answer: "We offer social media strategy, influencer marketing, paid advertising (Meta, Google, TikTok), content creation (photos, videos, graphics), community management, brand design, marketing automation, and analytics & reporting.",
-    relatedQuestions: ["How much does it cost?", "View Case Studies", "What platforms do you specialize in?", "Explore Our Tools"]
+    relatedQuestions: ["How much does it cost?", "View Case Studies", "What platforms do you specialize in?", "How does Social Media Strategy work?"]
+  },
+  "How does Social Media Strategy work?": {
+    answer: "We start with a consultation to understand your goals and audience, then conduct competitive analysis and research. We develop a comprehensive 1-3 month content calendar with platform-specific strategies, themed content pillars, hashtag strategy, and optimal posting schedules. Includes monthly check-ins to review performance and adjust based on analytics.",
+    relatedQuestions: ["What's included in the strategy?", "How long does strategy development take?", "How much does it cost?", "What services do you offer?"]
+  },
+  "What's included in the strategy?": {
+    answer: "Our strategy includes: comprehensive content calendar, platform-specific posting schedules, audience positioning and targeting, themed content pillars, hashtag strategy, competitor insights, KPI tracking, and monthly performance reviews with adjustments.",
+    relatedQuestions: ["How does Social Media Strategy work?", "How long does strategy development take?", "How can I start a campaign?", "Do you offer paid advertising management?"]
+  },
+  "How long does strategy development take?": {
+    answer: "Initial strategy development takes 1-2 weeks after consultation. You'll receive a comprehensive strategy document with calendar and implementation guidelines. Monthly check-ins ensure continuous optimization based on performance data.",
+    relatedQuestions: ["How does Social Media Strategy work?", "How long does it take to see results?", "What services do you offer?", "How much does it cost?"]
+  },
+  "How does Influencer Marketing work?": {
+    answer: "We define campaign objectives and budget, identify and vet relevant influencers based on engagement and audience fit, manage outreach and contracts, oversee content creation and approvals, track performance metrics, and deliver detailed campaign reports with insights and recommendations.",
+    relatedQuestions: ["What does influencer marketing include?", "How do you select influencers?", "How much does influencer marketing cost?", "Can you help with influencer partnerships?"]
+  },
+  "How do you select influencers?": {
+    answer: "We vet influencers based on engagement rates, audience demographics, brand alignment, content quality, authenticity, and past campaign performance. We only work with verified creators who match your target audience and brand values.",
+    relatedQuestions: ["How does Influencer Marketing work?", "What does influencer marketing include?", "How much does it cost?", "View Case Studies"]
+  },
+  "How does Paid Advertising work?": {
+    answer: "We audit existing accounts, set up tracking infrastructure, develop campaign strategy with audience segmentation, create ad copy and multiple creative variations for A/B testing, launch campaigns with proper targeting and bidding, and perform weekly optimization with monthly reporting.",
+    relatedQuestions: ["What platforms do you advertise on?", "Do you offer paid advertising management?", "How much does advertising cost?", "How do you measure success?"]
+  },
+  "What platforms do you advertise on?": {
+    answer: "We manage paid campaigns on Meta (Facebook/Instagram), Google Ads, TikTok Ads, LinkedIn, and YouTube. Each platform strategy is customized based on your target audience and campaign objectives.",
+    relatedQuestions: ["How does Paid Advertising work?", "Do you offer paid advertising management?", "What platforms do you specialize in?", "How much does it cost?"]
+  },
+  "How much does influencer marketing cost?": {
+    answer: "Influencer marketing costs vary based on influencer tier, number of creators, content requirements, and campaign duration. Pricing is customized per project. Contact us at hello@brandhype.co.za or 081 661 7013 for a detailed quote.",
+    relatedQuestions: ["How much does it cost?", "How does Influencer Marketing work?", "What are your payment terms?", "How can I start a campaign?"]
+  },
+  "How much does advertising cost?": {
+    answer: "Advertising costs include our management fee plus your ad spend budget. Minimum recommended monthly ad spend is R5,000-R10,000 for meaningful results. Our management fee is customized based on campaign complexity. Contact us for a personalized quote.",
+    relatedQuestions: ["How much does it cost?", "How does Paid Advertising work?", "What are your payment terms?", "Do you offer paid advertising management?"]
+  },
+  "How does Content Creation work?": {
+    answer: "We start with a content discovery session to understand your brand voice and visual preferences, develop and approve content concepts, produce 5-15 pieces monthly (graphics, videos, captions), deliver edited branded content optimized for each platform, and provide a content library and templates for future use.",
+    relatedQuestions: ["What type of content do you create?", "Do you create content in-house?", "How much does content creation cost?", "What services do you offer?"]
+  },
+  "What type of content do you create?": {
+    answer: "We create UGC-style videos, branded graphics, social media posts, short-form video content (Reels, TikToks, Shorts), product photography, infographics, carousel posts, stories, and platform-optimized content for Instagram, TikTok, Facebook, LinkedIn, and YouTube.",
+    relatedQuestions: ["How does Content Creation work?", "Do you create content in-house?", "What platforms do you specialize in?", "How can I start a campaign?"]
+  },
+  "How much does content creation cost?": {
+    answer: "Content creation pricing depends on volume, complexity, and production requirements. Packages typically include 5-15 pieces monthly. Contact us at hello@brandhype.co.za or 081 661 7013 for custom pricing based on your needs.",
+    relatedQuestions: ["How much does it cost?", "What type of content do you create?", "How does Content Creation work?", "What are your payment terms?"]
+  },
+  "How does Community Management work?": {
+    answer: "We establish brand voice guidelines and response templates, monitor all social channels daily for comments and messages, respond to inquiries within 2-4 hours during business hours, flag urgent issues, and provide weekly engagement reports with sentiment analysis and trending topics.",
+    relatedQuestions: ["What's included in community management?", "How quickly do you respond?", "How much does community management cost?", "What services do you offer?"]
+  },
+  "What's included in community management?": {
+    answer: "Daily monitoring of all social channels, responding to comments and DMs, managing brand reputation, fostering discussions, handling customer inquiries, flagging urgent issues, sentiment analysis, and weekly engagement reports.",
+    relatedQuestions: ["How does Community Management work?", "How quickly do you respond?", "How is communication handled?", "How can I start a campaign?"]
+  },
+  "How quickly do you respond?": {
+    answer: "We respond to comments and messages within 2-4 hours during business hours (Monday-Friday, 9am-5pm SAST). Urgent issues are flagged immediately for client review. Weekend monitoring available for premium packages.",
+    relatedQuestions: ["What's included in community management?", "How does Community Management work?", "How is communication handled?", "What are your payment terms?"]
+  },
+  "How much does community management cost?": {
+    answer: "Community management pricing depends on platform volume and response requirements. Pricing is customized per project. Contact us at hello@brandhype.co.za or 081 661 7013 for a detailed quote.",
+    relatedQuestions: ["How much does it cost?", "What's included in community management?", "How does Community Management work?", "What are your payment terms?"]
+  },
+  "How does Brand Design work?": {
+    answer: "We conduct a brand discovery workshop, research competitors and trends, present 2-3 logo concepts with mood boards, refine the chosen direction, develop complete brand guidelines, and deliver final logo files, brand book, and customizable social media templates.",
+    relatedQuestions: ["What's included in brand design?", "How long does branding take?", "How much does brand design cost?", "What services do you offer?"]
+  },
+  "What's included in brand design?": {
+    answer: "Logo design, color palette, typography guidelines, brand book, social media templates, business card designs, email signature, brand photography direction, and usage guidelines for consistent brand application.",
+    relatedQuestions: ["How does Brand Design work?", "How long does branding take?", "Do you create content in-house?", "How can I start a campaign?"]
+  },
+  "How long does branding take?": {
+    answer: "Complete brand design typically takes 3-4 weeks from discovery to final delivery. Timeline includes: discovery workshop (1 week), concept development (1 week), revisions (1 week), final deliverables (1 week).",
+    relatedQuestions: ["How does Brand Design work?", "What's included in brand design?", "How much does it cost?", "How can I start a campaign?"]
+  },
+  "How much does brand design cost?": {
+    answer: "Brand design packages start from R15,000 for basic identity to R50,000+ for comprehensive brand systems. Pricing depends on deliverables and complexity. Contact us for a custom quote.",
+    relatedQuestions: ["How much does it cost?", "What's included in brand design?", "How does Brand Design work?", "What are your payment terms?"]
+  },
+  "How does Analytics & Reporting work?": {
+    answer: "We set up tracking infrastructure, define KPIs aligned with business objectives, collect and analyze data from all platforms and ad accounts, create visual dashboard reports, and present findings in monthly review meetings with actionable recommendations.",
+    relatedQuestions: ["What metrics do you track?", "How do you measure success?", "How often do you report?", "What services do you offer?"]
+  },
+  "What metrics do you track?": {
+    answer: "We track engagement rates, follower growth, reach, impressions, click-through rates, conversion rates, ROI, cost per acquisition, website traffic, video views, story completion rates, and platform-specific metrics tailored to your goals.",
+    relatedQuestions: ["How does Analytics & Reporting work?", "How do you measure success?", "How often do you report?", "Do you offer paid advertising management?"]
+  },
+  "How often do you report?": {
+    answer: "Comprehensive monthly reports with visual dashboards and insights. Weekly performance summaries available for active campaigns. Quarterly business reviews for strategic planning and long-term optimization.",
+    relatedQuestions: ["What metrics do you track?", "How does Analytics & Reporting work?", "How is communication handled?", "How much does it cost?"]
+  },
+  "How does Marketing Automation work?": {
+    answer: "We audit current tools and processes, recommend and set up appropriate automation tools (scheduling, CRM, email marketing), configure automated workflows for posting and lead capture, integrate systems to centralize data, and provide training and ongoing support.",
+    relatedQuestions: ["What tools do you use?", "What's included in automation?", "How much does automation cost?", "What services do you offer?"]
+  },
+  "What tools do you use?": {
+    answer: "We work with industry-leading tools including Meta Business Suite, Later, Hootsuite, HubSpot, Mailchimp, Zapier, Google Analytics, and platform-native analytics. Tool selection is customized based on your needs and budget.",
+    relatedQuestions: ["How does Marketing Automation work?", "What's included in automation?", "Do you offer paid advertising management?", "How can I start a campaign?"]
+  },
+  "What's included in automation?": {
+    answer: "Automated social media scheduling, CRM integration, email marketing sequences, lead capture workflows, cross-platform posting, automated reporting, centralized campaign management, and team training on all systems.",
+    relatedQuestions: ["How does Marketing Automation work?", "What tools do you use?", "How much does it cost?", "What services do you offer?"]
+  },
+  "How much does automation cost?": {
+    answer: "Marketing automation setup fees range from R5,000-R20,000 depending on complexity. Monthly tool costs vary by platform. We'll recommend cost-effective solutions that fit your budget during consultation.",
+    relatedQuestions: ["How much does it cost?", "What's included in automation?", "How does Marketing Automation work?", "What are your payment terms?"]
   },
   "What does influencer marketing include?": {
     answer: "Our influencer marketing service includes influencer discovery and vetting, campaign strategy, content approval, performance tracking, contract negotiation, and comprehensive reporting on engagement and ROI.",
