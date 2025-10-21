@@ -161,21 +161,23 @@ export default function Services() {
       {/* Services Navigation */}
       <section className="py-12 border-b sticky top-16 bg-background/95 backdrop-blur-sm z-40">
         <div className="container mx-auto px-4">
-          <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
-            {services.map((service) => {
-              const Icon = service.icon;
-              return (
-                <Button
-                  key={service.id}
-                  variant={selectedService.id === service.id ? "default" : "outline"}
-                  onClick={() => setSelectedService(service)}
-                  className="flex-shrink-0 gap-2"
-                >
-                  <Icon className="h-4 w-4" />
-                  {service.title}
-                </Button>
-              );
-            })}
+          <div className="relative">
+            <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-muted/20 [&::-webkit-scrollbar-thumb]:bg-primary/40 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-primary/60">
+              {services.map((service) => {
+                const Icon = service.icon;
+                return (
+                  <Button
+                    key={service.id}
+                    variant={selectedService.id === service.id ? "default" : "outline"}
+                    onClick={() => setSelectedService(service)}
+                    className="flex-shrink-0 gap-2 snap-start"
+                  >
+                    <Icon className="h-4 w-4" />
+                    {service.title}
+                  </Button>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>

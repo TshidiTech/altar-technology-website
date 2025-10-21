@@ -5,7 +5,9 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Card } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { toast } from "sonner";
+import { CheckCircle2, Phone, Mail, Clock } from "lucide-react";
 
 const services = [
   "Social Media Strategy",
@@ -67,6 +69,7 @@ export const LeadForm = () => {
   const [selectedGoals, setSelectedGoals] = useState<string[]>([]);
   const [selectedChallenges, setSelectedChallenges] = useState<string[]>([]);
   const [acceptedTerms, setAcceptedTerms] = useState(false);
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -108,22 +111,83 @@ export const LeadForm = () => {
       toast.error("Please accept the Terms & Conditions to continue");
       return;
     }
-    toast.success("Thank you! We'll be in touch soon.");
+    if (selectedServices.length === 0) {
+      toast.error("Please select at least one service");
+      return;
+    }
+    if (selectedGoals.length === 0) {
+      toast.error("Please select at least one goal");
+      return;
+    }
+    
     console.log({ ...formData, services: selectedServices, goals: selectedGoals, challenges: selectedChallenges });
+    setShowSuccessDialog(true);
   };
 
   return (
-    <section id="lead-form" className="py-24 bg-dark text-dark-foreground scroll-mt-20">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-black mb-4">
-              Ready to <span className="bg-gradient-primary bg-clip-text text-transparent">Grow Your Brand?</span>
-            </h2>
-            <p className="text-xl text-dark-foreground/80">
-              Tell us about your challenges and we'll create a custom solution for you
+    <>
+      <Dialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2 text-2xl">
+              <CheckCircle2 className="h-8 w-8 text-green-500" />
+              Campaign Request Received!
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-6 pt-4">
+            <p className="text-muted-foreground">
+              Thank you for your interest! We've received your campaign details and our team is excited to help grow your brand.
             </p>
+            
+            <div className="space-y-4 bg-muted/30 p-4 rounded-lg">
+              <h3 className="font-semibold text-lg">What Happens Next?</h3>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <Clock className="h-5 w-5 mt-0.5 text-primary flex-shrink-0" />
+                  <div>
+                    <p className="font-medium">We'll respond within 24 hours</p>
+                    <p className="text-sm text-muted-foreground">Our team will review your requirements and reach out to discuss your campaign strategy</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Phone className="h-5 w-5 mt-0.5 text-primary flex-shrink-0" />
+                  <div>
+                    <p className="font-medium">Need immediate assistance?</p>
+                    <p className="text-sm text-muted-foreground">WhatsApp us on <a href="https://wa.me/27816617013" className="text-primary hover:underline font-semibold">081 661 7013</a></p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Mail className="h-5 w-5 mt-0.5 text-primary flex-shrink-0" />
+                  <div>
+                    <p className="font-medium">Check your inbox</p>
+                    <p className="text-sm text-muted-foreground">We've sent a confirmation to <span className="font-medium">{formData.email}</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <Button 
+              onClick={() => setShowSuccessDialog(false)} 
+              className="w-full"
+              size="lg"
+            >
+              Close
+            </Button>
           </div>
+        </DialogContent>
+      </Dialog>
+
+      <section id="lead-form" className="py-24 bg-dark text-dark-foreground scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-black mb-4">
+                Ready to <span className="bg-gradient-primary bg-clip-text text-transparent">Grow Your Brand?</span>
+              </h2>
+              <p className="text-xl text-dark-foreground/80">
+                Tell us about your challenges and we'll create a custom solution for you
+              </p>
+            </div>
 
           <Card className="p-8 bg-card/50 backdrop-blur-sm border-2 border-border">
             <form onSubmit={handleSubmit} className="space-y-8">
@@ -325,5 +389,6 @@ export const LeadForm = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
