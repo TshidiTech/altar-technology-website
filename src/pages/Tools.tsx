@@ -1,93 +1,32 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FAQChatbot } from "@/components/FAQChatbot";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Sparkles, Globe, Palette, TrendingUp, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
+import {
+  BarChart, Receipt, Car, Vote, CreditCard, GraduationCap, Calendar,
+  UtensilsCrossed, FileText, Users, MessageSquare, User, Box, Sparkles, Warehouse
+} from "lucide-react";
 
 const tools = [
-  {
-    name: "AI Content Calendar",
-    description: "Automatically generate a month's worth of content ideas tailored to your brand, industry, and target audience. Never run out of post ideas again.",
-    icon: Calendar,
-    status: "Coming Soon",
-    color: "from-pink-500 to-purple-500",
-    features: [
-      "AI-powered content suggestions",
-      "Multi-platform planning",
-      "Optimal posting times",
-      "Trending topic integration"
-    ]
-  },
-  {
-    name: "Smart Caption Generator",
-    description: "Create engaging, on-brand captions in seconds with AI. Perfect for Instagram, TikTok, and all your social platforms.",
-    icon: Sparkles,
-    status: "Coming Soon",
-    color: "from-blue-500 to-cyan-500",
-    features: [
-      "Brand voice learning",
-      "Hashtag recommendations",
-      "Emoji optimization",
-      "Multiple caption variations"
-    ]
-  },
-  {
-    name: "Brand Kit Creator",
-    description: "Design consistent brand assets including logos, color palettes, and typography guidelines for cohesive branding.",
-    icon: Palette,
-    status: "Coming Soon",
-    color: "from-orange-500 to-pink-500",
-    features: [
-      "AI logo generation",
-      "Color palette suggestions",
-      "Typography pairing",
-      "Brand guidelines export"
-    ]
-  }
-];
-
-const addOnServices = [
-  {
-    name: "Website Builder",
-    description: "Build stunning, conversion-optimized websites for your brand or influencer profile with our drag-and-drop builder.",
-    icon: Globe,
-    status: "Add-On Service",
-    color: "from-purple-500 to-pink-500",
-    features: [
-      "Pre-designed templates",
-      "Mobile responsive",
-      "SEO optimized",
-      "Analytics integration"
-    ]
-  },
-  {
-    name: "Performance Analytics Dashboard",
-    description: "Track all your social media metrics in one place. Get actionable insights and recommendations to improve your performance.",
-    icon: TrendingUp,
-    status: "Add-On Service",
-    color: "from-cyan-500 to-blue-500",
-    features: [
-      "Multi-platform tracking",
-      "Competitor benchmarking",
-      "ROI calculation",
-      "Custom reports"
-    ]
-  },
-  {
-    name: "Viral Content Predictor",
-    description: "Use AI to predict which content ideas have the highest potential to go viral before you create them.",
-    icon: Zap,
-    status: "Add-On Service",
-    color: "from-pink-500 to-red-500",
-    features: [
-      "Trend analysis",
-      "Engagement prediction",
-      "Best format recommendations",
-      "Timing optimization"
-    ]
-  }
+  { name: "AI Marketing Data Analytics Tool", desc: "Track and analyze marketing performance across platforms with AI-powered insights.", useCase: "Marketing teams needing real-time campaign analytics", icon: BarChart, color: "from-blue-500 to-cyan-500" },
+  { name: "AI Invoicing System", desc: "Automated invoice generation, tracking, and payment reminders with smart categorization.", useCase: "Freelancers and businesses managing billing", icon: Receipt, color: "from-green-500 to-cyan-500" },
+  { name: "Taxi Ride Management App", desc: "End-to-end ride management with driver tracking, fare calculation, and passenger matching.", useCase: "Transport companies and ride-hailing services", icon: Car, color: "from-orange-500 to-pink-500" },
+  { name: "Voting Compliance System", desc: "Secure digital voting with compliance tracking, audit trails, and real-time results.", useCase: "Organizations requiring secure voting processes", icon: Vote, color: "from-purple-500 to-blue-500" },
+  { name: "Digital Payment System", desc: "Integrated payment processing with multi-currency support and transaction dashboards.", useCase: "E-commerce and financial service providers", icon: CreditCard, color: "from-cyan-500 to-blue-500" },
+  { name: "Learning Management System", desc: "Course creation, student tracking, assessments, and certifications in one platform.", useCase: "Educational institutions and corporate training", icon: GraduationCap, color: "from-pink-500 to-purple-500" },
+  { name: "Booking Platforms (Salon, Lash, Wellness)", desc: "Online booking with staff management, reminders, and payment integration.", useCase: "Beauty salons, spas, and wellness businesses", icon: Calendar, color: "from-pink-500 to-red-500" },
+  { name: "Food Delivery App", desc: "Restaurant ordering, delivery tracking, driver management, and customer ratings.", useCase: "Restaurants and food delivery businesses", icon: UtensilsCrossed, color: "from-orange-500 to-yellow-500" },
+  { name: "Quote Generator", desc: "Professional quote creation with templates, calculations, and client management.", useCase: "Service businesses needing quick proposals", icon: FileText, color: "from-blue-500 to-purple-500" },
+  { name: "Virtual Assistant Marketplace", desc: "Connect businesses with virtual assistants through matching, task management, and payments.", useCase: "Remote work and outsourcing agencies", icon: Users, color: "from-purple-500 to-pink-500" },
+  { name: "Social Media CRM", desc: "Manage social media interactions, schedule content, and track audience engagement.", useCase: "Brands managing multi-platform presence", icon: MessageSquare, color: "from-cyan-500 to-blue-500" },
+  { name: "Personal Brand Builder App", desc: "Build and manage your personal brand with templates, content planning, and analytics.", useCase: "Influencers and professionals building their brand", icon: User, color: "from-pink-500 to-purple-500" },
+  { name: "3D Virtual Mall Prototype", desc: "Immersive 3D shopping experience with virtual storefronts and product showcases.", useCase: "Retail brands exploring virtual commerce", icon: Box, color: "from-purple-500 to-blue-500" },
+  { name: "Beauty Marketplace Platform", desc: "Multi-vendor beauty marketplace with reviews, bookings, and product listings.", useCase: "Beauty industry aggregators", icon: Sparkles, color: "from-pink-500 to-red-500" },
+  { name: "Warehouse Platform", desc: "Inventory management, order fulfillment, and warehouse operations dashboard.", useCase: "Logistics and distribution companies", icon: Warehouse, color: "from-orange-500 to-pink-500" },
 ];
 
 export default function Tools() {
@@ -95,170 +34,40 @@ export default function Tools() {
     <div className="min-h-screen bg-background">
       <Header />
       <FAQChatbot />
+      <WhatsAppButton />
 
-      {/* Hero Section */}
       <section className="pt-32 pb-16 bg-dark text-dark-foreground">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
-              Coming Soon
-            </Badge>
-            <h1 className="text-5xl md:text-7xl font-black">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Powerful Tools
-              </span>
-              <br />
-              For Modern Marketers
-            </h1>
-            <p className="text-xl text-dark-foreground/80 max-w-2xl mx-auto">
-              AI-powered tools to streamline your content creation, grow your brand, and amplify your reach
-            </p>
-          </div>
+        <div className="container mx-auto px-4 text-center">
+          <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">AI Powered</Badge>
+          <h1 className="text-5xl md:text-7xl font-black">
+            <span className="bg-gradient-primary bg-clip-text text-transparent">Digital Tools</span>
+            <br />& Products
+          </h1>
+          <p className="text-xl text-dark-foreground/80 max-w-2xl mx-auto mt-6">
+            Ready-to-deploy and custom-built digital solutions for every industry
+          </p>
         </div>
       </section>
 
-      {/* Tools Grid */}
-      <section className="py-24 bg-background">
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-black text-center mb-12">AI-Powered Tools</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {tools.map((tool, index) => {
               const Icon = tool.icon;
               return (
-                <Card 
-                  key={index}
-                  className="p-8 hover:shadow-card transition-all duration-300 hover:-translate-y-1 border-2 border-border hover:border-primary/20 relative overflow-hidden group"
-                >
-                  <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${tool.color} opacity-10 rounded-bl-full`} />
-                  
-                  <div className="relative space-y-6">
-                    <div className="flex items-start justify-between">
-                      <div className={`p-3 rounded-xl bg-gradient-to-br ${tool.color} bg-opacity-10`}>
-                        <Icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <Badge variant="outline" className="border-primary/30 text-primary">
-                        {tool.status}
-                      </Badge>
-                    </div>
-
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3">{tool.name}</h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {tool.description}
-                      </p>
-                    </div>
-
-                    <div className="space-y-2">
-                      <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
-                        Key Features
-                      </h4>
-                      <ul className="space-y-2">
-                        {tool.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-sm">
-                            <div className={`h-1.5 w-1.5 rounded-full bg-gradient-to-br ${tool.color}`} />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <Button 
-                      className="w-full bg-muted hover:bg-muted/80 text-foreground"
-                      disabled
-                    >
-                      Notify Me When Available
-                    </Button>
+                <Card key={index} className="p-6 hover:shadow-card transition-all duration-300 hover:-translate-y-1 border-2 border-border hover:border-primary/20 group">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center mb-4`}>
+                    <Icon className="h-6 w-6 text-white" />
                   </div>
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">{tool.name}</h3>
+                  <p className="text-sm text-muted-foreground mb-3">{tool.desc}</p>
+                  <p className="text-xs text-muted-foreground mb-4"><strong>Use case:</strong> {tool.useCase}</p>
+                  <Link to="/lead-capture">
+                    <Button size="sm" variant="outline" className="w-full">Request Demo</Button>
+                  </Link>
                 </Card>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Add-On Services Section */}
-      <section className="py-24 bg-muted">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-black text-center mb-12">Add-On Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {addOnServices.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <Card 
-                  key={index}
-                  className="p-8 hover:shadow-card transition-all duration-300 hover:-translate-y-1 border-2 border-border hover:border-primary/20 relative overflow-hidden group"
-                >
-                  <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${service.color} opacity-10 rounded-bl-full`} />
-                  
-                  <div className="relative space-y-6">
-                    <div className="flex items-start justify-between">
-                      <div className={`p-3 rounded-xl bg-gradient-to-br ${service.color} bg-opacity-10`}>
-                        <Icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <Badge variant="outline" className="border-secondary/30 text-secondary">
-                        {service.status}
-                      </Badge>
-                    </div>
-
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3">{service.name}</h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {service.description}
-                      </p>
-                    </div>
-
-                    <div className="space-y-2">
-                      <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
-                        Key Features
-                      </h4>
-                      <ul className="space-y-2">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-sm">
-                            <div className={`h-1.5 w-1.5 rounded-full bg-gradient-to-br ${service.color}`} />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <Button 
-                      className="w-full bg-muted hover:bg-muted/80 text-foreground"
-                      disabled
-                    >
-                      Contact for Details
-                    </Button>
-                  </div>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 bg-dark text-dark-foreground">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-4xl md:text-5xl font-black">
-              Want Early Access to
-              <br />
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Our Tools?
-              </span>
-            </h2>
-            <p className="text-xl text-dark-foreground/80">
-              Join our waitlist and be the first to know when these powerful marketing tools launch
-            </p>
-            <div className="flex gap-2 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-full bg-background/10 border border-border focus:border-primary focus:outline-none text-dark-foreground"
-              />
-              <Button className="bg-gradient-primary hover:shadow-glow transition-all rounded-full px-8">
-                Join Waitlist
-              </Button>
-            </div>
           </div>
         </div>
       </section>

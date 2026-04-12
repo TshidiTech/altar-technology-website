@@ -1,4 +1,5 @@
-import { Mail, Phone, Instagram } from "lucide-react";
+import { Mail, Phone, Instagram, Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -10,29 +11,31 @@ export const Footer = () => {
               Brand Hype
             </h3>
             <p className="text-dark-foreground/70 mb-4">
-              Your partner in social media marketing, influencer partnerships, and paid advertising success.
+              Your partner in digital solutions — from web & app development to AI automation and marketing.
             </p>
           </div>
 
           <div>
             <h4 className="font-bold mb-4">Services</h4>
             <ul className="space-y-2 text-dark-foreground/70">
-              <li><a href="#" className="hover:text-primary transition-colors">Social Media Strategy</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Influencer Marketing</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Paid Advertising</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Content Creation</a></li>
+              <li><Link to="/services" className="hover:text-primary transition-colors">Web Development</Link></li>
+              <li><Link to="/services" className="hover:text-primary transition-colors">App & Platform Development</Link></li>
+              <li><Link to="/services" className="hover:text-primary transition-colors">Systems & Automation</Link></li>
+              <li><Link to="/services" className="hover:text-primary transition-colors">AI & Automation Solutions</Link></li>
+              <li><Link to="/services" className="hover:text-primary transition-colors">Marketing</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold mb-4">Company</h4>
             <ul className="space-y-2 text-dark-foreground/70">
-              <li><a href="/case-studies" className="hover:text-primary transition-colors">Case Studies</a></li>
-              <li><a href="/blog" className="hover:text-primary transition-colors">Blog</a></li>
-              <li><a href="/tools" className="hover:text-primary transition-colors">Tools</a></li>
-              <li><a href="/terms" className="hover:text-primary transition-colors">Terms & Conditions</a></li>
-              <li><a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a></li>
-              <li><a href="/cookies" className="hover:text-primary transition-colors">Cookie Policy</a></li>
+              <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link to="/case-studies" className="hover:text-primary transition-colors">Case Studies</Link></li>
+              <li><Link to="/tools" className="hover:text-primary transition-colors">Tools</Link></li>
+              <li><Link to="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
+              <li><Link to="/terms" className="hover:text-primary transition-colors">Terms & Conditions</Link></li>
+              <li><Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/cookies" className="hover:text-primary transition-colors">Cookie Policy</Link></li>
             </ul>
           </div>
 
@@ -41,14 +44,20 @@ export const Footer = () => {
             <ul className="space-y-3 text-dark-foreground/70">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:hello@brandhype.co.za" className="hover:text-primary transition-colors">
-                  hello@brandhype.co.za
+                <a href="mailto:admin@brandhype.co.za" className="hover:text-primary transition-colors">
+                  admin@brandhype.co.za
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <a href="tel:086617013" className="hover:text-primary transition-colors">
-                  08 661 7013
+                <a href="tel:0670622953" className="hover:text-primary transition-colors">
+                  067 062 2953
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Calendar className="h-4 w-4" />
+                <a href="https://calendar.app.google/pkkvMSJBS3DQLPSW8" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  Schedule a Call
                 </a>
               </li>
               <li className="flex items-center gap-2">
@@ -62,7 +71,7 @@ export const Footer = () => {
         </div>
 
         <div className="border-t border-border/20 pt-8 text-center text-dark-foreground/60 text-sm">
-          <p>© 2025 Brand Hype Marketing. All rights reserved.</p>
+          <p>© 2025 Brand Hype Digital Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>
