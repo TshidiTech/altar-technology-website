@@ -42,10 +42,14 @@ const complexityTiers = ["Starter", "Growth", "Advanced"] as const;
 type Complexity = typeof complexityTiers[number];
 
 const optionalFeatures = [
-  { id: "ai-integration", label: "AI Integration" },
-  { id: "payments", label: "Payments" },
-  { id: "dashboards", label: "Dashboards" },
-  { id: "api-integrations", label: "API Integrations" },
+  { id: "ai-integration", label: "AI Integration", price: 15000 },
+  { id: "payments", label: "Payment Gateway", price: 12000 },
+  { id: "dashboards", label: "Analytics Dashboards", price: 18000 },
+  { id: "api-integrations", label: "API Integrations", price: 10000 },
+  { id: "user-auth", label: "User Authentication", price: 8000 },
+  { id: "notifications", label: "Push Notifications", price: 6000 },
+  { id: "cms", label: "CMS / Content Management", price: 12000 },
+  { id: "multi-language", label: "Multi-language Support", price: 10000 },
 ];
 
 const pricing: Record<string, Record<Complexity, { price: string; includes: string[] }>> = {
