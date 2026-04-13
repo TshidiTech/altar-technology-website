@@ -16,6 +16,7 @@ import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Cookies from "./pages/Cookies";
 import NotFound from "./pages/NotFound";
+import TshidiAI from "./pages/TshidiAI";
 import { ScrollToTop } from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();

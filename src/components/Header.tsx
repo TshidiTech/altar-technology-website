@@ -9,12 +9,13 @@ export const Header = () => {
 
   const navLinks = [
     { to: "/", label: "Home" },
+    { to: "/about", label: "About" },
     { to: "/services", label: "Services" },
     { to: "/industries", label: "Industries" },
     { to: "/tools", label: "Tools" },
+    { to: "/tshidi-ai", label: "TshidiAI" },
     { to: "/case-studies", label: "Case Studies" },
     { to: "/calculator", label: "Calculator" },
-    { to: "/about", label: "About" },
   ];
 
   return (
