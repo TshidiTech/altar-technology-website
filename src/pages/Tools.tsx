@@ -7,26 +7,30 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import {
-  BarChart, Receipt, Car, Vote, CreditCard, GraduationCap, Calendar,
-  UtensilsCrossed, FileText, Users, MessageSquare, User, Box, Sparkles, Warehouse
+  BarChart, Receipt, Car, CreditCard, GraduationCap, Calendar,
+  UtensilsCrossed, FileText, Users, MessageSquare, Box, Sparkles, Warehouse,
+  ExternalLink, Brain, Globe, BookOpen
 } from "lucide-react";
 
 const tools = [
-  { name: "AI Marketing Data Analytics Tool", desc: "Track and analyze marketing performance across platforms with AI-powered insights.", useCase: "Marketing teams needing real-time campaign analytics", icon: BarChart, color: "from-blue-500 to-cyan-500" },
-  { name: "AI Invoicing System", desc: "Automated invoice generation, tracking, and payment reminders with smart categorization.", useCase: "Freelancers and businesses managing billing", icon: Receipt, color: "from-green-500 to-cyan-500" },
-  { name: "Taxi Ride Management App", desc: "End-to-end ride management with driver tracking, fare calculation, and passenger matching.", useCase: "Transport companies and ride-hailing services", icon: Car, color: "from-orange-500 to-pink-500" },
-  { name: "Voting Compliance System", desc: "Secure digital voting with compliance tracking, audit trails, and real-time results.", useCase: "Organizations requiring secure voting processes", icon: Vote, color: "from-purple-500 to-blue-500" },
-  { name: "Digital Payment System", desc: "Integrated payment processing with multi-currency support and transaction dashboards.", useCase: "E-commerce and financial service providers", icon: CreditCard, color: "from-cyan-500 to-blue-500" },
-  { name: "Learning Management System", desc: "Course creation, student tracking, assessments, and certifications in one platform.", useCase: "Educational institutions and corporate training", icon: GraduationCap, color: "from-pink-500 to-purple-500" },
-  { name: "Booking Platforms (Salon, Lash, Wellness)", desc: "Online booking with staff management, reminders, and payment integration.", useCase: "Beauty salons, spas, and wellness businesses", icon: Calendar, color: "from-pink-500 to-red-500" },
-  { name: "Food Delivery App", desc: "Restaurant ordering, delivery tracking, driver management, and customer ratings.", useCase: "Restaurants and food delivery businesses", icon: UtensilsCrossed, color: "from-orange-500 to-yellow-500" },
-  { name: "Quote Generator", desc: "Professional quote creation with templates, calculations, and client management.", useCase: "Service businesses needing quick proposals", icon: FileText, color: "from-blue-500 to-purple-500" },
-  { name: "Virtual Assistant Marketplace", desc: "Connect businesses with virtual assistants through matching, task management, and payments.", useCase: "Remote work and outsourcing agencies", icon: Users, color: "from-purple-500 to-pink-500" },
-  { name: "Social Media CRM", desc: "Manage social media interactions, schedule content, and track audience engagement.", useCase: "Brands managing multi-platform presence", icon: MessageSquare, color: "from-cyan-500 to-blue-500" },
-  { name: "Personal Brand Builder App", desc: "Build and manage your personal brand with templates, content planning, and analytics.", useCase: "Influencers and professionals building their brand", icon: User, color: "from-pink-500 to-purple-500" },
-  { name: "3D Virtual Mall Prototype", desc: "Immersive 3D shopping experience with virtual storefronts and product showcases.", useCase: "Retail brands exploring virtual commerce", icon: Box, color: "from-purple-500 to-blue-500" },
-  { name: "Beauty Marketplace Platform", desc: "Multi-vendor beauty marketplace with reviews, bookings, and product listings.", useCase: "Beauty industry aggregators", icon: Sparkles, color: "from-pink-500 to-red-500" },
-  { name: "Warehouse Platform", desc: "Inventory management, order fulfillment, and warehouse operations dashboard.", useCase: "Logistics and distribution companies", icon: Warehouse, color: "from-orange-500 to-pink-500" },
+  { name: "AI Customer Data Analytics Tool", desc: "Predict churn, prioritise customers, and execute revenue-driving actions automatically.", useCase: "Banks, telecom, retail, insurance — any revenue team", icon: BarChart, color: "from-blue-500 to-cyan-500", demo: "https://aidataana.netlify.app/", screenshot: "/demos/ai-data-analytics.png" },
+  { name: "AI Invoicing System", desc: "Automated invoice generation, tracking, and payment reminders with smart categorization.", useCase: "Freelancers and businesses managing billing", icon: Receipt, color: "from-green-500 to-cyan-500", demo: "https://orchinvoice.netlify.app/" },
+  { name: "Taxi Ride Management App", desc: "End-to-end ride management with driver tracking, fare calculation, and passenger matching.", useCase: "Transport companies and ride-hailing services", icon: Car, color: "from-orange-500 to-pink-500", demo: "https://taxiflowdemo.netlify.app/" },
+  { name: "Digital Payment System", desc: "Integrated payment processing with multi-currency support and transaction dashboards.", useCase: "E-commerce and financial service providers", icon: CreditCard, color: "from-cyan-500 to-blue-500", demo: "https://mobuxx.netlify.app/" },
+  { name: "Learning Management System", desc: "Course creation, student tracking, assessments, and certifications in one platform.", useCase: "Educational institutions and corporate training", icon: GraduationCap, color: "from-pink-500 to-purple-500", demo: "https://ai4sa.netlify.app/" },
+  { name: "Learning App", desc: "Interactive learning experience with AI-powered content delivery and progress tracking.", useCase: "Students and self-paced learners", icon: BookOpen, color: "from-indigo-500 to-purple-500", demo: "https://demoai4sa.netlify.app/" },
+  { name: "Booking Platform (Wellness)", desc: "Online booking with staff management, reminders, and payment integration.", useCase: "Beauty salons, spas, and wellness businesses", icon: Calendar, color: "from-pink-500 to-red-500", demo: "https://wellnessconnect.netlify.app/" },
+  { name: "Booking Platform (Travel)", desc: "Travel booking with destination search, itinerary management, and availability calendars.", useCase: "Travel agencies and tour operators", icon: Globe, color: "from-teal-500 to-cyan-500", demo: "https://travelseassidedemo.netlify.app/" },
+  { name: "Food Delivery App", desc: "Restaurant ordering, delivery tracking, driver management, and customer ratings.", useCase: "Restaurants and food delivery businesses", icon: UtensilsCrossed, color: "from-orange-500 to-yellow-500", demo: "https://bitebuzzzz.netlify.app/" },
+  { name: "Quote Generator", desc: "Professional quote creation with templates, calculations, and client management.", useCase: "Service businesses needing quick proposals", icon: FileText, color: "from-blue-500 to-purple-500", demo: "https://sjvza.netlify.app/" },
+  { name: "Bill Generator", desc: "Fast, accurate billing with customisable templates and automated calculations.", useCase: "Small businesses and freelancers", icon: Receipt, color: "from-emerald-500 to-green-500", demo: "https://bhmbillgen.netlify.app/" },
+  { name: "Virtual Assistant Marketplace", desc: "Connect businesses with virtual assistants through matching, task management, and payments.", useCase: "Remote work and outsourcing agencies", icon: Users, color: "from-purple-500 to-pink-500", demo: "https://virtualassistanthub.netlify.app/" },
+  { name: "Social Media Platform Demo", desc: "Full social media platform with feeds, profiles, messaging, and content sharing.", useCase: "Brands building community platforms", icon: MessageSquare, color: "from-cyan-500 to-blue-500", demo: "https://arayasocialdemo.netlify.app/" },
+  { name: "3D Virtual Mall Prototype", desc: "Immersive 3D shopping experience with virtual storefronts and product showcases.", useCase: "Retail brands exploring virtual commerce", icon: Box, color: "from-purple-500 to-blue-500", demo: "https://arayamall.netlify.app/", screenshot: "/demos/3d-virtual-mall.png" },
+  { name: "Warehouse Platform", desc: "Inventory management, order fulfillment, and warehouse operations dashboard.", useCase: "Logistics and distribution companies", icon: Warehouse, color: "from-orange-500 to-pink-500", demo: "https://wcfza.netlify.app/" },
+  { name: "Beauty E-commerce Store", desc: "Multi-vendor beauty marketplace with reviews, bookings, and product listings.", useCase: "Beauty industry retailers and aggregators", icon: Sparkles, color: "from-pink-500 to-red-500", demo: "https://lovablelash.netlify.app/" },
+  { name: "NPC Website", desc: "Modern organisational website with member management and event listings.", useCase: "Non-profit and community organisations", icon: Globe, color: "from-slate-500 to-gray-500", demo: "https://myaman67demo.netlify.app/" },
+  { name: "Social Media Marketing Agent", desc: "AI-powered marketing agent for content creation, scheduling, and campaign management.", useCase: "Small businesses growing their brand", icon: Brain, color: "from-orange-500 to-red-500", demo: "https://tshidisocialai.netlify.app/", screenshot: "/demos/social-marketing-agent.png" },
 ];
 
 export default function Tools() {
@@ -49,22 +53,70 @@ export default function Tools() {
         </div>
       </section>
 
+      {/* TshidiAI Featured Product */}
+      <section className="py-12 bg-muted/30 border-b border-border">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-8">
+            <Badge className="mb-3 bg-primary/20 text-primary border-primary/30">
+              <Brain className="h-3 w-3 mr-1 inline" /> Featured Product
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-black mb-3">TshidiAI — Customer Decision Intelligence</h2>
+            <p className="text-muted-foreground">Turn fragmented customer data into revenue-driving decisions and automated actions.</p>
+          </div>
+          <div className="flex justify-center gap-4">
+            <Link to="/tshidi-ai">
+              <Button className="bg-gradient-primary hover:shadow-glow gap-2 rounded-full">
+                <Brain className="h-4 w-4" /> Explore TshidiAI
+              </Button>
+            </Link>
+            <a href="https://aidataana.netlify.app/" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="gap-2 rounded-full">
+                <ExternalLink className="h-4 w-4" /> Try Demo
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Disclaimer */}
+      <section className="py-4 bg-accent/10">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-sm text-muted-foreground">
+            <strong>Note:</strong> These are demos/prototypes and not finished products. Further development can be implemented based on your requirements.
+          </p>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {tools.map((tool, index) => {
               const Icon = tool.icon;
               return (
-                <Card key={index} className="p-6 hover:shadow-card transition-all duration-300 hover:-translate-y-1 border-2 border-border hover:border-primary/20 group">
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center mb-4`}>
-                    <Icon className="h-6 w-6 text-white" />
+                <Card key={index} className="overflow-hidden hover:shadow-card transition-all duration-300 hover:-translate-y-1 border-2 border-border hover:border-primary/20 group">
+                  {tool.screenshot && (
+                    <div className="h-40 overflow-hidden bg-muted">
+                      <img src={tool.screenshot} alt={tool.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                  )}
+                  <div className="p-6">
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center mb-4`}>
+                      <Icon className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">{tool.name}</h3>
+                    <p className="text-sm text-muted-foreground mb-3">{tool.desc}</p>
+                    <p className="text-xs text-muted-foreground mb-4"><strong>Use case:</strong> {tool.useCase}</p>
+                    <div className="flex gap-2">
+                      <a href={tool.demo} target="_blank" rel="noopener noreferrer" className="flex-1">
+                        <Button size="sm" variant="outline" className="w-full gap-1">
+                          <ExternalLink className="h-3 w-3" /> View Demo
+                        </Button>
+                      </a>
+                      <Link to="/lead-capture" className="flex-1">
+                        <Button size="sm" className="w-full">Request Build</Button>
+                      </Link>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">{tool.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{tool.desc}</p>
-                  <p className="text-xs text-muted-foreground mb-4"><strong>Use case:</strong> {tool.useCase}</p>
-                  <Link to="/lead-capture">
-                    <Button size="sm" variant="outline" className="w-full">Request Demo</Button>
-                  </Link>
                 </Card>
               );
             })}
