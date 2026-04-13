@@ -273,12 +273,15 @@ export default function Calculator() {
                 ))}
               </div>
 
-              <h3 className="text-xl font-bold mb-4">Optional Features</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <h3 className="text-xl font-bold mb-4">Optional Add-Ons</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {optionalFeatures.map(f => (
-                  <div key={f.id} className="flex items-center gap-3">
-                    <Checkbox checked={selectedFeatures.includes(f.id)} onCheckedChange={() => toggle(selectedFeatures, f.id, setSelectedFeatures)} id={f.id} />
-                    <label htmlFor={f.id} className="text-sm cursor-pointer font-medium">{f.label}</label>
+                  <div key={f.id} className="flex items-center justify-between p-3 rounded-lg border border-border hover:border-primary/20 transition-all">
+                    <div className="flex items-center gap-3">
+                      <Checkbox checked={selectedFeatures.includes(f.id)} onCheckedChange={() => toggle(selectedFeatures, f.id, setSelectedFeatures)} id={f.id} />
+                      <label htmlFor={f.id} className="text-sm cursor-pointer font-medium">{f.label}</label>
+                    </div>
+                    <span className="text-xs font-bold text-primary">+R{f.price.toLocaleString()}</span>
                   </div>
                 ))}
               </div>
@@ -323,13 +326,21 @@ export default function Calculator() {
 
                 {selectedFeatures.length > 0 && (
                   <div className="mt-6 p-4 bg-accent/10 rounded-lg">
-                    <h4 className="font-bold mb-2">Optional Features Selected:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {selectedFeatures.map(f => (
-                        <span key={f} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                          {optionalFeatures.find(o => o.id === f)?.label}
-                        </span>
-                      ))}
+                    <h4 className="font-bold mb-3">Add-On Features:</h4>
+                    <div className="space-y-2">
+                      {selectedFeatures.map(f => {
+                        const feat = optionalFeatures.find(o => o.id === f);
+                        return (
+                          <div key={f} className="flex justify-between items-center text-sm">
+                            <span>{feat?.label}</span>
+                            <span className="font-bold text-primary">R{feat?.price.toLocaleString()}</span>
+                          </div>
+                        );
+                      })}
+                      <div className="border-t border-border pt-2 mt-2 flex justify-between font-bold">
+                        <span>Add-Ons Total</span>
+                        <span className="text-primary">R{selectedFeatures.reduce((sum, f) => sum + (optionalFeatures.find(o => o.id === f)?.price || 0), 0).toLocaleString()}</span>
+                      </div>
                     </div>
                   </div>
                 )}
