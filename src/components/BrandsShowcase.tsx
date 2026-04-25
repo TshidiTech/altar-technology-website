@@ -10,7 +10,7 @@ const brandsWorkedWith = [
 
 export const BrandsShowcase = () => {
   return (
-    <section className="py-24 bg-background overflow-hidden">
+    <section className="py-24 bg-gradient-accent overflow-hidden">
       <div className="container mx-auto px-4 mb-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-black mb-4">
@@ -26,7 +26,7 @@ export const BrandsShowcase = () => {
             {[...brandsWorkedWith, ...brandsWorkedWith].map((brand, index) => (
               <Card 
                 key={`${brand}-${index}`}
-                className="flex-shrink-0 w-64 h-32 flex items-center justify-center p-6 hover:shadow-card transition-all border-2 border-border hover:border-primary/20"
+                 className="flex-shrink-0 w-64 h-32 flex items-center justify-center p-6 hover:shadow-card transition-all border border-border hover:border-primary/30 bg-background/80 backdrop-blur"
               >
                 <span className="text-2xl font-bold text-foreground/60">{brand}</span>
               </Card>

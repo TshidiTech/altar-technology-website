@@ -40,24 +40,34 @@ export default function Tools() {
       <FAQChatbot />
       <WhatsAppButton />
 
-      <section className="pt-32 pb-16 bg-dark text-dark-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">AI Powered</Badge>
-          <h1 className="text-5xl md:text-7xl font-black">
+      <section className="pt-32 pb-16 bg-gradient-dark text-dark-foreground">
+        <div className="container mx-auto px-4 grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-end">
+          <div>
+          <Badge className="mb-4 bg-primary/20 text-primary border-primary/30 rounded-md">AI Powered</Badge>
+          <h1 className="text-5xl md:text-7xl font-black leading-tight">
             <span className="bg-gradient-primary bg-clip-text text-transparent">Digital Tools</span>
             <br />& Products
           </h1>
-          <p className="text-xl text-dark-foreground/80 max-w-2xl mx-auto mt-6">
+          <p className="text-xl text-dark-foreground/80 max-w-2xl mt-6">
             Ready-to-deploy and custom-built digital solutions for every industry
           </p>
+          </div>
+          <div className="grid grid-cols-3 gap-3 rounded-lg border border-primary/20 bg-background/10 p-4 backdrop-blur-xl">
+            {["Demo", "Scope", "Build"].map((item, index) => (
+              <div key={item} className="rounded-md bg-background/10 p-4 text-center">
+                <div className="text-2xl font-black text-accent">0{index + 1}</div>
+                <div className="mt-2 text-sm font-bold">{item}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* TshidiAI Featured Product */}
-      <section className="py-12 bg-muted/30 border-b border-border">
+      <section className="py-12 bg-gradient-accent border-b border-border">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-8">
-            <Badge className="mb-3 bg-primary/20 text-primary border-primary/30">
+            <Badge className="mb-3 bg-primary/20 text-primary border-primary/30 rounded-md">
               <Brain className="h-3 w-3 mr-1 inline" /> Featured Product
             </Badge>
             <h2 className="text-3xl md:text-4xl font-black mb-3">TshidiAI — Customer Decision Intelligence</h2>
@@ -65,12 +75,12 @@ export default function Tools() {
           </div>
           <div className="flex justify-center gap-4">
             <Link to="/tshidi-ai">
-              <Button className="bg-gradient-primary hover:shadow-glow gap-2 rounded-full">
+                <Button className="bg-gradient-primary hover:shadow-glow gap-2 rounded-md">
                 <Brain className="h-4 w-4" /> Explore TshidiAI
               </Button>
             </Link>
             <a href="https://aidataana.netlify.app/" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" className="gap-2 rounded-full">
+              <Button variant="outline" className="gap-2 rounded-md">
                 <ExternalLink className="h-4 w-4" /> Try Demo
               </Button>
             </a>
@@ -93,15 +103,15 @@ export default function Tools() {
             {tools.map((tool, index) => {
               const Icon = tool.icon;
               return (
-                <Card key={index} className="overflow-hidden hover:shadow-card transition-all duration-300 hover:-translate-y-1 border-2 border-border hover:border-primary/20 group">
+                <Card key={index} className="overflow-hidden hover:shadow-card transition-all duration-300 hover:-translate-y-1 border border-border hover:border-primary/30 group">
                   {tool.screenshot && (
                     <div className="h-40 overflow-hidden bg-muted">
                       <img src={tool.screenshot} alt={tool.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                     </div>
                   )}
                   <div className="p-6">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center mb-4`}>
-                      <Icon className="h-6 w-6 text-white" />
+                    <div className="w-12 h-12 rounded-md bg-gradient-primary flex items-center justify-center mb-4 shadow-glow">
+                      <Icon className="h-6 w-6 text-primary-foreground" />
                     </div>
                     <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">{tool.name}</h3>
                     <p className="text-sm text-muted-foreground mb-3">{tool.desc}</p>

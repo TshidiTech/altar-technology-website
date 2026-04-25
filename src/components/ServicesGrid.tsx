@@ -8,38 +8,32 @@ const services = [
   {
     icon: Globe,
     title: "Web Development",
-    description: "Custom websites, e-commerce platforms, and web applications built for performance and conversion.",
-    color: "from-blue-500 to-cyan-500"
+    description: "Custom websites, e-commerce platforms, and web applications built for performance and conversion."
   },
   {
     icon: Smartphone,
     title: "App & Platform Development",
-    description: "Native and cross-platform apps, MVPs, and scalable digital platforms.",
-    color: "from-purple-500 to-pink-500"
+    description: "Native and cross-platform apps, MVPs, and scalable digital platforms."
   },
   {
     icon: Settings,
     title: "Systems & Automation",
-    description: "CRM systems, dashboards, internal tools, and workflow automation for operational efficiency.",
-    color: "from-orange-500 to-pink-500"
+    description: "CRM systems, dashboards, internal tools, and workflow automation for operational efficiency."
   },
   {
     icon: Bot,
     title: "AI & Automation Solutions",
-    description: "Intelligent chatbots, predictive systems, and full automation pipelines powered by AI.",
-    color: "from-cyan-500 to-blue-500"
+    description: "Intelligent chatbots, predictive systems, and full automation pipelines powered by AI."
   },
   {
     icon: Megaphone,
     title: "Digital Marketing",
-    description: "Social media strategy, influencer marketing, paid advertising, content creation, and analytics.",
-    color: "from-pink-500 to-purple-500"
+    description: "Social media strategy, influencer marketing, paid advertising, content creation, and analytics."
   },
   {
     icon: Code,
     title: "Prototypes & MVPs",
-    description: "Rapid prototyping and minimum viable products to validate your ideas fast.",
-    color: "from-purple-500 to-blue-500"
+    description: "Rapid prototyping and minimum viable products to validate your ideas fast."
   }
 ];
 
@@ -66,10 +60,10 @@ export const ServicesGrid = () => {
             return (
               <Link to="/services" key={index}>
                 <Card 
-                  className="p-6 hover:shadow-card transition-all duration-300 hover:-translate-y-1 border-2 border-border hover:border-primary/20 group cursor-pointer h-full"
+                  className="p-6 hover:shadow-card transition-all duration-300 hover:-translate-y-1 border border-border hover:border-primary/30 group cursor-pointer h-full bg-gradient-accent"
                 >
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                    <Icon className="h-7 w-7 text-white" />
+                  <div className="w-14 h-14 rounded-md bg-gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-glow">
+                    <Icon className="h-7 w-7 text-primary-foreground" />
                   </div>
                   <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                     {service.title}

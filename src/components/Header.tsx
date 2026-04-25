@@ -21,21 +21,21 @@ export const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       <ConstructionBanner />
-      <div className="bg-background/95 backdrop-blur-sm border-b border-border">
+      <div className="bg-background/90 backdrop-blur-xl border-b border-border shadow-card">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
               Brand Hype
             </Link>
 
-            <nav className="hidden md:flex items-center gap-6">
+            <nav className="hidden md:flex items-center gap-5">
               {navLinks.map((link) => (
                 <Link key={link.to} to={link.to} className="text-sm font-medium hover:text-primary transition-colors">
                   {link.label}
                 </Link>
               ))}
               <Link to="/lead-capture">
-                <Button className="bg-gradient-primary hover:shadow-glow transition-all">
+                <Button className="bg-gradient-primary hover:shadow-glow transition-all rounded-md">
                   Start Project
                 </Button>
               </Link>
@@ -55,7 +55,7 @@ export const Header = () => {
                   </Link>
                 ))}
                 <Link to="/lead-capture" onClick={() => setMobileMenuOpen(false)}>
-                  <Button className="bg-gradient-primary hover:shadow-glow transition-all w-full">
+                  <Button className="bg-gradient-primary hover:shadow-glow transition-all w-full rounded-md">
                     Start Project
                   </Button>
                 </Link>

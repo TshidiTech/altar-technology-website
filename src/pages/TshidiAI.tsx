@@ -64,32 +64,47 @@ export default function TshidiAI() {
       <WhatsAppButton />
 
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-dark text-dark-foreground relative overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <Badge className="mb-6 bg-primary/20 text-primary border-primary/30 text-sm px-4 py-1">
+      <section className="pt-32 pb-20 bg-gradient-dark text-dark-foreground relative overflow-hidden">
+        <div className="container mx-auto px-4 grid lg:grid-cols-[1fr_0.9fr] gap-10 items-center relative z-10">
+          <div>
+          <Badge className="mb-6 bg-primary/20 text-primary border-primary/30 text-sm px-4 py-1 rounded-md">
             <Brain className="h-4 w-4 mr-2 inline" />
             Customer Decision Intelligence Platform
           </Badge>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-6">
+          <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
             TURN CUSTOMER DATA INTO{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">REVENUE DECISIONS</span>
           </h1>
-          <p className="text-xl md:text-2xl text-dark-foreground/80 max-w-3xl mx-auto mb-8">
+          <p className="text-xl md:text-2xl text-dark-foreground/80 max-w-3xl mb-8">
             Predict churn, prioritise customers, and execute actions across your business — automatically. A virtual data analyst for your revenue team.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4">
             <a href="https://aidataana.netlify.app/" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-6 rounded-full group">
+              <Button size="lg" className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-6 rounded-md group">
                 Try Demo <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
             <Link to="/lead-capture">
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 rounded-full border-2 border-primary/20 hover:border-primary/40 bg-transparent">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-6 rounded-md border-2 border-primary/25 hover:border-primary/50 bg-background/5 backdrop-blur">
                 Book a Demo
               </Button>
             </Link>
+          </div>
+          </div>
+          <div className="rounded-lg border border-primary/20 bg-background/10 p-4 shadow-glow backdrop-blur-xl">
+            <div className="rounded-md bg-gradient-primary p-5 text-primary-foreground">
+              <div className="text-sm font-bold uppercase opacity-80">Decision Engine</div>
+              <div className="mt-2 text-4xl font-black">72%</div>
+              <div className="text-sm opacity-80">risk signals prioritised for action</div>
+            </div>
+            <div className="mt-3 grid grid-cols-2 gap-3">
+              {["Churn", "Revenue", "Segments", "Actions"].map((item) => (
+                <div key={item} className="rounded-md border border-border/20 bg-background/10 p-4">
+                  <div className="h-1.5 w-16 rounded-full bg-gradient-secondary mb-6" />
+                  <div className="font-bold">{item}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -113,7 +128,7 @@ export default function TshidiAI() {
             ].map((item, i) => {
               const Icon = item.icon;
               return (
-                <Card key={i} className="p-6 border-2 border-border">
+                <Card key={i} className="p-6 border border-border bg-background">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
                       <Icon className="h-5 w-5 text-destructive" />
@@ -141,7 +156,7 @@ export default function TshidiAI() {
             {howItWorks.map((item) => {
               const Icon = item.icon;
               return (
-                <Card key={item.step} className="p-6 border-2 border-border hover:border-primary/20 transition-all">
+                <Card key={item.step} className="p-6 border border-border hover:border-primary/30 transition-all bg-gradient-accent">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center text-primary-foreground font-black text-sm">
                       {item.step}
@@ -189,7 +204,7 @@ export default function TshidiAI() {
                 <Card key={ind.name} className="p-6 border-2 border-border hover:border-primary/20 transition-all">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <Icon className="h-5 w-5 text-primary" />
+                      <Icon className="h-5 w-5 text-accent" />
                     </div>
                     <h3 className="font-bold text-lg">{ind.name}</h3>
                   </div>
