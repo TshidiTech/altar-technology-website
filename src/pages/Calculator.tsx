@@ -306,7 +306,7 @@ export default function Calculator() {
           {/* Step 5: Results */}
           {step === 5 && (
             <div className="space-y-6">
-              <Card className="p-8">
+              <Card className="p-8 border border-border shadow-card">
                 <h2 className="text-3xl font-black mb-8 text-center">Your Project Estimate</h2>
 
                 <div className="space-y-6">
@@ -315,7 +315,7 @@ export default function Calculator() {
                     const label = serviceTypes.find(t => t.id === serviceId)?.label;
                     if (!p) return null;
                     return (
-                      <div key={serviceId} className="p-6 bg-muted/30 rounded-lg">
+                      <div key={serviceId} className="p-6 bg-gradient-accent rounded-md border border-border">
                         <div className="flex justify-between items-start mb-4">
                           <h3 className="text-xl font-bold">{label}</h3>
                           <span className="text-2xl font-black text-primary">{p.price}</span>
@@ -335,7 +335,7 @@ export default function Calculator() {
                 </div>
 
                 {selectedFeatures.length > 0 && (
-                  <div className="mt-6 p-4 bg-accent/10 rounded-lg">
+                  <div className="mt-6 p-4 bg-accent/10 rounded-md border border-accent/20">
                     <h4 className="font-bold mb-3">Add-On Features:</h4>
                     <div className="space-y-2">
                       {selectedFeatures.map(f => {
@@ -356,7 +356,7 @@ export default function Calculator() {
                 )}
               </Card>
 
-              <Card className="p-8">
+              <Card className="p-8 border border-border shadow-card">
                 <h3 className="text-xl font-bold mb-6">Next Steps</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <Button onClick={downloadQuote} variant="outline" className="gap-2 h-auto py-4 flex-col">
