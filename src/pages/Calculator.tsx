@@ -152,13 +152,23 @@ export default function Calculator() {
       <FAQChatbot />
       <WhatsAppButton />
 
-      <section className="pt-32 pb-12 bg-dark text-dark-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <CalcIcon className="h-16 w-16 mx-auto text-primary mb-4" />
+      <section className="pt-32 pb-12 bg-gradient-dark text-dark-foreground">
+        <div className="container mx-auto px-4 grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-end">
+          <div>
+          <CalcIcon className="h-16 w-16 text-primary mb-4" />
           <h1 className="text-5xl md:text-7xl font-black">Project Calculator</h1>
-          <p className="text-xl text-dark-foreground/80 max-w-2xl mx-auto mt-4">
+          <p className="text-xl text-dark-foreground/80 max-w-2xl mt-4">
             Get an estimated breakdown of your project costs
           </p>
+          </div>
+          <div className="grid grid-cols-5 gap-2 rounded-lg border border-primary/20 bg-background/10 p-3 backdrop-blur-xl">
+            {["Services", "Goals", "Needs", "Tier", "Quote"].map((item, index) => (
+              <div key={item} className="rounded-md bg-background/10 p-3 text-center">
+                <div className="text-lg font-black text-accent">{index + 1}</div>
+                <div className="mt-1 text-xs font-bold">{item}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -193,14 +203,14 @@ export default function Calculator() {
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Step 1: Services */}
           {step === 1 && (
-            <Card className="p-8">
+            <Card className="p-8 border border-border shadow-card">
               <h2 className="text-2xl font-bold mb-6">Select Service Types *</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {serviceTypes.map(s => (
                   <button
                     key={s.id}
                     onClick={() => toggle(selectedServices, s.id, setSelectedServices)}
-                    className={`p-4 rounded-lg border-2 text-left font-medium transition-all ${selectedServices.includes(s.id) ? "border-primary bg-primary/10 text-primary" : "border-border hover:border-primary/30"}`}
+                    className={`p-4 rounded-md border-2 text-left font-medium transition-all ${selectedServices.includes(s.id) ? "border-primary bg-primary/10 text-primary shadow-glow" : "border-border hover:border-primary/30"}`}
                   >
                     {s.label}
                   </button>
@@ -216,7 +226,7 @@ export default function Calculator() {
 
           {/* Step 2: Goals */}
           {step === 2 && (
-            <Card className="p-8">
+            <Card className="p-8 border border-border shadow-card">
               <h2 className="text-2xl font-bold mb-6">Goals & Objectives * (Select all that apply)</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {goals.map(g => (
@@ -235,7 +245,7 @@ export default function Calculator() {
 
           {/* Step 3: Challenges */}
           {step === 3 && (
-            <Card className="p-8">
+            <Card className="p-8 border border-border shadow-card">
               <h2 className="text-2xl font-bold mb-6">What are your biggest challenges? (Select all that apply)</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {challenges.map(c => (
@@ -254,14 +264,14 @@ export default function Calculator() {
 
           {/* Step 4: Complexity + Features */}
           {step === 4 && (
-            <Card className="p-8">
+            <Card className="p-8 border border-border shadow-card">
               <h2 className="text-2xl font-bold mb-6">Select Complexity Tier</h2>
               <div className="grid grid-cols-3 gap-4 mb-8">
                 {complexityTiers.map(tier => (
                   <button
                     key={tier}
                     onClick={() => setComplexity(tier)}
-                    className={`p-6 rounded-lg border-2 text-center transition-all ${complexity === tier ? "border-primary bg-primary/10" : "border-border hover:border-primary/30"}`}
+                    className={`p-6 rounded-md border-2 text-center transition-all ${complexity === tier ? "border-primary bg-primary/10 shadow-glow" : "border-border hover:border-primary/30"}`}
                   >
                     <div className="font-bold text-lg">{tier}</div>
                     <div className="text-xs text-muted-foreground mt-1">
@@ -276,7 +286,7 @@ export default function Calculator() {
               <h3 className="text-xl font-bold mb-4">Optional Add-Ons</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {optionalFeatures.map(f => (
-                  <div key={f.id} className="flex items-center justify-between p-3 rounded-lg border border-border hover:border-primary/20 transition-all">
+                  <div key={f.id} className="flex items-center justify-between p-3 rounded-md border border-border hover:border-primary/30 transition-all">
                     <div className="flex items-center gap-3">
                       <Checkbox checked={selectedFeatures.includes(f.id)} onCheckedChange={() => toggle(selectedFeatures, f.id, setSelectedFeatures)} id={f.id} />
                       <label htmlFor={f.id} className="text-sm cursor-pointer font-medium">{f.label}</label>
