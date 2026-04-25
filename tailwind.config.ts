@@ -51,11 +51,18 @@ export default {
           DEFAULT: "hsl(var(--dark-bg))",
           foreground: "hsl(var(--dark-foreground))",
         },
+        surface: {
+          DEFAULT: "hsl(var(--surface))",
+          foreground: "hsl(var(--surface-foreground))",
+        },
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
       },
       backgroundImage: {
         'gradient-primary': 'var(--gradient-primary)',
         'gradient-secondary': 'var(--gradient-secondary)',
         'gradient-accent': 'var(--gradient-accent)',
+        'gradient-dark': 'var(--gradient-dark)',
       },
       boxShadow: {
         'glow': 'var(--shadow-glow)',
