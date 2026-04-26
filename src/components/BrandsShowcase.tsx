@@ -10,11 +10,14 @@ const brandsWorkedWith = [
 
 export const BrandsShowcase = () => {
   return (
-    <section className="py-24 bg-gradient-accent overflow-hidden">
+    <section className="py-24 bg-accent overflow-hidden border-b-2 border-border">
       <div className="container mx-auto px-4 mb-16">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-black mb-4">
-            Trusted by <span className="bg-gradient-primary bg-clip-text text-transparent">Leading Brands</span>
+        <div className="text-center mb-16 space-y-4">
+          <div className="mx-auto inline-flex border-2 border-border bg-background px-4 py-2 text-xs font-bold uppercase tracking-widest shadow-card">
+            Proof wall
+          </div>
+          <h2 className="text-4xl md:text-6xl font-extrabold uppercase leading-none">
+            Trusted by <span className="text-primary">Leading Brands</span>
           </h2>
           <p className="text-xl text-muted-foreground">
             We've helped amazing brands build and grow their digital presence
@@ -26,9 +29,9 @@ export const BrandsShowcase = () => {
             {[...brandsWorkedWith, ...brandsWorkedWith].map((brand, index) => (
               <Card 
                 key={`${brand}-${index}`}
-                 className="flex-shrink-0 w-64 h-32 flex items-center justify-center p-6 hover:shadow-card transition-all border border-border hover:border-primary/30 bg-background/80 backdrop-blur"
+                 className="flex-shrink-0 w-64 h-32 flex items-center justify-center p-6 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal-lg transition-all border-2 border-border bg-background shadow-card rounded-sm"
               >
-                <span className="text-2xl font-bold text-foreground/60">{brand}</span>
+                <span className="text-2xl font-extrabold text-foreground/70 uppercase text-center leading-tight">{brand}</span>
               </Card>
             ))}
           </div>
