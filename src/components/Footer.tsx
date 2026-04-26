@@ -3,21 +3,22 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gradient-dark text-dark-foreground py-16 border-t border-border/20">
+    <footer className="bg-foreground text-background py-16 border-t-2 border-border">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div>
-            <h3 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4">
-              Brand Hype
+            <h3 className="mb-4 flex items-center gap-3 text-2xl font-display font-extrabold uppercase">
+              <span className="h-4 w-4 border-2 border-background bg-primary shadow-[2px_2px_0_0_hsl(var(--background))]" />
+              Brand Hype.
             </h3>
-            <p className="text-dark-foreground/70 mb-4">
+            <p className="text-background/70 mb-4">
               Your partner in digital solutions — from web & app development to AI automation and marketing.
             </p>
           </div>
 
           <div>
-            <h4 className="font-bold mb-4">Services</h4>
-            <ul className="space-y-2 text-dark-foreground/70">
+            <h4 className="font-bold mb-4 uppercase tracking-widest text-xs">Services</h4>
+            <ul className="space-y-2 text-background/70">
               <li><Link to="/services" className="hover:text-primary transition-colors">Web Development</Link></li>
               <li><Link to="/services" className="hover:text-primary transition-colors">App & Platform Development</Link></li>
               <li><Link to="/services" className="hover:text-primary transition-colors">Systems & Automation</Link></li>
@@ -27,8 +28,8 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-bold mb-4">Company</h4>
-            <ul className="space-y-2 text-dark-foreground/70">
+            <h4 className="font-bold mb-4 uppercase tracking-widest text-xs">Company</h4>
+            <ul className="space-y-2 text-background/70">
               <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
               <li><Link to="/case-studies" className="hover:text-primary transition-colors">Case Studies</Link></li>
               <li><Link to="/tools" className="hover:text-primary transition-colors">Tools</Link></li>
@@ -40,8 +41,8 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-bold mb-4">Contact</h4>
-            <ul className="space-y-3 text-dark-foreground/70">
+            <h4 className="font-bold mb-4 uppercase tracking-widest text-xs">Contact</h4>
+            <ul className="space-y-3 text-background/70">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
                 <a href="mailto:admin@brandhype.co.za" className="hover:text-primary transition-colors">
@@ -70,7 +71,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border/20 pt-8 text-center text-dark-foreground/60 text-sm">
+        <div className="border-t-2 border-background pt-8 text-center text-background/60 text-sm">
           <p>© 2025 Brand Hype Digital Solutions. All rights reserved.</p>
         </div>
       </div>
