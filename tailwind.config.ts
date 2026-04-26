@@ -71,6 +71,12 @@ export default {
       boxShadow: {
         'glow': 'var(--shadow-glow)',
         'card': 'var(--shadow-card)',
+        'brutal-sm': 'var(--shadow-brutal-sm)',
+        'brutal': 'var(--shadow-brutal)',
+        'brutal-lg': 'var(--shadow-brutal-lg)',
+        'brutal-xl': 'var(--shadow-brutal-xl)',
+        'brutal-protea': 'var(--shadow-brutal-protea)',
+        'brutal-sun': 'var(--shadow-brutal-sun)',
       },
       borderRadius: {
         lg: "var(--radius)",
