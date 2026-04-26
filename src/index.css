@@ -19,10 +19,10 @@ All colors MUST be HSL.
     --popover: 36 23% 95%;
     --popover-foreground: 60 3% 6%;
 
-    --primary: 341 100% 58%;
+    --primary: 268 76% 54%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 268 76% 54%;
+    --secondary: 341 100% 58%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 39 17% 87%;
@@ -36,7 +36,7 @@ All colors MUST be HSL.
 
     --border: 60 3% 6%;
     --input: 60 3% 6%;
-    --ring: 341 100% 58%;
+    --ring: 268 76% 54%;
 
     --radius: 0.25rem;
 
@@ -54,13 +54,13 @@ All colors MUST be HSL.
     --gradient-accent: linear-gradient(0deg, hsl(var(--accent)), hsl(var(--accent)));
     --gradient-dark: linear-gradient(0deg, hsl(var(--foreground)), hsl(var(--foreground)));
     
-    --shadow-glow: 6px 6px 0 0 hsl(var(--primary));
+    --shadow-glow: 6px 6px 0 0 hsl(var(--secondary));
     --shadow-card: 4px 4px 0 0 hsl(var(--foreground));
     --shadow-brutal-sm: 2px 2px 0 0 hsl(var(--foreground));
     --shadow-brutal: 4px 4px 0 0 hsl(var(--foreground));
     --shadow-brutal-lg: 6px 6px 0 0 hsl(var(--foreground));
     --shadow-brutal-xl: 8px 8px 0 0 hsl(var(--foreground));
-    --shadow-brutal-protea: 6px 6px 0 0 hsl(var(--primary));
+    --shadow-brutal-protea: 6px 6px 0 0 hsl(var(--secondary));
     --shadow-brutal-sun: 4px 4px 0 0 hsl(var(--warning));
     
     /* Dark sections */
@@ -78,10 +78,10 @@ All colors MUST be HSL.
     --popover: 230 35% 12%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 341 100% 62%;
+    --primary: 268 82% 64%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 268 82% 64%;
+    --secondary: 341 100% 62%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 30 7% 19%;
@@ -95,7 +95,7 @@ All colors MUST be HSL.
 
     --border: 36 23% 95%;
     --input: 36 23% 95%;
-    --ring: 341 100% 62%;
+    --ring: 268 82% 64%;
   }
 }
 
