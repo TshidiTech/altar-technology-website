@@ -39,19 +39,24 @@ const services = [
 
 export const ServicesGrid = () => {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-background border-b-2 border-border">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-6xl font-black">
+        <div className="mb-16 grid gap-6 md:grid-cols-[0.85fr_1.15fr] md:items-end">
+          <div className="inline-flex w-fit border-2 border-border bg-warning px-4 py-2 text-xs font-bold uppercase tracking-widest shadow-card">
+            Services menu
+          </div>
+          <div className="space-y-4 md:text-right">
+          <h2 className="text-4xl md:text-6xl font-extrabold uppercase leading-none">
             Everything You Need to
             <br />
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
+            <span className="text-primary">
               Build & Scale
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl md:ml-auto">
             Comprehensive digital solutions designed to transform your business
           </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -60,12 +65,12 @@ export const ServicesGrid = () => {
             return (
               <Link to="/services" key={index}>
                 <Card 
-                  className="p-6 hover:shadow-card transition-all duration-300 hover:-translate-y-1 border border-border hover:border-primary/30 group cursor-pointer h-full bg-gradient-accent"
+                  className="p-6 transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal-lg border-2 border-border group cursor-pointer h-full bg-card shadow-card rounded-sm"
                 >
-                  <div className="w-14 h-14 rounded-md bg-gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-glow">
+                  <div className="w-14 h-14 border-2 border-border bg-primary flex items-center justify-center mb-4 transition-transform shadow-card">
                     <Icon className="h-7 w-7 text-primary-foreground" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-extrabold mb-2 group-hover:text-primary transition-colors uppercase">
                     {service.title}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
