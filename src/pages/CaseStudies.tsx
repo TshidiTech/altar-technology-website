@@ -13,7 +13,6 @@ import platformDevices from "@/assets/brandhype-platform-devices.png";
 import servicesBg from "@/assets/services-bg.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 import lashesImage from "@/assets/medium-shot-plus-sized-woman-influencer_5.jpg";
-import contentCreator from "@/assets/content-creator-photography.jpg";
 
 const categories = ["All", "Systems", "Apps", "Websites", "Marketing"];
 
