@@ -264,14 +264,14 @@ export default function Calculator() {
 
           {/* Step 4: Complexity + Features */}
           {step === 4 && (
-            <Card className="p-8 border border-border shadow-card">
+            <Card className="p-5 border border-border shadow-card sm:p-8">
               <h2 className="text-2xl font-bold mb-6">Select Complexity Tier</h2>
-              <div className="grid grid-cols-3 gap-4 mb-8">
+              <div className="grid grid-cols-1 gap-3 mb-8 sm:grid-cols-3 sm:gap-4">
                 {complexityTiers.map(tier => (
                   <button
                     key={tier}
                     onClick={() => setComplexity(tier)}
-                    className={`p-6 rounded-md border-2 text-center transition-all ${complexity === tier ? "border-primary bg-primary/10 shadow-glow" : "border-border hover:border-primary/30"}`}
+                    className={`min-h-24 p-4 rounded-sm border-2 text-center transition-all sm:p-6 ${complexity === tier ? "border-primary bg-primary/10 shadow-glow" : "border-border hover:border-primary/30"}`}
                   >
                     <div className="font-bold text-lg">{tier}</div>
                     <div className="text-xs text-muted-foreground mt-1">
@@ -287,16 +287,16 @@ export default function Calculator() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {optionalFeatures.map(f => (
                   <div key={f.id} className="flex items-center justify-between p-3 rounded-md border border-border hover:border-primary/30 transition-all">
-                    <div className="flex items-center gap-3">
+                    <div className="flex min-w-0 items-center gap-3">
                       <Checkbox checked={selectedFeatures.includes(f.id)} onCheckedChange={() => toggle(selectedFeatures, f.id, setSelectedFeatures)} id={f.id} />
                       <label htmlFor={f.id} className="text-sm cursor-pointer font-medium">{f.label}</label>
                     </div>
-                    <span className="text-xs font-bold text-primary">+R{f.price.toLocaleString()}</span>
+                    <span className="ml-2 shrink-0 text-xs font-bold text-primary">+R{f.price.toLocaleString()}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="flex justify-between mt-8">
+              <div className="flex flex-col-reverse gap-3 sm:flex-row sm:justify-between mt-8">
                 <Button variant="outline" onClick={() => setStep(3)} className="gap-2"><ArrowLeft className="h-4 w-4" /> Back</Button>
                 <Button onClick={() => setStep(5)} className="gap-2">View Estimate <ArrowRight className="h-4 w-4" /></Button>
               </div>
@@ -306,8 +306,8 @@ export default function Calculator() {
           {/* Step 5: Results */}
           {step === 5 && (
             <div className="space-y-6">
-              <Card className="p-8 border border-border shadow-card">
-                <h2 className="text-3xl font-black mb-8 text-center">Your Project Estimate</h2>
+              <Card className="p-5 border border-border shadow-card sm:p-8">
+                <h2 className="text-2xl font-black mb-8 text-center sm:text-3xl">Your Project Estimate</h2>
 
                 <div className="space-y-6">
                   {selectedServices.map(serviceId => {
@@ -316,9 +316,9 @@ export default function Calculator() {
                     if (!p) return null;
                     return (
                       <div key={serviceId} className="p-6 bg-gradient-accent rounded-md border border-border">
-                        <div className="flex justify-between items-start mb-4">
+                        <div className="flex flex-col gap-2 mb-4 sm:flex-row sm:items-start sm:justify-between">
                           <h3 className="text-xl font-bold">{label}</h3>
-                          <span className="text-2xl font-black text-primary">{p.price}</span>
+                          <span className="text-xl font-black text-primary sm:text-2xl">{p.price}</span>
                         </div>
                         <div className="text-sm font-medium text-muted-foreground mb-2">{complexity} Tier — What's Included:</div>
                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -341,7 +341,7 @@ export default function Calculator() {
                       {selectedFeatures.map(f => {
                         const feat = optionalFeatures.find(o => o.id === f);
                         return (
-                          <div key={f} className="flex justify-between items-center text-sm">
+                          <div key={f} className="flex items-start justify-between gap-3 text-sm">
                             <span>{feat?.label}</span>
                             <span className="font-bold text-primary">R{feat?.price.toLocaleString()}</span>
                           </div>
@@ -356,7 +356,7 @@ export default function Calculator() {
                 )}
               </Card>
 
-              <Card className="p-8 border border-border shadow-card">
+              <Card className="p-5 border border-border shadow-card sm:p-8">
                 <h3 className="text-xl font-bold mb-6">Next Steps</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <Button onClick={downloadQuote} variant="outline" className="gap-2 h-auto py-4 flex-col">
@@ -378,7 +378,7 @@ export default function Calculator() {
                 </div>
               </Card>
 
-              <div className="flex justify-between">
+              <div className="flex flex-col-reverse gap-3 sm:flex-row sm:justify-between">
                 <Button variant="outline" onClick={() => setStep(4)} className="gap-2"><ArrowLeft className="h-4 w-4" /> Back</Button>
                 <Link to="/lead-capture">
                   <Button className="gap-2 bg-gradient-primary hover:shadow-glow">Submit Full Enquiry <ArrowRight className="h-4 w-4" /></Button>
