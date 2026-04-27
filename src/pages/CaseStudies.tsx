@@ -98,23 +98,23 @@ export default function CaseStudies() {
       <FAQChatbot />
       <WhatsAppButton />
 
-      <section className="pt-32 pb-16 bg-dark text-dark-foreground">
+      <section className="pt-28 pb-12 bg-dark text-dark-foreground sm:pt-32 sm:pb-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-black">
+          <h1 className="text-4xl font-black sm:text-5xl md:text-7xl">
             <span className="bg-gradient-primary bg-clip-text text-transparent">Success Stories</span>
             <br />That Speak Volumes
           </h1>
-          <p className="text-xl text-dark-foreground/80 max-w-2xl mx-auto mt-6">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-dark-foreground/80 sm:mt-6 sm:text-xl">
             Real results from real projects across development, systems, AI, and marketing.
           </p>
         </div>
       </section>
 
-      <section className="py-6 border-b sticky top-16 bg-background/95 backdrop-blur-sm z-40">
+      <section className="sticky top-16 z-40 border-b bg-background py-4 sm:py-6">
         <div className="container mx-auto px-4">
-          <div className="flex gap-3 overflow-x-auto pb-2">
+          <div className="flex gap-3 overflow-x-auto pb-2 snap-x">
             {categories.map(cat => (
-              <Button key={cat} variant={activeCategory === cat ? "default" : "outline"} onClick={() => setActiveCategory(cat)} className="flex-shrink-0">
+              <Button key={cat} variant={activeCategory === cat ? "default" : "outline"} onClick={() => setActiveCategory(cat)} className="flex-shrink-0 snap-start text-xs sm:text-sm">
                 {cat}
               </Button>
             ))}
@@ -122,7 +122,7 @@ export default function CaseStudies() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-12 sm:py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filtered.map((study, index) => (
@@ -132,7 +132,7 @@ export default function CaseStudies() {
                     <img src={study.image} alt={study.brand} className="w-full h-full object-cover" />
                   </div>
                 )}
-                <div className="p-8">
+                <div className="p-5 sm:p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <div className={`h-2 w-16 bg-gradient-to-r ${study.color} rounded-full`} />
                     <Badge variant="outline">{study.category}</Badge>
@@ -140,7 +140,7 @@ export default function CaseStudies() {
                   <h3 className="text-2xl font-bold mb-1">{study.brand}</h3>
                   <h4 className="text-primary font-semibold mb-3">{study.campaign}</h4>
                   <p className="text-muted-foreground mb-6">{study.description}</p>
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
                     {study.metrics.map((m, i) => {
                       const Icon = m.icon;
                       return (
@@ -159,11 +159,11 @@ export default function CaseStudies() {
         </div>
       </section>
 
-      <section className="py-20 bg-dark text-dark-foreground">
+      <section className="py-12 bg-dark text-dark-foreground sm:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-black mb-4">Ready to Be Our Next <span className="bg-gradient-primary bg-clip-text text-transparent">Success Story?</span></h2>
+          <h2 className="mb-4 text-3xl font-black sm:text-4xl">Ready to Be Our Next <span className="bg-gradient-primary bg-clip-text text-transparent">Success Story?</span></h2>
           <Link to="/lead-capture">
-            <Button size="lg" className="bg-gradient-primary hover:shadow-glow rounded-full text-lg px-8 py-6 mt-6 gap-2">
+            <Button size="lg" className="mt-6 w-full bg-gradient-primary hover:shadow-glow rounded-sm text-base gap-2 sm:w-auto sm:text-lg">
               Start Your Project <ArrowRight className="h-5 w-5" />
             </Button>
           </Link>
