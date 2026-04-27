@@ -64,40 +64,40 @@ export default function TshidiAI() {
       <WhatsAppButton />
 
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-gradient-dark text-dark-foreground relative overflow-hidden">
-        <div className="container mx-auto px-4 grid lg:grid-cols-[1fr_0.9fr] gap-10 items-center relative z-10">
+      <section className="relative overflow-hidden bg-gradient-dark pt-28 pb-12 text-dark-foreground sm:pt-32 sm:pb-20">
+        <div className="container relative z-10 mx-auto grid gap-8 px-4 lg:grid-cols-[1fr_0.9fr] lg:items-center">
           <div>
           <Badge className="mb-6 bg-primary/20 text-primary border-primary/30 text-sm px-4 py-1 rounded-md">
             <Brain className="h-4 w-4 mr-2 inline" />
             Customer Decision Intelligence Platform
           </Badge>
-          <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+          <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl md:text-7xl">
             TURN CUSTOMER DATA INTO{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">REVENUE DECISIONS</span>
           </h1>
-          <p className="text-xl md:text-2xl text-dark-foreground/80 max-w-3xl mb-8">
+          <p className="mb-8 max-w-3xl text-base text-dark-foreground/80 sm:text-xl md:text-2xl">
             Predict churn, prioritise customers, and execute actions across your business — automatically. A virtual data analyst for your revenue team.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a href="https://aidataana.netlify.app/" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-6 rounded-md group">
+          <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
+            <a href="https://aidataana.netlify.app/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Button size="lg" className="w-full bg-gradient-primary hover:shadow-glow text-base rounded-sm group sm:text-lg">
                 Try Demo <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
-            <Link to="/lead-capture">
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 rounded-md border-2 border-primary/25 hover:border-primary/50 bg-background/5 backdrop-blur">
+            <Link to="/lead-capture" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full text-base rounded-sm border-2 border-primary/25 hover:border-primary/50 bg-background/5 sm:text-lg">
                 Book a Demo
               </Button>
             </Link>
           </div>
           </div>
-          <div className="rounded-lg border border-primary/20 bg-background/10 p-4 shadow-glow backdrop-blur-xl">
+           <div className="rounded-sm border-2 border-border bg-background/10 p-3 shadow-glow sm:p-4">
             <div className="rounded-md bg-gradient-primary p-5 text-primary-foreground">
               <div className="text-sm font-bold uppercase opacity-80">Decision Engine</div>
               <div className="mt-2 text-4xl font-black">72%</div>
               <div className="text-sm opacity-80">risk signals prioritised for action</div>
             </div>
-            <div className="mt-3 grid grid-cols-2 gap-3">
+            <div className="mt-3 grid grid-cols-2 gap-2 sm:gap-3">
               {["Churn", "Revenue", "Segments", "Actions"].map((item) => (
                 <div key={item} className="rounded-md border border-border/20 bg-background/10 p-4">
                   <div className="h-1.5 w-16 rounded-full bg-gradient-secondary mb-6" />
@@ -111,11 +111,11 @@ export default function TshidiAI() {
 
       {/* Problem Section */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="container mx-auto max-w-5xl px-4">
           <div className="text-center mb-12">
             <Badge variant="destructive" className="mb-4"><AlertTriangle className="h-4 w-4 mr-1 inline" /> The Problem</Badge>
-            <h2 className="text-3xl md:text-5xl font-black mb-4">Customer Data Is Everywhere, But Decisions Are Disconnected</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <h2 className="mb-4 text-3xl font-black md:text-5xl">Customer Data Is Everywhere, But Decisions Are Disconnected</h2>
+            <p className="mx-auto max-w-3xl text-base text-muted-foreground sm:text-lg">
               Big companies have customer data spread across CRM, marketing tools, support systems, analytics, and billing — but no one sees the complete picture.
             </p>
           </div>
@@ -129,7 +129,7 @@ export default function TshidiAI() {
               const Icon = item.icon;
               return (
                 <Card key={i} className="p-6 border border-border bg-background">
-                  <div className="flex items-start gap-4">
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                     <div className="w-10 h-10 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
                       <Icon className="h-5 w-5 text-destructive" />
                     </div>
@@ -180,7 +180,7 @@ export default function TshidiAI() {
             <h2 className="text-3xl md:text-5xl font-black mb-4">Built for Revenue-Driven Teams</h2>
             <p className="text-lg text-muted-foreground">Banks, telecom companies, retail brands, insurance companies — and any team responsible for customer growth, retention, and revenue.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4 sm:gap-4">
             {["Marketing Teams", "Sales Teams", "Customer Support", "Executives", "Data Analysts", "Product Teams", "Operations", "Finance"].map((team) => (
               <div key={team} className="p-4 bg-background rounded-lg border border-border text-center font-medium text-sm">
                 {team}
@@ -233,7 +233,7 @@ export default function TshidiAI() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {pricing.map((plan) => (
-              <Card key={plan.tier} className={`p-8 border-2 transition-all ${plan.popular ? "border-primary shadow-glow scale-[1.02]" : "border-border"}`}>
+              <Card key={plan.tier} className={`p-6 border-2 transition-all sm:p-8 ${plan.popular ? "border-primary shadow-glow md:scale-[1.02]" : "border-border"}`}>
                 {plan.popular && <Badge className="mb-4 bg-primary text-primary-foreground">Most Popular</Badge>}
                 <h3 className="text-xl font-bold">{plan.tier}</h3>
                 <div className="text-4xl font-black text-primary my-4">{plan.price}</div>
@@ -271,13 +271,13 @@ export default function TshidiAI() {
             TshidiAI sits at the intersection of Data, AI, Operations, and Revenue.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://aidataana.netlify.app/" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-6 rounded-full">
+            <a href="https://aidataana.netlify.app/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Button size="lg" className="w-full bg-gradient-primary hover:shadow-glow text-base rounded-sm sm:text-lg">
                 Try the Demo
               </Button>
             </a>
-            <Link to="/lead-capture">
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 rounded-full border-2 border-primary/20 bg-transparent">
+            <Link to="/lead-capture" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full text-base rounded-sm border-2 border-primary/20 bg-transparent sm:text-lg">
                 Contact Sales
               </Button>
             </Link>

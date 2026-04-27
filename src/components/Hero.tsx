@@ -6,46 +6,46 @@ import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-24 text-foreground">
+    <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-background pt-24 text-foreground sm:pt-28">
       <div className="absolute inset-y-0 right-0 hidden w-1/3 border-l-2 border-border bg-accent lg:block" />
-      <div className="container mx-auto px-4 py-24 relative z-10">
-        <div className="max-w-5xl mx-auto grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-center animate-fade-in">
-          <div className="text-center lg:text-left space-y-8">
-          <div className="inline-flex items-center gap-2 border-2 border-border bg-warning px-4 py-2 text-xs font-bold uppercase tracking-widest shadow-card mb-4">
+      <div className="container relative z-10 mx-auto px-4 py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto grid max-w-5xl items-center gap-8 animate-fade-in lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="space-y-6 text-center lg:text-left sm:space-y-8">
+          <div className="inline-flex max-w-full items-center gap-2 border-2 border-border bg-warning px-3 py-2 text-[0.68rem] font-bold uppercase tracking-widest shadow-card sm:px-4 sm:text-xs">
             <Sparkles className="h-4 w-4" />
             Built in South Africa, for South Africa
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[0.9] uppercase tracking-tight">
+          <h1 className="text-4xl font-extrabold uppercase leading-[0.92] tracking-tight sm:text-5xl md:text-7xl lg:text-8xl">
             Build the
             <br />
             <span className="text-primary">digital engine</span>
             <br />
             your business runs on.
           </h1>
-          <div className="text-3xl md:text-5xl font-display font-extrabold uppercase text-secondary">
+          <div className="min-h-10 text-2xl font-display font-extrabold uppercase text-secondary sm:text-3xl md:text-5xl">
             <TypingEffect phrases={["Web apps", "AI systems", "MVPs", "Automation"]} typingSpeed={110} deletingSpeed={55} pauseTime={1600} />
           </div>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto lg:mx-0 leading-relaxed">
+          <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg md:text-2xl lg:mx-0">
             Build, launch, and scale your digital products — from websites and apps to AI-powered systems and marketing campaigns.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-            <Link to="/lead-capture">
+          <div className="flex flex-col items-stretch justify-center gap-3 pt-2 sm:flex-row sm:items-center lg:justify-start">
+            <Link to="/lead-capture" className="w-full sm:w-auto">
               <Button 
                 size="lg" 
-                className="border-2 border-border bg-primary text-primary-foreground shadow-card hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-glow transition-all text-base px-8 py-6 rounded-sm uppercase tracking-widest group"
+                className="w-full border-2 border-border bg-primary text-primary-foreground shadow-card hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-glow transition-all text-sm sm:text-base rounded-sm uppercase tracking-widest group"
               >
                 Start Project
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link to="/case-studies">
+            <Link to="/case-studies" className="w-full sm:w-auto">
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="text-base px-8 py-6 rounded-sm border-2 border-border bg-background text-foreground shadow-card hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-glow uppercase tracking-widest"
+                className="w-full rounded-sm border-2 border-border bg-background text-sm text-foreground shadow-card hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-glow uppercase tracking-widest sm:text-base"
               >
                 View Case Studies
               </Button>
@@ -57,7 +57,7 @@ export const Hero = () => {
           </p>
           </div>
 
-          <div className="hidden lg:block">
+          <div className="mt-2 lg:mt-0">
             <div className="relative border-2 border-border bg-background p-3 shadow-brutal-xl">
               <div className="absolute -right-4 -top-4 h-20 w-20 border-2 border-border bg-secondary shadow-card" />
               <img

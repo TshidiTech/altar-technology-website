@@ -76,20 +76,20 @@ export default function Blog() {
       <FAQChatbot />
       <WhatsAppButton />
 
-      <section className="pt-32 pb-16 bg-dark text-dark-foreground">
+      <section className="pt-28 pb-12 bg-dark text-dark-foreground sm:pt-32 sm:pb-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-black">
+          <h1 className="text-4xl font-black sm:text-5xl md:text-7xl">
             Insights &
             <br />
             <span className="bg-gradient-primary bg-clip-text text-transparent">Expert Tips</span>
           </h1>
-          <p className="text-xl text-dark-foreground/80 max-w-2xl mx-auto mt-6">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-dark-foreground/80 sm:mt-6 sm:text-xl">
             Latest strategies, trends, and best practices in digital solutions and marketing
           </p>
         </div>
       </section>
 
-      <section className="py-24 bg-background">
+      <section className="py-12 bg-background sm:py-24">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
@@ -99,14 +99,14 @@ export default function Blog() {
                     <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   </div>
                 )}
-                <div className="p-6 space-y-4">
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                <div className="space-y-4 p-5 sm:p-6">
+                  <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground sm:gap-4">
                     <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">{post.category}</span>
                     <div className="flex items-center gap-1"><Clock className="h-3 w-3" />{post.readTime}</div>
                   </div>
                   <h3 className="text-xl font-bold group-hover:text-primary transition-colors leading-tight">{post.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{post.excerpt}</p>
-                  <div className="flex items-center justify-between pt-4 border-t border-border">
+                  <div className="flex flex-col gap-2 border-t border-border pt-4 sm:flex-row sm:items-center sm:justify-between">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Calendar className="h-4 w-4" />
                       {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}

@@ -8,7 +8,7 @@ export const WhatsAppButton = () => {
   return (
     <Button
       onClick={() => window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank')}
-      className="fixed bottom-24 left-6 h-14 w-14 rounded-full bg-[#25D366] hover:bg-[#20BA5A] shadow-lg hover:shadow-xl transition-all z-50"
+      className="fixed bottom-4 left-4 z-50 h-12 w-12 rounded-full bg-[#25D366] shadow-lg transition-all hover:bg-[#20BA5A] hover:shadow-xl sm:bottom-24 sm:left-6 sm:h-14 sm:w-14"
       size="icon"
     >
       <MessageCircle className="h-7 w-7 text-white" />

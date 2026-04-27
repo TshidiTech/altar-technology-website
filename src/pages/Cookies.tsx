@@ -6,15 +6,15 @@ export default function Cookies() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="pt-32 pb-24">
+      <main className="pt-28 pb-16 sm:pt-32 sm:pb-24">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-black mb-8">
+          <h1 className="mb-8 text-4xl font-black sm:text-5xl md:text-6xl">
             Cookie Policy
           </h1>
           
-          <div className="prose prose-lg max-w-none space-y-8">
+          <div className="prose max-w-none space-y-8 sm:prose-lg">
             <section>
-              <h2 className="text-3xl font-bold mb-4">1. What Are Cookies?</h2>
+              <h2 className="mb-4 text-2xl font-bold sm:text-3xl">1. What Are Cookies?</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Cookies are small text files stored on your device (computer, tablet, or mobile) when you visit websites. 
                 They help websites remember your preferences, analyze traffic, and provide a better user experience.

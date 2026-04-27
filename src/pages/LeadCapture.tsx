@@ -83,16 +83,16 @@ export default function LeadCapture() {
         </DialogContent>
       </Dialog>
 
-      <section className="pt-32 pb-24">
+      <section className="pt-28 pb-16 sm:pt-32 sm:pb-24">
         <div className="container mx-auto px-4 max-w-2xl">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-black mb-4">
+          <div className="mb-8 text-center sm:mb-12">
+            <h1 className="mb-4 text-3xl font-black sm:text-4xl md:text-5xl">
               Let's Build <span className="bg-gradient-primary bg-clip-text text-transparent">Something Great</span>
             </h1>
-            <p className="text-lg text-muted-foreground">Tell us about your project and we'll get back to you within 24 hours.</p>
+            <p className="text-base text-muted-foreground sm:text-lg">Tell us about your project and we'll get back to you within 24 hours.</p>
           </div>
 
-          <Card className="p-8 border-2 border-border">
+          <Card className="border-2 border-border p-5 sm:p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="name">Name *</Label>
@@ -104,14 +104,14 @@ export default function LeadCapture() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="service">Service Needed *</Label>
-                <select id="service" required value={formData.service} onChange={(e) => setFormData({...formData, service: e.target.value})} className="w-full px-3 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
+                <select id="service" required value={formData.service} onChange={(e) => setFormData({...formData, service: e.target.value})} className="min-h-11 w-full rounded-sm border-2 border-input bg-background px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
                   <option value="">Select a service</option>
                   {serviceOptions.map(s => <option key={s} value={s}>{s}</option>)}
                 </select>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="budget">Budget Range *</Label>
-                <select id="budget" required value={formData.budget} onChange={(e) => setFormData({...formData, budget: e.target.value})} className="w-full px-3 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
+                <select id="budget" required value={formData.budget} onChange={(e) => setFormData({...formData, budget: e.target.value})} className="min-h-11 w-full rounded-sm border-2 border-input bg-background px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
                   <option value="">Select budget range</option>
                   {budgetRanges.map(b => <option key={b} value={b}>{b}</option>)}
                 </select>
@@ -120,7 +120,7 @@ export default function LeadCapture() {
                 <Label htmlFor="message">Message</Label>
                 <Textarea id="message" rows={4} value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} placeholder="Tell us about your project..." />
               </div>
-              <Button type="submit" size="lg" className="w-full bg-gradient-primary hover:shadow-glow transition-all text-lg py-6 rounded-full">
+              <Button type="submit" size="lg" className="w-full bg-gradient-primary hover:shadow-glow transition-all text-base rounded-sm sm:text-lg">
                 Submit Enquiry
               </Button>
             </form>
@@ -129,7 +129,7 @@ export default function LeadCapture() {
           <div className="text-center mt-8">
             <p className="text-muted-foreground mb-3">Prefer to talk?</p>
             <a href="https://calendar.app.google/pkkvMSJBS3DQLPSW8" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="lg" className="gap-2 rounded-full">
+              <Button variant="outline" size="lg" className="w-full gap-2 rounded-sm sm:w-auto">
                 <Calendar className="h-5 w-5" />
                 Schedule a Call
               </Button>

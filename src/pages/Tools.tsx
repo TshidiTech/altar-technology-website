@@ -40,22 +40,22 @@ export default function Tools() {
       <FAQChatbot />
       <WhatsAppButton />
 
-      <section className="pt-32 pb-16 bg-gradient-dark text-dark-foreground">
-        <div className="container mx-auto px-4 grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-end">
+      <section className="pt-28 pb-12 bg-gradient-dark text-dark-foreground sm:pt-32 sm:pb-16">
+        <div className="container mx-auto grid gap-8 px-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
           <Badge className="mb-4 bg-primary/20 text-primary border-primary/30 rounded-md">AI Powered</Badge>
-          <h1 className="text-5xl md:text-7xl font-black leading-tight">
+          <h1 className="text-4xl font-black leading-tight sm:text-5xl md:text-7xl">
             <span className="bg-gradient-primary bg-clip-text text-transparent">Digital Tools</span>
             <br />& Products
           </h1>
-          <p className="text-xl text-dark-foreground/80 max-w-2xl mt-6">
+          <p className="mt-4 max-w-2xl text-base text-dark-foreground/80 sm:mt-6 sm:text-xl">
             Ready-to-deploy and custom-built digital solutions for every industry
           </p>
           </div>
-          <div className="grid grid-cols-3 gap-3 rounded-lg border border-primary/20 bg-background/10 p-4 backdrop-blur-xl">
+          <div className="grid grid-cols-3 gap-2 rounded-sm border-2 border-border bg-background/10 p-2 sm:gap-3 sm:p-4">
             {["Demo", "Scope", "Build"].map((item, index) => (
-              <div key={item} className="rounded-md bg-background/10 p-4 text-center">
-                <div className="text-2xl font-black text-accent">0{index + 1}</div>
+              <div key={item} className="rounded-sm bg-background/10 p-3 text-center sm:p-4">
+                <div className="text-xl font-black text-accent sm:text-2xl">0{index + 1}</div>
                 <div className="mt-2 text-sm font-bold">{item}</div>
               </div>
             ))}
@@ -73,13 +73,13 @@ export default function Tools() {
             <h2 className="text-3xl md:text-4xl font-black mb-3">TshidiAI — Customer Decision Intelligence</h2>
             <p className="text-muted-foreground">Turn fragmented customer data into revenue-driving decisions and automated actions.</p>
           </div>
-          <div className="flex justify-center gap-4">
-            <Link to="/tshidi-ai">
+          <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+            <Link to="/tshidi-ai" className="w-full sm:w-auto">
                 <Button className="bg-gradient-primary hover:shadow-glow gap-2 rounded-md">
                 <Brain className="h-4 w-4" /> Explore TshidiAI
               </Button>
             </Link>
-            <a href="https://aidataana.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <a href="https://aidataana.netlify.app/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <Button variant="outline" className="gap-2 rounded-md">
                 <ExternalLink className="h-4 w-4" /> Try Demo
               </Button>
@@ -116,7 +116,7 @@ export default function Tools() {
                     <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">{tool.name}</h3>
                     <p className="text-sm text-muted-foreground mb-3">{tool.desc}</p>
                     <p className="text-xs text-muted-foreground mb-4"><strong>Use case:</strong> {tool.useCase}</p>
-                    <div className="flex gap-2">
+                    <div className="grid gap-2 sm:grid-cols-2">
                       <a href={tool.demo} target="_blank" rel="noopener noreferrer" className="flex-1">
                         <Button size="sm" variant="outline" className="w-full gap-1">
                           <ExternalLink className="h-3 w-3" /> View Demo

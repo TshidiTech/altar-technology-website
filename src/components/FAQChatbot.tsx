@@ -114,7 +114,7 @@ export const FAQChatbot = () => {
       {!isOpen && (
         <Button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 h-14 w-14 rounded-full bg-gradient-primary hover:shadow-glow transition-all z-50"
+          className="fixed bottom-4 right-4 h-12 w-12 rounded-full bg-gradient-primary hover:shadow-glow transition-all z-50 sm:bottom-6 sm:right-6 sm:h-14 sm:w-14"
           size="icon"
         >
           <MessageCircle className="h-6 w-6" />
@@ -122,7 +122,7 @@ export const FAQChatbot = () => {
       )}
 
       {isOpen && (
-        <Card className="fixed bottom-6 right-6 w-[380px] h-[500px] flex flex-col z-50 shadow-2xl border-2 border-border overflow-hidden">
+        <Card className="fixed inset-x-3 bottom-3 z-50 flex h-[min(500px,calc(100svh-1.5rem))] flex-col overflow-hidden border-2 border-border shadow-2xl sm:inset-x-auto sm:bottom-6 sm:right-6 sm:w-[380px]">
           <div className="bg-gradient-primary p-4 flex items-center justify-between">
             <div>
               <h3 className="font-bold text-foreground">Brand Hype Assistant</h3>
@@ -146,7 +146,7 @@ export const FAQChatbot = () => {
                             <button
                               key={opt}
                               onClick={() => handleQuestion(opt)}
-                              className="text-xs px-3 py-1.5 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors text-left"
+                              className="min-h-10 rounded-sm border border-border bg-primary/10 px-3 py-2 text-left text-xs text-primary transition-colors hover:bg-primary/20"
                             >
                               {opt}
                             </button>
