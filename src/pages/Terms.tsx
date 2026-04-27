@@ -6,15 +6,15 @@ export default function Terms() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="pt-32 pb-24">
+      <main className="pt-28 pb-16 sm:pt-32 sm:pb-24">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-black mb-8">
+          <h1 className="mb-8 text-4xl font-black sm:text-5xl md:text-6xl">
             Terms & Conditions
           </h1>
           
-          <div className="prose prose-lg max-w-none space-y-8">
+          <div className="prose max-w-none space-y-8 sm:prose-lg">
             <section>
-              <h2 className="text-3xl font-bold mb-4">1. Services Agreement</h2>
+              <h2 className="mb-4 text-2xl font-bold sm:text-3xl">1. Services Agreement</h2>
               <p className="text-muted-foreground leading-relaxed">
                 By engaging Brand Hype Marketing ("the Agency"), you agree to these terms and conditions. 
                 All services are provided subject to the scope of work outlined in your signed proposal or agreement.
@@ -40,7 +40,7 @@ export default function Terms() {
 
             <section>
               <h2 className="text-3xl font-bold mb-4">3. No Refund Policy</h2>
-              <div className="bg-accent/30 border-l-4 border-primary p-6 rounded-lg">
+                <div className="border-l-4 border-primary bg-accent/30 p-4 sm:p-6">
                 <p className="text-foreground font-semibold mb-2">
                   IMPORTANT: All payments are non-refundable.
                 </p>
