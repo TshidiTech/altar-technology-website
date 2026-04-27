@@ -68,18 +68,18 @@ export default function Industries() {
       <FAQChatbot />
       <WhatsAppButton />
 
-      <section className="pt-32 pb-16 bg-dark text-dark-foreground">
+      <section className="pt-28 pb-12 bg-dark text-dark-foreground sm:pt-32 sm:pb-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-black mb-4">
+          <h1 className="mb-4 text-4xl font-black sm:text-5xl md:text-7xl">
             Industries <span className="bg-gradient-primary bg-clip-text text-transparent">We Serve</span>
           </h1>
-          <p className="text-xl text-dark-foreground/80 max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-base text-dark-foreground/80 sm:text-xl">
             Tailored digital solutions across key sectors
           </p>
         </div>
       </section>
 
-      <section className="py-6 border-b sticky top-16 bg-background/95 backdrop-blur-sm z-40">
+      <section className="sticky top-16 z-40 border-b bg-background py-4 sm:py-6">
         <div className="container mx-auto px-4">
           <div className="flex gap-3 overflow-x-auto pb-2 snap-x [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:bg-primary/40 [&::-webkit-scrollbar-thumb]:rounded-full">
             {industries.map((ind) => {
@@ -89,7 +89,7 @@ export default function Industries() {
                   key={ind.id}
                   variant={selected.id === ind.id ? "default" : "outline"}
                   onClick={() => setSelected(ind)}
-                  className="flex-shrink-0 gap-2 snap-start"
+                  className="flex-shrink-0 gap-2 snap-start text-xs sm:text-sm"
                 >
                   <Icon className="h-4 w-4" />
                   {ind.title}
@@ -100,19 +100,19 @@ export default function Industries() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-12 sm:py-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <div className={`w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br ${selected.color} flex items-center justify-center mb-6`}>
               {(() => { const Icon = selected.icon; return <Icon className="h-10 w-10 text-white" />; })()}
             </div>
-            <h2 className="text-4xl font-black mb-4">{selected.title}</h2>
-            <p className="text-lg text-muted-foreground">{selected.description}</p>
+             <h2 className="mb-4 text-3xl font-black sm:text-4xl">{selected.title}</h2>
+             <p className="text-base text-muted-foreground sm:text-lg">{selected.description}</p>
           </div>
 
-          <Card className="p-8 border-2 border-border mb-8">
+           <Card className="mb-8 border-2 border-border p-5 sm:p-8">
             <h3 className="text-xl font-bold mb-4">Related Projects</h3>
-            <div className="grid grid-cols-2 gap-4">
+             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
               {selected.projects.map((project, i) => (
                 <div key={i} className="flex items-center gap-3 p-4 bg-muted/30 rounded-lg">
                   <ArrowRight className="h-4 w-4 text-primary flex-shrink-0" />
@@ -124,7 +124,7 @@ export default function Industries() {
 
           <div className="text-center">
             <Link to="/lead-capture">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow rounded-full text-lg px-8 py-6 gap-2">
+               <Button size="lg" className="w-full bg-gradient-primary hover:shadow-glow rounded-sm text-base gap-2 sm:w-auto sm:text-lg">
                 Discuss Your Project <ArrowRight className="h-5 w-5" />
               </Button>
             </Link>
