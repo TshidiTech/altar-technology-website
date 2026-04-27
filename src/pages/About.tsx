@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight, Search, Paintbrush, RefreshCw, Rocket } from "lucide-react";
+import tshidiMoepi from "@/assets/tshidi-moepi-ceo.webp";
 
 const steps = [
   { icon: Search, title: "Discovery & Planning", desc: "We dive deep into your business, goals, audience, and challenges to define a clear project roadmap." },
@@ -34,7 +35,24 @@ export default function About() {
 
       <section className="py-12 sm:py-20">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="prose prose-lg max-w-none">
+          <div className="grid items-center gap-8 md:grid-cols-[0.9fr_1.1fr]">
+            <div className="relative border-2 border-border bg-background p-2 shadow-brutal-xl">
+              <img
+                src={tshidiMoepi}
+                alt="Tshidi Moepi, CEO and AI Workflow Engineer at Brand Hype"
+                className="aspect-[4/5] w-full object-cover object-[62%_42%]"
+                loading="lazy"
+                width={1280}
+                height={1600}
+              />
+              <div className="absolute -bottom-4 left-4 border-2 border-border bg-primary px-4 py-2 text-xs font-bold uppercase tracking-widest text-primary-foreground shadow-card sm:left-6">
+                Tshidi Moepi
+              </div>
+            </div>
+            <div className="prose prose-lg max-w-none">
+              <div className="mb-4 inline-flex border-2 border-border bg-accent px-3 py-2 text-xs font-bold uppercase tracking-widest shadow-card">
+                CEO / AI Workflow Engineer
+              </div>
             <p className="mb-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
               Brand Hype started as a social media marketing agency and has evolved into a full-service digital solutions company. We build custom websites, mobile apps, enterprise systems, AI-powered tools, and marketing campaigns that help businesses grow and scale.
             </p>
@@ -42,8 +60,9 @@ export default function About() {
               Our team combines strategic thinking with technical execution. Whether you're a startup launching your first MVP or an enterprise needing complex automation, we deliver solutions that are modern, intelligent, and built to scale.
             </p>
             <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Based in South Africa, we work with clients across industries — from BPO and logistics to beauty, education, and finance. Our approach is simple: understand the problem, design the solution, build it right, and support it long-term.
+              We work with ambitious clients across industries — from BPO and logistics to beauty, education, and finance. Our approach is simple: understand the problem, design the solution, build it right, and support it long-term.
             </p>
+            </div>
           </div>
         </div>
       </section>

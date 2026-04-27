@@ -13,7 +13,7 @@ export const Hero = () => {
           <div className="space-y-6 text-center lg:text-left sm:space-y-8">
           <div className="inline-flex max-w-full items-center gap-2 border-2 border-border bg-warning px-3 py-2 text-[0.68rem] font-bold uppercase tracking-widest shadow-card sm:px-4 sm:text-xs">
             <Sparkles className="h-4 w-4" />
-            Built in South Africa, for South Africa
+            Revenue-ready digital systems
           </div>
           
           <h1 className="text-4xl font-extrabold uppercase leading-[0.92] tracking-tight sm:text-5xl md:text-7xl lg:text-8xl">
