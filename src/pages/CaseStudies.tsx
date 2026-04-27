@@ -9,8 +9,13 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { ArrowRight, TrendingUp, Users, Eye } from "lucide-react";
 import jetourCar from "@/assets/jetour-car.avif";
+import platformDevices from "@/assets/brandhype-platform-devices.png";
+import servicesBg from "@/assets/services-bg.jpg";
+import heroBg from "@/assets/hero-bg.jpg";
+import lashesImage from "@/assets/medium-shot-plus-sized-woman-influencer_5.jpg";
+import contentCreator from "@/assets/content-creator-photography.jpg";
 
-const categories = ["All", "Systems", "Apps", "Websites", "AI Tools", "Marketing"];
+const categories = ["All", "Systems", "Apps", "Websites", "Marketing"];
 
 const caseStudies = [
   {
@@ -27,40 +32,30 @@ const caseStudies = [
     image: jetourCar,
   },
   {
-    brand: "IEMSA",
-    campaign: "Workforce Management System",
+    brand: "IEMSA x EFF",
+    campaign: "Voting Compliance System",
     category: "Systems",
-    description: "Built a custom workforce management and scheduling platform for IEMSA's BPO operations, automating shift allocation and performance tracking.",
+    description: "Built a secure voting compliance and member management platform with real-time verification workflows, reporting, and audit trail capabilities.",
     metrics: [
-      { label: "Efficiency Gain", value: "40%", icon: TrendingUp },
-      { label: "Users", value: "500+", icon: Users },
-      { label: "Uptime", value: "99.9%", icon: Eye }
+      { label: "Members", value: "50K+", icon: Users },
+      { label: "Accuracy", value: "99.8%", icon: TrendingUp },
+      { label: "Processing", value: "Real-time", icon: Eye }
     ],
     color: "from-blue-500 to-cyan-500",
+    image: platformDevices,
   },
   {
-    brand: "Araya Beauty",
+    brand: "Lovable Lashes",
     campaign: "E-commerce & Booking Platform",
     category: "Websites",
-    description: "Designed and developed a full e-commerce website with integrated booking system for Araya Beauty's salon and product line.",
+    description: "Designed and developed a full e-commerce website with integrated booking flows for Lovable Lashes' beauty services and product line.",
     metrics: [
       { label: "Online Sales", value: "+180%", icon: TrendingUp },
       { label: "Bookings", value: "2K+/mo", icon: Users },
       { label: "Load Time", value: "1.2s", icon: Eye }
     ],
     color: "from-pink-500 to-red-500",
-  },
-  {
-    brand: "EFF",
-    campaign: "Voting Compliance System",
-    category: "AI Tools",
-    description: "Developed a secure voting compliance and member management system with real-time analytics and audit trail capabilities.",
-    metrics: [
-      { label: "Members", value: "50K+", icon: Users },
-      { label: "Accuracy", value: "99.8%", icon: TrendingUp },
-      { label: "Processing", value: "Real-time", icon: Eye }
-    ],
-    color: "from-green-500 to-cyan-500",
+    image: lashesImage,
   },
   {
     brand: "Transport Co.",
@@ -73,6 +68,7 @@ const caseStudies = [
       { label: "Rating", value: "4.8★", icon: Eye }
     ],
     color: "from-orange-500 to-pink-500",
+    image: servicesBg,
   },
   {
     brand: "EduTech",
@@ -85,6 +81,7 @@ const caseStudies = [
       { label: "Completion", value: "78%", icon: TrendingUp }
     ],
     color: "from-purple-500 to-blue-500",
+    image: heroBg,
   },
 ];
 
