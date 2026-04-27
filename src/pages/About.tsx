@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight, Search, Paintbrush, RefreshCw, Rocket } from "lucide-react";
-import tshidiMoepi from "@/assets/tshidi-moepi-ceo.jpg";
+import tshidiMoepi from "@/assets/tshidi-moepi-ceo.webp";
 
 const steps = [
   { icon: Search, title: "Discovery & Planning", desc: "We dive deep into your business, goals, audience, and challenges to define a clear project roadmap." },
