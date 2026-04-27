@@ -152,20 +152,20 @@ export default function Calculator() {
       <FAQChatbot />
       <WhatsAppButton />
 
-      <section className="pt-32 pb-12 bg-gradient-dark text-dark-foreground">
-        <div className="container mx-auto px-4 grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-end">
+      <section className="pt-28 pb-10 bg-gradient-dark text-dark-foreground sm:pt-32 sm:pb-12">
+        <div className="container mx-auto grid gap-8 px-4 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>
           <CalcIcon className="h-16 w-16 text-primary mb-4" />
-          <h1 className="text-5xl md:text-7xl font-black">Project Calculator</h1>
-          <p className="text-xl text-dark-foreground/80 max-w-2xl mt-4">
+          <h1 className="text-4xl font-black sm:text-5xl md:text-7xl">Project Calculator</h1>
+          <p className="mt-4 max-w-2xl text-base text-dark-foreground/80 sm:text-xl">
             Get an estimated breakdown of your project costs
           </p>
           </div>
-          <div className="grid grid-cols-5 gap-2 rounded-lg border border-primary/20 bg-background/10 p-3 backdrop-blur-xl">
+          <div className="grid grid-cols-5 gap-1 rounded-sm border-2 border-border bg-background/10 p-2 sm:gap-2 sm:p-3">
             {["Services", "Goals", "Needs", "Tier", "Quote"].map((item, index) => (
-              <div key={item} className="rounded-md bg-background/10 p-3 text-center">
+              <div key={item} className="rounded-sm bg-background/10 p-2 text-center sm:p-3">
                 <div className="text-lg font-black text-accent">{index + 1}</div>
-                <div className="mt-1 text-xs font-bold">{item}</div>
+                <div className="mt-1 text-[0.65rem] font-bold sm:text-xs">{item}</div>
               </div>
             ))}
           </div>
@@ -203,21 +203,21 @@ export default function Calculator() {
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Step 1: Services */}
           {step === 1 && (
-            <Card className="p-8 border border-border shadow-card">
+            <Card className="p-5 border border-border shadow-card sm:p-8">
               <h2 className="text-2xl font-bold mb-6">Select Service Types *</h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 sm:gap-4">
                 {serviceTypes.map(s => (
                   <button
                     key={s.id}
                     onClick={() => toggle(selectedServices, s.id, setSelectedServices)}
-                    className={`p-4 rounded-md border-2 text-left font-medium transition-all ${selectedServices.includes(s.id) ? "border-primary bg-primary/10 text-primary shadow-glow" : "border-border hover:border-primary/30"}`}
+                    className={`min-h-12 p-4 rounded-sm border-2 text-left font-medium transition-all ${selectedServices.includes(s.id) ? "border-primary bg-primary/10 text-primary shadow-glow" : "border-border hover:border-primary/30"}`}
                   >
                     {s.label}
                   </button>
                 ))}
               </div>
               <div className="flex justify-end mt-8">
-                <Button onClick={() => setStep(2)} disabled={selectedServices.length === 0} className="gap-2">
+                <Button onClick={() => setStep(2)} disabled={selectedServices.length === 0} className="w-full gap-2 sm:w-auto">
                   Next <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>
@@ -226,7 +226,7 @@ export default function Calculator() {
 
           {/* Step 2: Goals */}
           {step === 2 && (
-            <Card className="p-8 border border-border shadow-card">
+            <Card className="p-5 border border-border shadow-card sm:p-8">
               <h2 className="text-2xl font-bold mb-6">Goals & Objectives * (Select all that apply)</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {goals.map(g => (
@@ -236,7 +236,7 @@ export default function Calculator() {
                   </div>
                 ))}
               </div>
-              <div className="flex justify-between mt-8">
+              <div className="flex flex-col-reverse gap-3 sm:flex-row sm:justify-between mt-8">
                 <Button variant="outline" onClick={() => setStep(1)} className="gap-2"><ArrowLeft className="h-4 w-4" /> Back</Button>
                 <Button onClick={() => setStep(3)} disabled={selectedGoals.length === 0} className="gap-2">Next <ArrowRight className="h-4 w-4" /></Button>
               </div>
@@ -245,7 +245,7 @@ export default function Calculator() {
 
           {/* Step 3: Challenges */}
           {step === 3 && (
-            <Card className="p-8 border border-border shadow-card">
+            <Card className="p-5 border border-border shadow-card sm:p-8">
               <h2 className="text-2xl font-bold mb-6">What are your biggest challenges? (Select all that apply)</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {challenges.map(c => (
@@ -255,7 +255,7 @@ export default function Calculator() {
                   </div>
                 ))}
               </div>
-              <div className="flex justify-between mt-8">
+              <div className="flex flex-col-reverse gap-3 sm:flex-row sm:justify-between mt-8">
                 <Button variant="outline" onClick={() => setStep(2)} className="gap-2"><ArrowLeft className="h-4 w-4" /> Back</Button>
                 <Button onClick={() => setStep(4)} className="gap-2">Next <ArrowRight className="h-4 w-4" /></Button>
               </div>
