@@ -21,36 +21,36 @@ export default function About() {
       <FAQChatbot />
       <WhatsAppButton />
 
-      <section className="pt-32 pb-16 bg-dark text-dark-foreground">
+      <section className="pt-28 pb-12 bg-dark text-dark-foreground sm:pt-32 sm:pb-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-black mb-4">
+          <h1 className="mb-4 text-4xl font-black sm:text-5xl md:text-7xl">
             About <span className="bg-gradient-primary bg-clip-text text-transparent">Brand Hype</span>
           </h1>
-          <p className="text-xl text-dark-foreground/80 max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-base text-dark-foreground/80 sm:text-xl">
             A scalable digital solutions company building the future, one project at a time.
           </p>
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-12 sm:py-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="mb-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
               Brand Hype started as a social media marketing agency and has evolved into a full-service digital solutions company. We build custom websites, mobile apps, enterprise systems, AI-powered tools, and marketing campaigns that help businesses grow and scale.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="mb-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
               Our team combines strategic thinking with technical execution. Whether you're a startup launching your first MVP or an enterprise needing complex automation, we deliver solutions that are modern, intelligent, and built to scale.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
               Based in South Africa, we work with clients across industries — from BPO and logistics to beauty, education, and finance. Our approach is simple: understand the problem, design the solution, build it right, and support it long-term.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 bg-muted/30 sm:py-20">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-4xl font-black text-center mb-16">
+          <h2 className="mb-10 text-center text-3xl font-black sm:mb-16 sm:text-4xl">
             How We <span className="bg-gradient-primary bg-clip-text text-transparent">Work</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -71,18 +71,18 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-dark text-dark-foreground">
+      <section className="py-12 bg-dark text-dark-foreground sm:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-black mb-4">Let's Build <span className="bg-gradient-primary bg-clip-text text-transparent">Together</span></h2>
-          <p className="text-xl text-dark-foreground/80 mb-8">Ready to start your next project?</p>
+          <h2 className="mb-4 text-3xl font-black sm:text-4xl">Let's Build <span className="bg-gradient-primary bg-clip-text text-transparent">Together</span></h2>
+          <p className="mb-8 text-base text-dark-foreground/80 sm:text-xl">Ready to start your next project?</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/lead-capture">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow rounded-full text-lg px-8 py-6 gap-2">
+            <Link to="/lead-capture" className="w-full sm:w-auto">
+              <Button size="lg" className="w-full bg-gradient-primary hover:shadow-glow rounded-sm text-base gap-2 sm:text-lg">
                 Start Project <ArrowRight className="h-5 w-5" />
               </Button>
             </Link>
-            <a href="https://calendar.app.google/pkkvMSJBS3DQLPSW8" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="rounded-full text-lg px-8 py-6">
+            <a href="https://calendar.app.google/pkkvMSJBS3DQLPSW8" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full rounded-sm text-base sm:text-lg">
                 Schedule a Call
               </Button>
             </a>
