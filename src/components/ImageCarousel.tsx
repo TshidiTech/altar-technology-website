@@ -28,16 +28,16 @@ export const ImageCarousel = ({ images }: ImageCarouselProps) => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden py-12 bg-background/50">
+    <div className="relative overflow-hidden py-10 bg-background/50 sm:py-12">
       <div
         ref={scrollRef}
-        className="flex gap-8 overflow-x-hidden"
+        className="flex gap-4 overflow-x-hidden sm:gap-8"
         style={{ scrollBehavior: 'auto' }}
       >
         {[...images, ...images].map((image, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-64 h-48 rounded-lg overflow-hidden shadow-lg"
+            className="h-40 w-52 flex-shrink-0 overflow-hidden rounded-sm border-2 border-border shadow-card sm:h-48 sm:w-64"
           >
             <img
               src={image}
