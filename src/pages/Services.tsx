@@ -83,13 +83,13 @@ export default function Services() {
       <FAQChatbot />
       <WhatsAppButton />
 
-      <section className="pt-32 pb-16 bg-dark text-dark-foreground">
+      <section className="pt-28 pb-12 bg-dark text-dark-foreground sm:pt-32 sm:pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h1 className="text-5xl md:text-7xl font-black">
+            <h1 className="text-4xl font-black sm:text-5xl md:text-7xl">
               Our <span className="bg-gradient-primary bg-clip-text text-transparent">Services</span>
             </h1>
-            <p className="text-xl text-dark-foreground/80 max-w-2xl mx-auto">
+            <p className="mx-auto max-w-2xl text-base text-dark-foreground/80 sm:text-xl">
               End-to-end digital solutions — from development to marketing
             </p>
           </div>
@@ -97,7 +97,7 @@ export default function Services() {
       </section>
 
       {/* Service Nav */}
-      <section className="py-6 border-b sticky top-16 bg-background/95 backdrop-blur-sm z-40">
+      <section className="sticky top-16 z-40 border-b bg-background py-4 sm:py-6">
         <div className="container mx-auto px-4">
           <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-muted/20 [&::-webkit-scrollbar-thumb]:bg-primary/40 [&::-webkit-scrollbar-thumb]:rounded-full">
             {serviceCategories.map((cat) => {
@@ -107,7 +107,7 @@ export default function Services() {
                   key={cat.id}
                   variant={selected.id === cat.id ? "default" : "outline"}
                   onClick={() => setSelected(cat)}
-                  className="flex-shrink-0 gap-2 snap-start"
+                  className="flex-shrink-0 gap-2 snap-start text-xs sm:text-sm"
                 >
                   <Icon className="h-4 w-4" />
                   {cat.title}
@@ -119,15 +119,15 @@ export default function Services() {
       </section>
 
       {/* Service Detail */}
-      <section className="py-20">
+      <section className="py-12 sm:py-20">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="mb-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-black mb-4">{selected.title}</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{selected.overview}</p>
+          <div className="mb-8 text-center sm:mb-12">
+            <h2 className="mb-4 text-3xl font-black sm:text-4xl md:text-5xl">{selected.title}</h2>
+            <p className="mx-auto max-w-3xl text-base text-muted-foreground sm:text-lg">{selected.overview}</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card className="p-8 border-2 border-border">
+            <Card className="p-5 border-2 border-border sm:p-8">
               <h3 className="text-2xl font-bold mb-6">What's Included</h3>
               <ul className="space-y-3">
                 {selected.included.map((item, i) => (
@@ -139,7 +139,7 @@ export default function Services() {
               </ul>
             </Card>
 
-            <Card className="p-8 border-2 border-border">
+            <Card className="p-5 border-2 border-border sm:p-8">
               <h3 className="text-2xl font-bold mb-6">Use Cases</h3>
               <ul className="space-y-3">
                 {selected.useCases.map((uc, i) => (
@@ -151,7 +151,7 @@ export default function Services() {
               </ul>
               <div className="mt-8 p-6 bg-muted/30 rounded-lg">
                 <h4 className="font-bold mb-3">Pricing Tiers</h4>
-                <div className="grid grid-cols-3 gap-4 text-center">
+                 <div className="grid grid-cols-1 gap-3 text-center sm:grid-cols-3 sm:gap-4">
                   <div>
                     <p className="text-xs text-muted-foreground mb-1">Starter</p>
                     <p className="font-bold text-primary">{selected.pricing.starter}</p>
@@ -171,7 +171,7 @@ export default function Services() {
 
           <div className="text-center">
             <Link to="/lead-capture">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow rounded-full text-lg px-8 py-6 gap-2">
+              <Button size="lg" className="w-full bg-gradient-primary hover:shadow-glow rounded-sm text-base gap-2 sm:w-auto sm:text-lg">
                 Get Started <ArrowRight className="h-5 w-5" />
               </Button>
             </Link>
