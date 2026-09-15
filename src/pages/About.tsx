@@ -6,14 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight, Search, Paintbrush, RefreshCw, Rocket } from "lucide-react";
-import tshidiMoepi from "@/assets/team/tshidi-moepi.png.asset.json";
-import kutlwanoTake from "@/assets/team/kutlwano-take.jpg.asset.json";
-import dingaanManjate from "@/assets/team/dingaan-manjate.jpg.asset.json";
-import zusipheMvovo from "@/assets/team/zusiphe-mvovo.jpg.asset.json";
-import katlegoMalaka from "@/assets/team/katlego-malaka.png.asset.json";
-import milaniSani from "@/assets/team/milani-sani.jpg.asset.json";
-import boitumeloLatola from "@/assets/team/boitumelo-latola.jpg.asset.json";
-import tshepoMasinge from "@/assets/team/tshepo-masinge.png.asset.json";
+import tshidiMoepi from "@/assets/tshidi-moepi-ceo.webp";
 
 const steps = [
   { icon: Search, title: "Discovery & Planning", desc: "We dive deep into your business, goals, audience, and challenges to define a clear project roadmap." },
@@ -21,18 +14,6 @@ const steps = [
   { icon: RefreshCw, title: "Review & Refine", desc: "We iterate based on your feedback, test thoroughly, and optimize for performance and usability." },
   { icon: Rocket, title: "Launch & Training", desc: "We deploy your solution, provide hands-on training, and offer ongoing support to ensure success." },
 ];
-
-const team = [
-  { name: "Tshidi Moepi", role: "CEO / AI Workflow Engineer", image: tshidiMoepi.url },
-  { name: "Dingaan Manjate", role: "CTO", image: dingaanManjate.url },
-  { name: "Boitumelo Latola", role: "Operations Manager", image: boitumeloLatola.url },
-  { name: "Kutlwano Take", role: "Senior Developer", image: kutlwanoTake.url },
-  { name: "Zusiphe Mvovo", role: "Intern", image: zusipheMvovo.url },
-  { name: "Katlego Malaka", role: "Intern", image: katlegoMalaka.url },
-  { name: "Milani Sani", role: "Intern", image: milaniSani.url },
-  { name: "Tshepo Masinge", role: "Intern", image: tshepoMasinge.url },
-];
-
 
 export default function About() {
   return (
@@ -57,7 +38,7 @@ export default function About() {
           <div className="grid items-center gap-8 md:grid-cols-[0.9fr_1.1fr]">
             <div className="relative border-2 border-border bg-background p-2 shadow-brutal-xl">
               <img
-                src={tshidiMoepi.url}
+                src={tshidiMoepi}
                 alt="Tshidi Moepi, CEO and AI Workflow Engineer at Brand Hype"
                 className="aspect-[4/5] w-full object-cover object-[62%_42%]"
                 loading="lazy"
@@ -83,42 +64,6 @@ export default function About() {
             </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="border-y-2 border-border bg-accent py-12 sm:py-20">
-        <div className="container mx-auto max-w-5xl px-4">
-          <div className="mb-10 max-w-2xl sm:mb-12">
-            <div className="mb-3 inline-flex border-2 border-border bg-primary px-3 py-2 text-xs font-bold uppercase tracking-widest text-primary-foreground shadow-card">
-              The People Behind The Work
-            </div>
-            <h2 className="text-3xl font-black sm:text-4xl">Meet Our Team</h2>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
-            {team.map((member, index) => (
-              <article key={member.name} className="border-2 border-border bg-background p-2 shadow-brutal-sm">
-                <div className="relative overflow-hidden border-2 border-border bg-muted">
-                  <img
-                    src={member.image}
-                    alt={`${member.name}, ${member.role} at Brand Hype`}
-                    className="aspect-[4/5] w-full object-cover object-top"
-                    loading="lazy"
-                    width={600}
-                    height={750}
-                  />
-                  <span className="absolute left-2 top-2 border-2 border-border bg-secondary px-2 py-1 text-xs font-black text-secondary-foreground">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                </div>
-                <div className="px-1 pb-2 pt-3">
-                  <h4 className="text-base font-black sm:text-lg">{member.name}</h4>
-                  <p className="mt-1 text-xs font-bold uppercase tracking-widest text-primary">{member.role}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-
         </div>
       </section>
 
