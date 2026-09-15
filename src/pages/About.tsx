@@ -22,18 +22,17 @@ const steps = [
   { icon: Rocket, title: "Launch & Training", desc: "We deploy your solution, provide hands-on training, and offer ongoing support to ensure success." },
 ];
 
-const leadership = [
-  { name: "Dingaan Manjate", role: "CTO", image: dingaanManjate.url, position: "object-center" },
-  { name: "Boitumelo Latola", role: "Operations Manager", image: boitumeloLatola.url, position: "object-center" },
-  { name: "Kutlwano Take", role: "Senior Developer", image: kutlwanoTake.url, position: "object-center" },
+const team = [
+  { name: "Tshidi Moepi", role: "CEO / AI Workflow Engineer", image: tshidiMoepi.url },
+  { name: "Dingaan Manjate", role: "CTO", image: dingaanManjate.url },
+  { name: "Boitumelo Latola", role: "Operations Manager", image: boitumeloLatola.url },
+  { name: "Kutlwano Take", role: "Senior Developer", image: kutlwanoTake.url },
+  { name: "Zusiphe Mvovo", role: "Intern", image: zusipheMvovo.url },
+  { name: "Katlego Malaka", role: "Intern", image: katlegoMalaka.url },
+  { name: "Milani Sani", role: "Intern", image: milaniSani.url },
+  { name: "Tshepo Masinge", role: "Intern", image: tshepoMasinge.url },
 ];
 
-const interns = [
-  { name: "Zusiphe Mvovo", image: zusipheMvovo.url, position: "object-top" },
-  { name: "Katlego Malaka", image: katlegoMalaka.url, position: "object-center" },
-  { name: "Milani Sani", image: milaniSani.url, position: "object-top" },
-  { name: "Tshepo Masinge", image: tshepoMasinge.url, position: "object-center" },
-];
 
 export default function About() {
   return (
@@ -96,54 +95,30 @@ export default function About() {
             <h2 className="text-3xl font-black sm:text-4xl">Meet Our Team</h2>
           </div>
 
-          <div className="mb-12">
-            <h3 className="mb-5 border-b-2 border-border pb-3 text-sm font-black uppercase tracking-widest">Leadership</h3>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {leadership.map((member, index) => (
-                <article key={member.name} className="border-2 border-border bg-background p-2 shadow-brutal">
-                  <div className="relative overflow-hidden border-2 border-border bg-muted">
-                    <img
-                      src={member.image}
-                      alt={`${member.name}, ${member.role} at Brand Hype`}
-                      className={`aspect-[4/5] w-full object-cover ${member.position}`}
-                      loading="lazy"
-                      width={600}
-                      height={750}
-                    />
-                    <span className="absolute left-3 top-3 border-2 border-border bg-secondary px-2 py-1 text-xs font-black text-secondary-foreground">
-                      0{index + 2}
-                    </span>
-                  </div>
-                  <div className="px-2 pb-3 pt-4">
-                    <h4 className="text-xl font-black">{member.name}</h4>
-                    <p className="mt-1 text-sm font-bold uppercase tracking-widest text-primary">{member.role}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3 className="mb-5 border-b-2 border-border pb-3 text-sm font-black uppercase tracking-widest">Emerging Talent</h3>
-            <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
-              {interns.map((member) => (
-                <article key={member.name} className="border-2 border-border bg-background p-2 shadow-brutal-sm">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+            {team.map((member, index) => (
+              <article key={member.name} className="border-2 border-border bg-background p-2 shadow-brutal-sm">
+                <div className="relative overflow-hidden border-2 border-border bg-muted">
                   <img
                     src={member.image}
-                    alt={`${member.name}, Intern at Brand Hype`}
-                    className={`aspect-[4/5] w-full border-2 border-border bg-muted object-cover ${member.position}`}
+                    alt={`${member.name}, ${member.role} at Brand Hype`}
+                    className="aspect-[4/5] w-full object-cover object-top"
                     loading="lazy"
-                    width={500}
-                    height={625}
+                    width={600}
+                    height={750}
                   />
-                  <div className="px-1 pb-2 pt-3">
-                    <h4 className="text-base font-black sm:text-lg">{member.name}</h4>
-                    <p className="mt-1 text-xs font-bold uppercase tracking-widest text-muted-foreground">Intern</p>
-                  </div>
-                </article>
-              ))}
-            </div>
+                  <span className="absolute left-2 top-2 border-2 border-border bg-secondary px-2 py-1 text-xs font-black text-secondary-foreground">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <div className="px-1 pb-2 pt-3">
+                  <h4 className="text-base font-black sm:text-lg">{member.name}</h4>
+                  <p className="mt-1 text-xs font-bold uppercase tracking-widest text-primary">{member.role}</p>
+                </div>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
