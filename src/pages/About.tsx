@@ -22,18 +22,17 @@ const steps = [
   { icon: Rocket, title: "Launch & Training", desc: "We deploy your solution, provide hands-on training, and offer ongoing support to ensure success." },
 ];
 
-const leadership = [
-  { name: "Dingaan Manjate", role: "CTO", image: dingaanManjate.url, position: "object-center" },
-  { name: "Boitumelo Latola", role: "Operations Manager", image: boitumeloLatola.url, position: "object-center" },
-  { name: "Kutlwano Take", role: "Senior Developer", image: kutlwanoTake.url, position: "object-center" },
+const team = [
+  { name: "Tshidi Moepi", role: "CEO / AI Workflow Engineer", image: tshidiMoepi.url },
+  { name: "Dingaan Manjate", role: "CTO", image: dingaanManjate.url },
+  { name: "Boitumelo Latola", role: "Operations Manager", image: boitumeloLatola.url },
+  { name: "Kutlwano Take", role: "Senior Developer", image: kutlwanoTake.url },
+  { name: "Zusiphe Mvovo", role: "Intern", image: zusipheMvovo.url },
+  { name: "Katlego Malaka", role: "Intern", image: katlegoMalaka.url },
+  { name: "Milani Sani", role: "Intern", image: milaniSani.url },
+  { name: "Tshepo Masinge", role: "Intern", image: tshepoMasinge.url },
 ];
 
-const interns = [
-  { name: "Zusiphe Mvovo", image: zusipheMvovo.url, position: "object-top" },
-  { name: "Katlego Malaka", image: katlegoMalaka.url, position: "object-center" },
-  { name: "Milani Sani", image: milaniSani.url, position: "object-top" },
-  { name: "Tshepo Masinge", image: tshepoMasinge.url, position: "object-center" },
-];
 
 export default function About() {
   return (
