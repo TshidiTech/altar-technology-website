@@ -6,13 +6,33 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight, Search, Paintbrush, RefreshCw, Rocket } from "lucide-react";
-import tshidiMoepi from "@/assets/tshidi-moepi-ceo.webp";
+import tshidiMoepi from "@/assets/team/tshidi-moepi.png.asset.json";
+import kutlwanoTake from "@/assets/team/kutlwano-take.jpg.asset.json";
+import dingaanManjate from "@/assets/team/dingaan-manjate.jpg.asset.json";
+import zusipheMvovo from "@/assets/team/zusiphe-mvovo.jpg.asset.json";
+import katlegoMalaka from "@/assets/team/katlego-malaka.png.asset.json";
+import milaniSani from "@/assets/team/milani-sani.jpg.asset.json";
+import boitumeloLatola from "@/assets/team/boitumelo-latola.jpg.asset.json";
+import tshepoMasinge from "@/assets/team/tshepo-masinge.png.asset.json";
 
 const steps = [
   { icon: Search, title: "Discovery & Planning", desc: "We dive deep into your business, goals, audience, and challenges to define a clear project roadmap." },
   { icon: Paintbrush, title: "Design & Development", desc: "Our team designs and builds your solution with modern tools, clean architecture, and pixel-perfect UI." },
   { icon: RefreshCw, title: "Review & Refine", desc: "We iterate based on your feedback, test thoroughly, and optimize for performance and usability." },
   { icon: Rocket, title: "Launch & Training", desc: "We deploy your solution, provide hands-on training, and offer ongoing support to ensure success." },
+];
+
+const leadership = [
+  { name: "Dingaan Manjate", role: "CTO", image: dingaanManjate.url, position: "object-center" },
+  { name: "Boitumelo Latola", role: "Operations Manager", image: boitumeloLatola.url, position: "object-center" },
+  { name: "Kutlwano Take", role: "Senior Developer", image: kutlwanoTake.url, position: "object-center" },
+];
+
+const interns = [
+  { name: "Zusiphe Mvovo", image: zusipheMvovo.url, position: "object-top" },
+  { name: "Katlego Malaka", image: katlegoMalaka.url, position: "object-center" },
+  { name: "Milani Sani", image: milaniSani.url, position: "object-top" },
+  { name: "Tshepo Masinge", image: tshepoMasinge.url, position: "object-center" },
 ];
 
 export default function About() {
@@ -38,7 +58,7 @@ export default function About() {
           <div className="grid items-center gap-8 md:grid-cols-[0.9fr_1.1fr]">
             <div className="relative border-2 border-border bg-background p-2 shadow-brutal-xl">
               <img
-                src={tshidiMoepi}
+                src={tshidiMoepi.url}
                 alt="Tshidi Moepi, CEO and AI Workflow Engineer at Brand Hype"
                 className="aspect-[4/5] w-full object-cover object-[62%_42%]"
                 loading="lazy"
@@ -62,6 +82,66 @@ export default function About() {
             <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
               We work with ambitious clients across industries — from BPO and logistics to beauty, education, and finance. Our approach is simple: understand the problem, design the solution, build it right, and support it long-term.
             </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y-2 border-border bg-accent py-12 sm:py-20">
+        <div className="container mx-auto max-w-5xl px-4">
+          <div className="mb-10 max-w-2xl sm:mb-12">
+            <div className="mb-3 inline-flex border-2 border-border bg-primary px-3 py-2 text-xs font-bold uppercase tracking-widest text-primary-foreground shadow-card">
+              The People Behind The Work
+            </div>
+            <h2 className="text-3xl font-black sm:text-4xl">Meet Our Team</h2>
+          </div>
+
+          <div className="mb-12">
+            <h3 className="mb-5 border-b-2 border-border pb-3 text-sm font-black uppercase tracking-widest">Leadership</h3>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {leadership.map((member, index) => (
+                <article key={member.name} className="border-2 border-border bg-background p-2 shadow-brutal">
+                  <div className="relative overflow-hidden border-2 border-border bg-muted">
+                    <img
+                      src={member.image}
+                      alt={`${member.name}, ${member.role} at Brand Hype`}
+                      className={`aspect-[4/5] w-full object-cover ${member.position}`}
+                      loading="lazy"
+                      width={600}
+                      height={750}
+                    />
+                    <span className="absolute left-3 top-3 border-2 border-border bg-secondary px-2 py-1 text-xs font-black text-secondary-foreground">
+                      0{index + 2}
+                    </span>
+                  </div>
+                  <div className="px-2 pb-3 pt-4">
+                    <h4 className="text-xl font-black">{member.name}</h4>
+                    <p className="mt-1 text-sm font-bold uppercase tracking-widest text-primary">{member.role}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="mb-5 border-b-2 border-border pb-3 text-sm font-black uppercase tracking-widest">Emerging Talent</h3>
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+              {interns.map((member) => (
+                <article key={member.name} className="border-2 border-border bg-background p-2 shadow-brutal-sm">
+                  <img
+                    src={member.image}
+                    alt={`${member.name}, Intern at Brand Hype`}
+                    className={`aspect-[4/5] w-full border-2 border-border bg-muted object-cover ${member.position}`}
+                    loading="lazy"
+                    width={500}
+                    height={625}
+                  />
+                  <div className="px-1 pb-2 pt-3">
+                    <h4 className="text-base font-black sm:text-lg">{member.name}</h4>
+                    <p className="mt-1 text-xs font-bold uppercase tracking-widest text-muted-foreground">Intern</p>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </div>
