@@ -1,39 +1,39 @@
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { 
-  Globe, Smartphone, Settings, Bot, Megaphone, Code
+  Sparkles, Headphones, BarChart3, Megaphone, Settings, Layers
 } from "lucide-react";
 
 const services = [
   {
-    icon: Globe,
-    title: "Web Development",
-    description: "Custom websites, e-commerce platforms, and web applications built for performance and conversion."
+    icon: Sparkles,
+    title: "Customer Experience",
+    description: "Journey design, self-service and engagement technology that makes every customer interaction easier."
   },
   {
-    icon: Smartphone,
-    title: "App & Platform Development",
-    description: "Native and cross-platform apps, MVPs, and scalable digital platforms."
+    icon: Headphones,
+    title: "Contact Centre Technology",
+    description: "Omnichannel contact centre platforms, routing, quality and AI assistance for service teams."
   },
   {
-    icon: Settings,
-    title: "Systems & Automation",
-    description: "CRM systems, dashboards, internal tools, and workflow automation for operational efficiency."
-  },
-  {
-    icon: Bot,
-    title: "AI & Automation Solutions",
-    description: "Intelligent chatbots, predictive systems, and full automation pipelines powered by AI."
+    icon: BarChart3,
+    title: "Business Intelligence",
+    description: "Data warehousing, dashboards and reporting that turn scattered data into decisions."
   },
   {
     icon: Megaphone,
-    title: "Digital Marketing",
-    description: "Social media strategy, influencer marketing, paid advertising, content creation, and analytics."
+    title: "Digital Marketing Intelligence",
+    description: "Campaign, audience and attribution intelligence that shows what actually drives growth."
   },
   {
-    icon: Code,
-    title: "Prototypes & MVPs",
-    description: "Rapid prototyping and minimum viable products to validate your ideas fast."
+    icon: Settings,
+    title: "Business Operations",
+    description: "Workflow automation, internal systems and integrations that remove manual effort."
+  },
+  {
+    icon: Layers,
+    title: "Digital Platforms",
+    description: "Web, mobile and cloud platforms engineered to scale with your organisation."
   }
 ];
 

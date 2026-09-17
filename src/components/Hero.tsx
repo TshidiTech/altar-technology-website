@@ -13,22 +13,22 @@ export const Hero = () => {
           <div className="space-y-6 text-center lg:text-left sm:space-y-8">
           <div className="inline-flex max-w-full items-center gap-2 border-2 border-border bg-warning px-3 py-2 text-[0.68rem] font-bold uppercase tracking-widest shadow-card sm:px-4 sm:text-xs">
             <Sparkles className="h-4 w-4" />
-            Revenue-ready digital systems
+            AI • Data • Cloud • Software
           </div>
           
           <h1 className="text-4xl font-extrabold uppercase leading-[0.92] tracking-tight sm:text-5xl md:text-7xl lg:text-8xl">
-            Build the
+            Build.
             <br />
-            <span className="text-primary">digital engine</span>
+            <span className="text-primary">Transform.</span>
             <br />
-            your business runs on.
+            Grow.
           </h1>
           <div className="min-h-10 text-2xl font-display font-extrabold uppercase text-secondary sm:text-3xl md:text-5xl">
-            <TypingEffect phrases={["Web apps", "AI systems", "MVPs", "Automation"]} typingSpeed={110} deletingSpeed={55} pauseTime={1600} />
+            <TypingEffect phrases={["Artificial intelligence", "Data platforms", "Cloud systems", "Custom software"]} typingSpeed={110} deletingSpeed={55} pauseTime={1600} />
           </div>
           
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg md:text-2xl lg:mx-0">
-            Build, launch, and scale your digital products — from websites and apps to AI-powered systems and marketing campaigns.
+            We build technology that helps organisations work smarter, serve customers better and grow faster — starting with the problem, not the technology.
           </p>
           
           <div className="flex flex-col items-stretch justify-center gap-3 pt-2 sm:flex-row sm:items-center lg:justify-start">
@@ -53,7 +53,7 @@ export const Hero = () => {
           </div>
           
           <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
-            Free consultation / No commitment required / ZAR-first
+            Free discovery session / No commitment / South African built
           </p>
           </div>
 
@@ -62,13 +62,15 @@ export const Hero = () => {
               <div className="absolute -right-4 -top-4 h-20 w-20 border-2 border-border bg-secondary shadow-card" />
               <img
                 src={platformDevices}
-                alt="Brand Hype platform displayed on desktop and smartphone"
+                alt="Altar Technology platform shown on desktop and smartphone"
                 className="relative z-10 aspect-[4/3] w-full object-cover"
                 width={1280}
                 height={960}
+                decoding="async"
+                fetchPriority="high"
               />
               <div className="absolute -bottom-4 left-8 z-20 border-2 border-border bg-warning px-4 py-2 text-xs font-bold uppercase tracking-widest shadow-card">
-                Platform-ready builds
+                Enterprise-ready platforms
               </div>
             </div>
           </div>
