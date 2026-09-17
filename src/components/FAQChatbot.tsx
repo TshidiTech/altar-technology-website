@@ -26,7 +26,7 @@ const faqs: Record<string, { answer: string; relatedQuestions: string[] }> = {
     relatedQuestions: ["How can I start a project?", "What's the payment process?", "View pricing calculator", "What services do you offer?"]
   },
   "How can I start a project?": {
-    answer: "Easy! Submit an enquiry on our Lead Capture page, email us at admin@brandhype.co.za, WhatsApp us on 067 062 2953, or schedule a call via our booking link. We'll respond within 24 hours.",
+    answer: "Easy! Submit an enquiry on our Lead Capture page, email us at hello@altartechnology.co.za, WhatsApp us on 067 062 2953, or schedule a call via our booking link. We'll respond within 24 hours.",
     relatedQuestions: ["What services do you offer?", "How much does it cost?", "What's the payment process?", "View case studies"]
   },
   "What's the payment process?": {
@@ -74,7 +74,7 @@ export const FAQChatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       type: "bot",
-      text: "👋 Hi! I'm the Brand Hype assistant. I can help you learn about our digital solutions, pricing, and how to get started. What would you like to know?",
+      text: "👋 Hi! I'm the Altar Technology assistant. I can help you learn about our digital solutions, pricing, and how to get started. What would you like to know?",
       options: initialPrompts,
     },
   ]);
@@ -94,7 +94,7 @@ export const FAQChatbot = () => {
     } else {
       const botMessage: Message = {
         type: "bot",
-        text: "I don't have an answer for that specific question. Please contact us at admin@brandhype.co.za or WhatsApp 067 062 2953 for more information.",
+        text: "I don't have an answer for that specific question. Please contact us at hello@altartechnology.co.za or WhatsApp 067 062 2953 for more information.",
         options: initialPrompts,
       };
       setMessages((prev) => [...prev, userMessage, botMessage]);
@@ -125,7 +125,7 @@ export const FAQChatbot = () => {
         <Card className="fixed inset-x-3 bottom-3 z-50 flex h-[min(500px,calc(100svh-1.5rem))] flex-col overflow-hidden border-2 border-border shadow-2xl sm:inset-x-auto sm:bottom-6 sm:right-6 sm:w-[380px]">
           <div className="bg-gradient-primary p-4 flex items-center justify-between">
             <div>
-              <h3 className="font-bold text-foreground">Brand Hype Assistant</h3>
+              <h3 className="font-bold text-foreground">Altar Technology Assistant</h3>
               <p className="text-xs text-foreground/70">Digital Solutions Expert</p>
             </div>
             <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="text-foreground hover:bg-background/20">

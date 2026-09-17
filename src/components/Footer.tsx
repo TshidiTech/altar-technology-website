@@ -9,21 +9,21 @@ export const Footer = () => {
           <div>
             <h3 className="mb-4 flex items-center gap-3 text-2xl font-display font-extrabold uppercase">
               <span className="h-4 w-4 border-2 border-background bg-primary shadow-[2px_2px_0_0_hsl(var(--background))]" />
-              Brand Hype.
+              Altar Technology
             </h3>
             <p className="text-background/70 mb-4">
-              Your partner in digital solutions — from web & app development to AI automation and marketing.
+              Build. Transform. Grow. AI, data, cloud and software solutions for South African organisations.
             </p>
           </div>
 
           <div>
-            <h4 className="font-bold mb-4 uppercase tracking-widest text-xs">Services</h4>
+            <h4 className="font-bold mb-4 uppercase tracking-widest text-xs">Solutions</h4>
             <ul className="space-y-2 text-background/70">
-              <li><Link to="/services" className="hover:text-primary transition-colors">Web Development</Link></li>
-              <li><Link to="/services" className="hover:text-primary transition-colors">App & Platform Development</Link></li>
-              <li><Link to="/services" className="hover:text-primary transition-colors">Systems & Automation</Link></li>
-              <li><Link to="/services" className="hover:text-primary transition-colors">AI & Automation Solutions</Link></li>
-              <li><Link to="/services" className="hover:text-primary transition-colors">Marketing</Link></li>
+              <li><Link to="/services" className="hover:text-primary transition-colors">Customer Experience</Link></li>
+              <li><Link to="/services" className="hover:text-primary transition-colors">Contact Centre Technology</Link></li>
+              <li><Link to="/services" className="hover:text-primary transition-colors">Business Intelligence</Link></li>
+              <li><Link to="/services" className="hover:text-primary transition-colors">Business Operations</Link></li>
+              <li><Link to="/services" className="hover:text-primary transition-colors">Digital Platforms</Link></li>
             </ul>
           </div>
 
@@ -45,8 +45,8 @@ export const Footer = () => {
             <ul className="space-y-3 text-background/70">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:admin@brandhype.co.za" className="hover:text-primary transition-colors">
-                  admin@brandhype.co.za
+                <a href="mailto:hello@altartechnology.co.za" className="hover:text-primary transition-colors">
+                  hello@altartechnology.co.za
                 </a>
               </li>
               <li className="flex items-center gap-2">
@@ -63,8 +63,8 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Instagram className="h-4 w-4" />
-                <a href="https://instagram.com/brandhype" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  @brandhype
+                <a href="https://instagram.com/altartechnology" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  @altartechnology
                 </a>
               </li>
             </ul>
@@ -72,7 +72,7 @@ export const Footer = () => {
         </div>
 
         <div className="border-t-2 border-background pt-8 text-center text-background/60 text-sm">
-          <p>© 2025 Brand Hype Digital Solutions. All rights reserved.</p>
+          <p>© 2026 Altar Technology. All rights reserved.</p>
         </div>
       </div>
     </footer>

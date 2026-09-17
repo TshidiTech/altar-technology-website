@@ -16,7 +16,7 @@ export default function Privacy() {
             <section>
               <h2 className="mb-4 text-2xl font-bold sm:text-3xl">1. Introduction</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Brand Hype Marketing ("we", "our", "us") is committed to protecting your privacy. This Privacy Policy 
+                Altar Technology ("we", "our", "us") is committed to protecting your privacy. This Privacy Policy 
                 explains how we collect, use, disclose, and safeguard your information when you visit our website or 
                 use our services.
               </p>
@@ -133,7 +133,7 @@ export default function Privacy() {
                 <li>Lodge a complaint with the Information Regulator</li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                To exercise these rights, contact us at <a href="mailto:hello@brandhype.co.za" className="text-primary hover:underline">hello@brandhype.co.za</a>.
+                To exercise these rights, contact us at <a href="mailto:hello@altartechnology.co.za" className="text-primary hover:underline">hello@altartechnology.co.za</a>.
               </p>
             </section>
 
@@ -174,8 +174,8 @@ export default function Privacy() {
             <section className="border-t pt-8 mt-12">
               <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
               <div className="space-y-2 text-muted-foreground">
-                <p><strong className="text-foreground">Brand Hype Marketing</strong></p>
-                <p>Email: <a href="mailto:hello@brandhype.co.za" className="text-primary hover:underline">hello@brandhype.co.za</a></p>
+                <p><strong className="text-foreground">Altar Technology</strong></p>
+                <p>Email: <a href="mailto:hello@altartechnology.co.za" className="text-primary hover:underline">hello@altartechnology.co.za</a></p>
                 <p>Phone: <a href="tel:+27816617013" className="text-primary hover:underline">081 661 7013</a></p>
                 <p>WhatsApp: <a href="https://wa.me/27816617013" className="text-primary hover:underline">081 661 7013</a></p>
               </div>

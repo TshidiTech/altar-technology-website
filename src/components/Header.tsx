@@ -26,7 +26,7 @@ export const Header = () => {
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex min-w-0 items-center gap-3 text-lg font-display font-extrabold tracking-tight uppercase sm:text-xl">
               <span className="h-4 w-4 border-2 border-border bg-primary shadow-[var(--shadow-brutal-sm)]" />
-              <span className="truncate">Brand Hype.</span>
+              <span className="truncate">Altar Technology</span>
             </Link>
 
             <nav className="hidden md:flex items-center gap-2">

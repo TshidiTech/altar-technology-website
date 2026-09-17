@@ -44,7 +44,7 @@ export default function LeadCapture() {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nCompany: ${formData.company}\nService: ${formData.service}\nBudget: ${formData.budget}\n\nMessage:\n${formData.message}`
     );
-    window.open(`mailto:admin@brandhype.co.za?subject=${subject}&body=${body}`);
+    window.open(`mailto:hello@altartechnology.co.za?subject=${subject}&body=${body}`);
     setShowSuccess(true);
   };
 
@@ -71,7 +71,7 @@ export default function LeadCapture() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary" />
-                <a href="mailto:admin@brandhype.co.za" className="text-primary hover:underline">admin@brandhype.co.za</a>
+                <a href="mailto:hello@altartechnology.co.za" className="text-primary hover:underline">hello@altartechnology.co.za</a>
               </div>
               <div className="flex items-center gap-3">
                 <Calendar className="h-5 w-5 text-primary" />

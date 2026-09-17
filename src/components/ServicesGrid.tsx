@@ -1,39 +1,39 @@
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { 
-  Globe, Smartphone, Settings, Bot, Megaphone, Code
+  Sparkles, Headphones, BarChart3, Megaphone, Settings, Layers
 } from "lucide-react";
 
 const services = [
   {
-    icon: Globe,
-    title: "Web Development",
-    description: "Custom websites, e-commerce platforms, and web applications built for performance and conversion."
+    icon: Sparkles,
+    title: "Customer Experience",
+    description: "Journey design, self-service and engagement technology that makes every customer interaction easier."
   },
   {
-    icon: Smartphone,
-    title: "App & Platform Development",
-    description: "Native and cross-platform apps, MVPs, and scalable digital platforms."
+    icon: Headphones,
+    title: "Contact Centre Technology",
+    description: "Omnichannel contact centre platforms, routing, quality and AI assistance for service teams."
   },
   {
-    icon: Settings,
-    title: "Systems & Automation",
-    description: "CRM systems, dashboards, internal tools, and workflow automation for operational efficiency."
-  },
-  {
-    icon: Bot,
-    title: "AI & Automation Solutions",
-    description: "Intelligent chatbots, predictive systems, and full automation pipelines powered by AI."
+    icon: BarChart3,
+    title: "Business Intelligence",
+    description: "Data warehousing, dashboards and reporting that turn scattered data into decisions."
   },
   {
     icon: Megaphone,
-    title: "Digital Marketing",
-    description: "Social media strategy, influencer marketing, paid advertising, content creation, and analytics."
+    title: "Digital Marketing Intelligence",
+    description: "Campaign, audience and attribution intelligence that shows what actually drives growth."
   },
   {
-    icon: Code,
-    title: "Prototypes & MVPs",
-    description: "Rapid prototyping and minimum viable products to validate your ideas fast."
+    icon: Settings,
+    title: "Business Operations",
+    description: "Workflow automation, internal systems and integrations that remove manual effort."
+  },
+  {
+    icon: Layers,
+    title: "Digital Platforms",
+    description: "Web, mobile and cloud platforms engineered to scale with your organisation."
   }
 ];
 
@@ -43,18 +43,18 @@ export const ServicesGrid = () => {
       <div className="container mx-auto px-4">
         <div className="mb-16 grid gap-6 md:grid-cols-[0.85fr_1.15fr] md:items-end">
           <div className="inline-flex w-fit border-2 border-border bg-warning px-4 py-2 text-xs font-bold uppercase tracking-widest shadow-card">
-            Services menu
+            Solutions
           </div>
           <div className="space-y-4 md:text-right">
           <h2 className="text-4xl md:text-6xl font-extrabold uppercase leading-none">
-            Everything You Need to
+            Technology that
             <br />
             <span className="text-primary">
-              Build & Scale
+              moves business forward
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl md:ml-auto">
-            Comprehensive digital solutions designed to transform your business
+            AI, data, cloud and software solutions built around your problem — not a product catalogue.
           </p>
           </div>
         </div>
