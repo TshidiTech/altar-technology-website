@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Syne", "DM Sans", "sans-serif"],
-        sans: ["DM Sans", "system-ui", "sans-serif"],
+        display: ["Sora", "Manrope", "system-ui", "sans-serif"],
+        sans: ["Manrope", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
