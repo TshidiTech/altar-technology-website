@@ -24,7 +24,7 @@ export default function Cookies() {
             <section>
               <h2 className="text-3xl font-bold mb-4">2. How We Use Cookies</h2>
               <p className="text-muted-foreground leading-relaxed mb-2">
-                Brand Hype Marketing uses cookies to:
+                Altar Technology uses cookies to:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
                 <li>Remember your preferences and settings</li>
@@ -176,8 +176,8 @@ export default function Cookies() {
               <h2 className="text-3xl font-bold mb-4">Questions About Cookies?</h2>
               <div className="space-y-2 text-muted-foreground">
                 <p>If you have questions about our use of cookies, please contact us:</p>
-                <p><strong className="text-foreground">Brand Hype Marketing</strong></p>
-                <p>Email: <a href="mailto:hello@brandhype.co.za" className="text-primary hover:underline">hello@brandhype.co.za</a></p>
+                <p><strong className="text-foreground">Altar Technology</strong></p>
+                <p>Email: <a href="mailto:hello@altartechnology.co.za" className="text-primary hover:underline">hello@altartechnology.co.za</a></p>
                 <p>Phone: <a href="tel:+27816617013" className="text-primary hover:underline">081 661 7013</a></p>
               </div>
               <p className="text-sm text-muted-foreground mt-6">

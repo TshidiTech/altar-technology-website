@@ -25,7 +25,7 @@ export default function About() {
       <section className="pt-28 pb-12 bg-dark text-dark-foreground sm:pt-32 sm:pb-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="mb-4 text-4xl font-black sm:text-5xl md:text-7xl">
-            About <span className="bg-gradient-primary bg-clip-text text-transparent">Brand Hype</span>
+            About <span className="bg-gradient-primary bg-clip-text text-transparent">Altar Technology</span>
           </h1>
           <p className="mx-auto max-w-2xl text-base text-dark-foreground/80 sm:text-xl">
             A scalable digital solutions company building the future, one project at a time.
@@ -39,7 +39,7 @@ export default function About() {
             <div className="relative border-2 border-border bg-background p-2 shadow-brutal-xl">
               <img
                 src={tshidiMoepi}
-                alt="Tshidi Moepi, CEO and AI Workflow Engineer at Brand Hype"
+                alt="Tshidi Moepi, CEO and AI Workflow Engineer at Altar Technology"
                 className="aspect-[4/5] w-full object-cover object-[62%_42%]"
                 loading="lazy"
                 width={1280}
@@ -54,7 +54,7 @@ export default function About() {
                 CEO / AI Workflow Engineer
               </div>
             <p className="mb-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Brand Hype started as a social media marketing agency and has evolved into a full-service digital solutions company. We build custom websites, mobile apps, enterprise systems, AI-powered tools, and marketing campaigns that help businesses grow and scale.
+              Altar Technology started as a social media marketing agency and has evolved into a full-service digital solutions company. We build custom websites, mobile apps, enterprise systems, AI-powered tools, and marketing campaigns that help businesses grow and scale.
             </p>
             <p className="mb-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
               Our team combines strategic thinking with technical execution. Whether you're a startup launching your first MVP or an enterprise needing complex automation, we deliver solutions that are modern, intelligent, and built to scale.

@@ -16,7 +16,7 @@ export default function Terms() {
             <section>
               <h2 className="mb-4 text-2xl font-bold sm:text-3xl">1. Services Agreement</h2>
               <p className="text-muted-foreground leading-relaxed">
-                By engaging Brand Hype Marketing ("the Agency"), you agree to these terms and conditions. 
+                By engaging Altar Technology ("the Agency"), you agree to these terms and conditions. 
                 All services are provided subject to the scope of work outlined in your signed proposal or agreement.
               </p>
             </section>
@@ -135,8 +135,8 @@ export default function Terms() {
             <section className="border-t pt-8 mt-12">
               <h2 className="text-3xl font-bold mb-4">Contact Information</h2>
               <div className="space-y-2 text-muted-foreground">
-                <p><strong className="text-foreground">Brand Hype Marketing</strong></p>
-                <p>Email: <a href="mailto:hello@brandhype.co.za" className="text-primary hover:underline">hello@brandhype.co.za</a></p>
+                <p><strong className="text-foreground">Altar Technology</strong></p>
+                <p>Email: <a href="mailto:hello@altartechnology.co.za" className="text-primary hover:underline">hello@altartechnology.co.za</a></p>
                 <p>Phone: <a href="tel:+27816617013" className="text-primary hover:underline">081 661 7013</a></p>
               </div>
               <p className="text-sm text-muted-foreground mt-6">
