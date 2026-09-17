@@ -43,18 +43,18 @@ export const ServicesGrid = () => {
       <div className="container mx-auto px-4">
         <div className="mb-16 grid gap-6 md:grid-cols-[0.85fr_1.15fr] md:items-end">
           <div className="inline-flex w-fit border-2 border-border bg-warning px-4 py-2 text-xs font-bold uppercase tracking-widest shadow-card">
-            Services menu
+            Solutions
           </div>
           <div className="space-y-4 md:text-right">
           <h2 className="text-4xl md:text-6xl font-extrabold uppercase leading-none">
-            Everything You Need to
+            Technology that
             <br />
             <span className="text-primary">
-              Build & Scale
+              moves business forward
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl md:ml-auto">
-            Comprehensive digital solutions designed to transform your business
+            AI, data, cloud and software solutions built around your problem — not a product catalogue.
           </p>
           </div>
         </div>
