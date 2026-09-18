@@ -7,20 +7,20 @@ import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight, Search, Paintbrush, RefreshCw, Rocket } from "lucide-react";
 import tshidiMoepi from "@/assets/team/Confident_elegance_in_monochrome_fashion.png.asset.json";
-import dingaanManjate from "@/assets/team/157629.jpg.asset.json";
-import boitumeloLatola from "@/assets/team/157634.jpg.asset.json";
-import kutlwanoTake from "@/assets/team/157633.jpg.asset.json";
-import zusipheMvovo from "@/assets/team/157632.png.asset.json";
-import katlegoMalaka from "@/assets/team/157631.png.asset.json";
+import boitumeloLatola from "@/assets/team/117340.jpg.asset.json";
+import katlegoMalaka from "@/assets/team/157629.jpg.asset.json";
 import milaniSani from "@/assets/team/157630.jpg.asset.json";
-import tshepoHanyane from "@/assets/team/117340.jpg.asset.json";
+import tshepoHanyane from "@/assets/team/157631.png.asset.json";
+import zusipheMvovo from "@/assets/team/157632.png.asset.json";
+import dingaanManjate from "@/assets/team/157633.jpg.asset.json";
+import kutlwanoTake from "@/assets/team/157634.jpg.asset.json";
 
 const team = [
-  { name: "Tshidi Moepi", role: "CEO / AI Workflow Engineer", img: tshidiMoepi.url },
-  { name: "Dingaan Manjate", role: "CTO", img: dingaanManjate.url },
+  { name: "Tshidi Moepi", role: "CEO", img: tshidiMoepi.url, imageClass: "scale-[1.2] origin-top" },
+  { name: "Dingaan Manjate", role: "CTO / Cloud Engineer", img: dingaanManjate.url },
   { name: "Boitumelo Latola", role: "Operations Manager", img: boitumeloLatola.url },
-  { name: "Kutlwano Take", role: "Senior Developer", img: kutlwanoTake.url },
   { name: "Zusiphe Mvovo", role: "Project Delivery Lead", img: zusipheMvovo.url },
+  { name: "Kutlwano Take", role: "Senior Developer", img: kutlwanoTake.url },
   { name: "Katlego Malaka", role: "Software Developer", img: katlegoMalaka.url },
   { name: "Milani Sani", role: "Software Developer", img: milaniSani.url },
   { name: "Tshepo Hanyane", role: "Software Developer", img: tshepoHanyane.url },
@@ -55,16 +55,18 @@ export default function About() {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="grid items-center gap-8 md:grid-cols-[0.9fr_1.1fr]">
             <div className="relative border-2 border-border bg-background p-2 shadow-brutal-xl">
-              <img
-                src={tshidiMoepi.url}
-                alt="Tshidi Moepi, CEO and AI Workflow Engineer at Altar Technology"
-                className="aspect-[4/5] w-full object-cover object-top"
-                loading="eager"
-                decoding="async"
-                fetchPriority="high"
-                width={1024}
-                height={1280}
-              />
+              <div className="aspect-[4/5] overflow-hidden">
+                <img
+                  src={tshidiMoepi.url}
+                  alt="Tshidi Moepi, CEO of Altar Technology"
+                  className="h-full w-full origin-top scale-[1.2] object-cover object-top"
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                  width={1024}
+                  height={1280}
+                />
+              </div>
               <div className="absolute -bottom-4 left-4 border-2 border-border bg-primary px-4 py-2 text-xs font-bold uppercase tracking-widest text-primary-foreground shadow-card sm:left-6">
                 Tshidi Moepi — CEO
               </div>
@@ -103,7 +105,7 @@ export default function About() {
                 <img
                   src={member.img}
                   alt={`${member.name}, ${member.role} at Altar Technology`}
-                  className="aspect-[4/5] w-full object-cover object-top"
+                  className={`aspect-[4/5] w-full object-cover object-top ${member.imageClass ?? ""}`}
                   loading="lazy"
                   decoding="async"
                 />
