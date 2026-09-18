@@ -16,7 +16,7 @@ import dingaanManjate from "@/assets/team/157633.jpg.asset.json";
 import kutlwanoTake from "@/assets/team/157634.jpg.asset.json";
 
 const team = [
-  { name: "Tshidi Moepi", role: "CEO", img: tshidiMoepi.url, imageClass: "scale-[1.2] origin-top" },
+  { name: "Tshidi Moepi", role: "CEO", img: tshidiMoepi.url, imageClass: "scale-[1.75] origin-top object-[center_8%]" },
   { name: "Dingaan Manjate", role: "CTO / Cloud Engineer", img: dingaanManjate.url },
   { name: "Boitumelo Latola", role: "Operations Manager", img: boitumeloLatola.url },
   { name: "Zusiphe Mvovo", role: "Project Delivery Lead", img: zusipheMvovo.url },
@@ -102,14 +102,16 @@ export default function About() {
           <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
             {team.map((member, i) => (
               <Card key={i} className="overflow-hidden border-2 border-border bg-card shadow-card">
-                <img
-                  src={member.img}
-                  alt={`${member.name}, ${member.role} at Altar Technology`}
-                  className={`aspect-[4/5] w-full object-cover object-top ${member.imageClass ?? ""}`}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="p-3 sm:p-4">
+                <div className="aspect-[4/5] overflow-hidden">
+                  <img
+                    src={member.img}
+                    alt={`${member.name}, ${member.role} at Altar Technology`}
+                    className={`h-full w-full object-cover object-top ${member.imageClass ?? ""}`}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div className="relative z-10 min-h-[4.5rem] bg-card p-3 sm:p-4">
                   <h3 className="text-sm font-extrabold uppercase sm:text-base">{member.name}</h3>
                   <p className="text-xs text-muted-foreground sm:text-sm">{member.role}</p>
                 </div>
