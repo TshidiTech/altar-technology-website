@@ -12,7 +12,7 @@ export const Footer = () => {
               Altar Technology
             </h3>
             <p className="text-background/70 mb-4">
-              Build. Transform. Grow. AI, data, cloud and software solutions for South African organisations.
+              Build. Transform. Grow. Technology, training and staffing for IT support and customer service — AI, data, cloud and software for modern call centre and BPO operations.
             </p>
           </div>
 

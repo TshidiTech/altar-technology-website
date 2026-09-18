@@ -28,7 +28,7 @@ export const Hero = () => {
           </div>
           
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg md:text-2xl lg:mx-0">
-            We build technology that helps organisations work smarter, serve customers better and grow faster — starting with the problem, not the technology.
+            Technology, training and staffing for IT support and customer service. We build the AI, data, cloud and software behind modern call centre and BPO operations — starting with the problem, not the technology.
           </p>
           
           <div className="flex flex-col items-stretch justify-center gap-3 pt-2 sm:flex-row sm:items-center lg:justify-start">

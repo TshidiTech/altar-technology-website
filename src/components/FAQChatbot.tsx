@@ -74,7 +74,7 @@ export const FAQChatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       type: "bot",
-      text: "👋 Hi! I'm the Altar Technology assistant. I can help you learn about our digital solutions, pricing, and how to get started. What would you like to know?",
+      text: "👋 Hi! I'm the Altar Technology assistant. I can help you learn about our technology, training and staffing solutions for IT support and customer service. What would you like to know?",
       options: initialPrompts,
     },
   ]);
