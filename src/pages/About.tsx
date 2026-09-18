@@ -87,6 +87,36 @@ export default function About() {
         </div>
       </section>
 
+      <section className="py-12 bg-surface sm:py-20">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="mb-10 text-center sm:mb-14">
+            <div className="mx-auto mb-4 w-fit border-2 border-border bg-warning px-4 py-2 text-xs font-bold uppercase tracking-widest shadow-card">
+              The team
+            </div>
+            <h2 className="text-3xl font-black sm:text-4xl">
+              The people <span className="bg-gradient-primary bg-clip-text text-transparent">behind the build</span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+            {team.map((member, i) => (
+              <Card key={i} className="overflow-hidden border-2 border-border bg-card shadow-card">
+                <img
+                  src={member.img}
+                  alt={`${member.name}, ${member.role} at Altar Technology`}
+                  className="aspect-[4/5] w-full object-cover object-top"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="p-3 sm:p-4">
+                  <h3 className="text-sm font-extrabold uppercase sm:text-base">{member.name}</h3>
+                  <p className="text-xs text-muted-foreground sm:text-sm">{member.role}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-12 bg-muted/30 sm:py-20">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="mb-10 text-center text-3xl font-black sm:mb-16 sm:text-4xl">
