@@ -136,7 +136,7 @@ export default function Terms() {
               <h2 className="text-3xl font-bold mb-4">Contact Information</h2>
               <div className="space-y-2 text-muted-foreground">
                 <p><strong className="text-foreground">Altar Technology</strong></p>
-                <p>Email: <a href="mailto:hello@altartechnology.co.za" className="text-primary hover:underline">hello@altartechnology.co.za</a></p>
+                <p>Email: <a href="mailto:admin@brandhype.co.za" className="text-primary hover:underline">admin@brandhype.co.za</a></p>
                 <p>Phone: <a href="tel:+27816617013" className="text-primary hover:underline">081 661 7013</a></p>
               </div>
               <p className="text-sm text-muted-foreground mt-6">
