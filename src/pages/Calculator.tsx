@@ -130,7 +130,7 @@ export default function Calculator() {
     content += `DISCLAIMER: This calculator provides estimated pricing based on typical project scopes. `;
     content += `Final pricing and objectives will be determined during consultation based on your specific needs, `;
     content += `industry, and campaign complexity. All prices are in ZAR and exclude VAT.\n\n`;
-    content += `Contact: hello@altartechnology.co.za | 067 062 2953\n`;
+    content += `Contact: admin@brandhype.co.za | 067 062 2953\n`;
     content += `Book a call: https://calendar.app.google/pkkvMSJBS3DQLPSW8`;
     return content;
   };
@@ -363,7 +363,7 @@ export default function Calculator() {
                     <Download className="h-5 w-5" />
                     <span>Download Quote</span>
                   </Button>
-                  <a href={`mailto:hello@altartechnology.co.za?subject=${encodeURIComponent("Project Estimate from Calculator")}&body=${generateEmailBody()}`}>
+                  <a href={`mailto:admin@brandhype.co.za?subject=${encodeURIComponent("Project Estimate from Calculator")}&body=${generateEmailBody()}`}>
                     <Button variant="outline" className="gap-2 h-auto py-4 flex-col w-full">
                       <Mail className="h-5 w-5" />
                       <span>Email Quote</span>

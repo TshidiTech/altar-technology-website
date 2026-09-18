@@ -12,7 +12,7 @@ export const Footer = () => {
               Altar Technology
             </h3>
             <p className="text-background/70 mb-4">
-              Build. Transform. Grow. AI, data, cloud and software solutions for South African organisations.
+              Build. Transform. Grow. Technology, training and staffing for IT support and customer service — AI, data, cloud and software for modern call centre and BPO operations.
             </p>
           </div>
 
@@ -45,8 +45,8 @@ export const Footer = () => {
             <ul className="space-y-3 text-background/70">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:hello@altartechnology.co.za" className="hover:text-primary transition-colors">
-                  hello@altartechnology.co.za
+                <a href="mailto:admin@brandhype.co.za" className="hover:text-primary transition-colors">
+                  admin@brandhype.co.za
                 </a>
               </li>
               <li className="flex items-center gap-2">

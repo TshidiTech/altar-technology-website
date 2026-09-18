@@ -6,7 +6,25 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight, Search, Paintbrush, RefreshCw, Rocket } from "lucide-react";
-import tshidiMoepi from "@/assets/tshidi-moepi-ceo.webp";
+import tshidiMoepi from "@/assets/team/Confident_elegance_in_monochrome_fashion.png.asset.json";
+import dingaanManjate from "@/assets/team/157629.jpg.asset.json";
+import boitumeloLatola from "@/assets/team/157634.jpg.asset.json";
+import kutlwanoTake from "@/assets/team/157633.jpg.asset.json";
+import zusipheMvovo from "@/assets/team/157632.png.asset.json";
+import katlegoMalaka from "@/assets/team/157631.png.asset.json";
+import milaniSani from "@/assets/team/157630.jpg.asset.json";
+import tshepoHanyane from "@/assets/team/117340.jpg.asset.json";
+
+const team = [
+  { name: "Tshidi Moepi", role: "CEO / AI Workflow Engineer", img: tshidiMoepi.url },
+  { name: "Dingaan Manjate", role: "CTO", img: dingaanManjate.url },
+  { name: "Boitumelo Latola", role: "Operations Manager", img: boitumeloLatola.url },
+  { name: "Kutlwano Take", role: "Senior Developer", img: kutlwanoTake.url },
+  { name: "Zusiphe Mvovo", role: "Project Delivery Lead", img: zusipheMvovo.url },
+  { name: "Katlego Malaka", role: "Software Developer", img: katlegoMalaka.url },
+  { name: "Milani Sani", role: "Software Developer", img: milaniSani.url },
+  { name: "Tshepo Hanyane", role: "Software Developer", img: tshepoHanyane.url },
+];
 
 const steps = [
   { icon: Search, title: "Problem & Research", desc: "We start with the problem, not the technology — mapping the business context, people and data before anything is built." },
@@ -38,33 +56,63 @@ export default function About() {
           <div className="grid items-center gap-8 md:grid-cols-[0.9fr_1.1fr]">
             <div className="relative border-2 border-border bg-background p-2 shadow-brutal-xl">
               <img
-                src={tshidiMoepi}
+                src={tshidiMoepi.url}
                 alt="Tshidi Moepi, CEO and AI Workflow Engineer at Altar Technology"
-                className="aspect-[4/5] w-full object-cover object-[62%_42%]"
+                className="aspect-[4/5] w-full object-cover object-top"
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
-                width={1280}
-                height={1600}
+                width={1024}
+                height={1280}
               />
               <div className="absolute -bottom-4 left-4 border-2 border-border bg-primary px-4 py-2 text-xs font-bold uppercase tracking-widest text-primary-foreground shadow-card sm:left-6">
-                Tshidi Moepi
+                Tshidi Moepi — CEO
               </div>
             </div>
             <div className="prose prose-lg max-w-none">
               <div className="mb-4 inline-flex border-2 border-border bg-accent px-3 py-2 text-xs font-bold uppercase tracking-widest shadow-card">
-                CEO / AI Workflow Engineer
+                Technology / Training / Staffing
               </div>
             <p className="mb-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
               Altar Technology is a technology company built around one belief: technology should solve real business problems. We deliver artificial intelligence, data, cloud and custom software for organisations that need systems they can trust.
             </p>
             <p className="mb-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              We start with the problem. Not the technology. Every engagement moves through research, design, prototyping, engineering and continuous improvement — so what we build fits the way your business actually runs.
+              Our new era goes beyond building systems. We provide the technology, the training and the staffing for IT support and customer service — purpose-built for call centre and BPO operations that need to serve better at scale.
             </p>
             <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Our focus areas include customer intelligence, contact centre intelligence, business operating systems and digital platforms — the systems that determine how well an organisation serves its customers and scales.
+              We start with the problem. Not the technology. Every engagement moves through research, design, prototyping, engineering and continuous improvement — so what we build fits the way your business actually runs.
             </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-surface sm:py-20">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="mb-10 text-center sm:mb-14">
+            <div className="mx-auto mb-4 w-fit border-2 border-border bg-warning px-4 py-2 text-xs font-bold uppercase tracking-widest shadow-card">
+              The team
+            </div>
+            <h2 className="text-3xl font-black sm:text-4xl">
+              The people <span className="bg-gradient-primary bg-clip-text text-transparent">behind the build</span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+            {team.map((member, i) => (
+              <Card key={i} className="overflow-hidden border-2 border-border bg-card shadow-card">
+                <img
+                  src={member.img}
+                  alt={`${member.name}, ${member.role} at Altar Technology`}
+                  className="aspect-[4/5] w-full object-cover object-top"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="p-3 sm:p-4">
+                  <h3 className="text-sm font-extrabold uppercase sm:text-base">{member.name}</h3>
+                  <p className="text-xs text-muted-foreground sm:text-sm">{member.role}</p>
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
