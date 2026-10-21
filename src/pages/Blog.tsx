@@ -4,6 +4,7 @@ import { FAQChatbot } from "@/components/FAQChatbot";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import lifestyleInfluencer from "@/assets/portrait-young-person-holding-camera.jpg";
 import podcastInfluencer from "@/assets/portrait-plus-size-man-influencer.jpg";
