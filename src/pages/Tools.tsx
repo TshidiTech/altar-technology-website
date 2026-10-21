@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import {
   BarChart, Receipt, Car, CreditCard, GraduationCap, Calendar,
   UtensilsCrossed, FileText, Users, MessageSquare, Box, Sparkles, Warehouse,
-  ExternalLink, Brain, Globe, BookOpen
+  ExternalLink, Brain, Globe, BookOpen, ArrowRight
 } from "lucide-react";
 
 const tools = [
