@@ -4,6 +4,7 @@ import { FAQChatbot } from "@/components/FAQChatbot";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import lifestyleInfluencer from "@/assets/portrait-young-person-holding-camera.jpg";
 import podcastInfluencer from "@/assets/portrait-plus-size-man-influencer.jpg";
@@ -117,6 +118,20 @@ export default function Blog() {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-dark text-dark-foreground sm:py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="mb-4 text-3xl font-black sm:text-4xl">Reading About It? Let's <span className="bg-gradient-primary bg-clip-text text-transparent">Build It.</span></h2>
+          <p className="mx-auto mb-6 max-w-xl text-base text-dark-foreground/80">
+            Have a project in mind after one of these articles? Tell us about it — we respond within 24 hours.
+          </p>
+          <Link to="/lead-capture">
+            <Button size="lg" className="w-full bg-gradient-primary hover:shadow-glow rounded-sm text-base gap-2 sm:w-auto sm:text-lg">
+              Start Your Project <ArrowRight className="h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </section>
 

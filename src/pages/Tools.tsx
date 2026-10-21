@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import {
   BarChart, Receipt, Car, CreditCard, GraduationCap, Calendar,
   UtensilsCrossed, FileText, Users, MessageSquare, Box, Sparkles, Warehouse,
-  ExternalLink, Brain, Globe, BookOpen
+  ExternalLink, Brain, Globe, BookOpen, ArrowRight
 } from "lucide-react";
 
 const tools = [
@@ -131,6 +131,20 @@ export default function Tools() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-dark text-dark-foreground sm:py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="mb-4 text-3xl font-black sm:text-4xl">See Something You Need <span className="bg-gradient-primary bg-clip-text text-transparent">Built for You?</span></h2>
+          <p className="mx-auto mb-6 max-w-xl text-base text-dark-foreground/80">
+            Any of these tools can be customised or rebuilt for your business. Tell us what you need — we respond within 24 hours.
+          </p>
+          <Link to="/lead-capture">
+            <Button size="lg" className="w-full bg-gradient-primary hover:shadow-glow rounded-sm text-base gap-2 sm:w-auto sm:text-lg">
+              Request a Build <ArrowRight className="h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </section>
 
