@@ -9,7 +9,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { CheckCircle2, Calendar, Phone, Mail } from "lucide-react";
+import { CheckCircle2, Calendar, Phone, Mail, AlertTriangle } from "lucide-react";
+import { submitToFormspree } from "@/lib/formspree";
 
 const serviceOptions = [
   "Web Development",
@@ -34,18 +35,36 @@ const budgetRanges = [
 
 export default function LeadCapture() {
   const [showSuccess, setShowSuccess] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [formData, setFormData] = useState({
     name: "", company: "", service: "", budget: "", message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`New Project Enquiry from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nCompany: ${formData.company}\nService: ${formData.service}\nBudget: ${formData.budget}\n\nMessage:\n${formData.message}`
-    );
-    window.open(`mailto:admin@brandhype.co.za?subject=${subject}&body=${body}`);
-    setShowSuccess(true);
+    setSubmitting(true);
+    setSubmitError("");
+    try {
+      await submitToFormspree({
+        _subject: `New Project Enquiry from ${formData.name}`,
+        name: formData.name,
+        company: formData.company,
+        service: formData.service,
+        budget: formData.budget,
+        message: formData.message,
+        source: "Lead Capture form",
+      });
+      setShowSuccess(true);
+    } catch (err) {
+      setSubmitError(
+        err instanceof Error
+          ? err.message
+          : "Something went wrong. Please try again or WhatsApp us on 067 062 2953."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -120,8 +139,14 @@ export default function LeadCapture() {
                 <Label htmlFor="message">Message</Label>
                 <Textarea id="message" rows={4} value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} placeholder="Tell us about your project..." />
               </div>
-              <Button type="submit" size="lg" className="w-full bg-gradient-primary hover:shadow-glow transition-all text-base rounded-sm sm:text-lg">
-                Submit Enquiry
+              {submitError && (
+                <div className="flex items-start gap-2 rounded-sm border border-destructive/40 bg-destructive/10 p-3 text-sm text-destructive">
+                  <AlertTriangle className="mt-0.5 h-4 w-4 flex-shrink-0" />
+                  <span>{submitError}</span>
+                </div>
+              )}
+              <Button type="submit" size="lg" disabled={submitting} className="w-full bg-gradient-primary hover:shadow-glow transition-all text-base rounded-sm sm:text-lg">
+                {submitting ? "Sending…" : "Submit Enquiry"}
               </Button>
             </form>
           </Card>
