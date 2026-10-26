@@ -9,10 +9,10 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { ArrowRight, TrendingUp, Users, Eye } from "lucide-react";
 import jetourCar from "@/assets/jetour-car.avif";
-import platformDevices from "@/assets/brandhype-platform-devices.png";
-import servicesBg from "@/assets/services-bg.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
-import lashesImage from "@/assets/medium-shot-plus-sized-woman-influencer_5.jpg";
+import platformDevices from "@/assets/brandhype-platform-devices.webp";
+import servicesBg from "@/assets/services-bg.webp";
+import heroBg from "@/assets/hero-bg.webp";
+import lashesImage from "@/assets/medium-shot-plus-sized-woman-influencer_5.webp";
 
 const categories = ["All", "Systems", "Apps", "Websites", "Marketing"];
 

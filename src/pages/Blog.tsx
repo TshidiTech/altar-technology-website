@@ -6,12 +6,12 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
-import lifestyleInfluencer from "@/assets/portrait-young-person-holding-camera.jpg";
-import podcastInfluencer from "@/assets/portrait-plus-size-man-influencer.jpg";
-import fashionInfluencer from "@/assets/portrait-plus-size-male-influencer-1.jpg";
-import petsContent from "@/assets/influencer-pet-content-creators.jpg";
-import parentingContent from "@/assets/parenting-content-creator.jpg";
-import familyContent from "@/assets/parenting-content-creator-1.jpg";
+import lifestyleInfluencer from "@/assets/portrait-young-person-holding-camera.webp";
+import podcastInfluencer from "@/assets/portrait-plus-size-man-influencer.webp";
+import fashionInfluencer from "@/assets/portrait-plus-size-male-influencer-1.webp";
+import petsContent from "@/assets/influencer-pet-content-creators.webp";
+import parentingContent from "@/assets/parenting-content-creator.webp";
+import familyContent from "@/assets/parenting-content-creator-1.webp";
 
 const blogPosts = [
   {
