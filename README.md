@@ -7,6 +7,16 @@ Official website for **Altar Technology** — a South African technology company
 - **Live site:** https://altar.technology
 - **Headline service:** QAaaS — Quality Assurance as a Service for Contact Centres & BPOs
 
+## What's in the Current Build
+
+- **Altar Technology rebrand** — all copy, header, footer and page metadata updated from the previous Brand Hype branding; typography refreshed to Sora (headings) and Manrope (body) in the Altar purple / baby pink / white / black design system, with light and dark mode.
+- **New positioning** — technology solutions first, supported by training and staffing for IT Support & Customer Service, aimed at contact centre / BPO operations. Approved AI • Data • Cloud • Software messaging preserved.
+- **QAaaS announcement banner** — site-wide "NOW ONBOARDING: Quality Assurance as a Service (QAaaS) for Contact Centres & BPOs" banner with a Book Discovery Call link.
+- **Form + chatbot submissions wired to Formspree** — the lead capture form and the floating FAQ chatbot submit to `https://formspree.io/f/mqpergdz` (`src/lib/formspree.ts`). Submissions arrive by email with no backend to maintain.
+- **Team section on About** — leadership first (CEO, CTO, Operations Manager, Project Delivery Lead, Senior Developer) followed by the software developers, with the correct photo-to-person mapping and a head-and-shoulders crop for the CEO portrait.
+- **Images optimised for speed** — all photos and screenshots compressed (roughly 95% smaller, no visible quality loss) and lazy-loaded so pages open fast on mobile data.
+- **Netlify fix applied** — all images now bundle locally with the build (no external CDN paths) and `public/_redirects` restores the SPA rule, so images and page refreshes work on https://altar.technology, not only on the Lovable preview.
+
 ## Tech Stack
 
 - React 18 + TypeScript
