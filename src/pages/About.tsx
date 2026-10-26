@@ -6,24 +6,24 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight, Search, Paintbrush, RefreshCw, Rocket } from "lucide-react";
-import tshidiMoepi from "@/assets/team/Confident_elegance_in_monochrome_fashion.webp.asset.json";
-import boitumeloLatola from "@/assets/team/117340.webp.asset.json";
-import katlegoMalaka from "@/assets/team/157629.webp.asset.json";
-import milaniSani from "@/assets/team/157630.webp.asset.json";
-import tshepoHanyane from "@/assets/team/157631.webp.asset.json";
-import zusipheMvovo from "@/assets/team/157632.webp.asset.json";
-import dingaanManjate from "@/assets/team/157633.webp.asset.json";
-import kutlwanoTake from "@/assets/team/157634.webp.asset.json";
+import tshidiMoepi from "@/assets/team/tshidi-moepi.webp";
+import boitumeloLatola from "@/assets/team/boitumelo-latola.webp";
+import katlegoMalaka from "@/assets/team/katlego-malaka.webp";
+import milaniSani from "@/assets/team/milani-sani.webp";
+import tshepoHanyane from "@/assets/team/tshepo-hanyane.webp";
+import zusipheMvovo from "@/assets/team/zusiphe-mvovo.webp";
+import dingaanManjate from "@/assets/team/dingaan-manjate.webp";
+import kutlwanoTake from "@/assets/team/kutlwano-take.webp";
 
 const team = [
-  { name: "Tshidi Moepi", role: "CEO", img: tshidiMoepi.url, imageClass: "scale-[1.75] origin-top object-[center_8%]" },
-  { name: "Dingaan Manjate", role: "CTO / Cloud Engineer", img: dingaanManjate.url },
-  { name: "Boitumelo Latola", role: "Operations Manager", img: boitumeloLatola.url },
-  { name: "Zusiphe Mvovo", role: "Project Delivery Lead", img: zusipheMvovo.url },
-  { name: "Kutlwano Take", role: "Senior Developer", img: kutlwanoTake.url },
-  { name: "Katlego Malaka", role: "Software Developer", img: katlegoMalaka.url },
-  { name: "Milani Sani", role: "Software Developer", img: milaniSani.url },
-  { name: "Tshepo Hanyane", role: "Software Developer", img: tshepoHanyane.url },
+  { name: "Tshidi Moepi", role: "CEO", img: tshidiMoepi, imageClass: "scale-[1.75] origin-top object-[center_8%]" },
+  { name: "Dingaan Manjate", role: "CTO / Cloud Engineer", img: dingaanManjate },
+  { name: "Boitumelo Latola", role: "Operations Manager", img: boitumeloLatola },
+  { name: "Zusiphe Mvovo", role: "Project Delivery Lead", img: zusipheMvovo },
+  { name: "Kutlwano Take", role: "Senior Developer", img: kutlwanoTake },
+  { name: "Katlego Malaka", role: "Software Developer", img: katlegoMalaka },
+  { name: "Milani Sani", role: "Software Developer", img: milaniSani },
+  { name: "Tshepo Hanyane", role: "Software Developer", img: tshepoHanyane },
 ];
 
 const steps = [
@@ -57,7 +57,7 @@ export default function About() {
             <div className="relative border-2 border-border bg-background p-2 shadow-brutal-xl">
               <div className="aspect-[4/5] overflow-hidden">
                 <img
-                  src={tshidiMoepi.url}
+                  src={tshidiMoepi}
                   alt="Tshidi Moepi, CEO of Altar Technology"
                   className="h-full w-full origin-top scale-[1.2] object-cover object-top"
                   loading="eager"
