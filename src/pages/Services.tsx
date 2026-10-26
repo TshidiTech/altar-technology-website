@@ -11,14 +11,14 @@ import {
   Globe, Smartphone, Settings, Bot, Megaphone, ArrowRight, CheckCircle2
 } from "lucide-react";
 
-import fitnessInfluencer from "@/assets/portrait-fitness-influencer.jpg";
-import fitnessInfluencer2 from "@/assets/portrait-fitness-influencer_2.jpg";
-import fitnessInfluencer1 from "@/assets/portrait-fitness-influencer_1.jpg";
-import petsContent from "@/assets/person-creating-online-content-with-their-pets.jpg";
-import foodContent from "@/assets/people-creating-food-content-upload-internet-food-lovers.jpg";
-import lifestyleInfluencer5 from "@/assets/medium-shot-plus-sized-woman-influencer_5.jpg";
-import lifestyleInfluencer4 from "@/assets/medium-shot-plus-sized-woman-influencer_4.jpg";
-import lifestyleInfluencer3 from "@/assets/medium-shot-plus-sized-woman-influencer_3.jpg";
+import fitnessInfluencer from "@/assets/portrait-fitness-influencer.webp";
+import fitnessInfluencer2 from "@/assets/portrait-fitness-influencer_2.webp";
+import fitnessInfluencer1 from "@/assets/portrait-fitness-influencer_1.webp";
+import petsContent from "@/assets/person-creating-online-content-with-their-pets.webp";
+import foodContent from "@/assets/people-creating-food-content-upload-internet-food-lovers.webp";
+import lifestyleInfluencer5 from "@/assets/medium-shot-plus-sized-woman-influencer_5.webp";
+import lifestyleInfluencer4 from "@/assets/medium-shot-plus-sized-woman-influencer_4.webp";
+import lifestyleInfluencer3 from "@/assets/medium-shot-plus-sized-woman-influencer_3.webp";
 
 const serviceCategories = [
   {
