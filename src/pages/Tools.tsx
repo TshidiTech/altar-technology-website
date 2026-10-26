@@ -106,7 +106,7 @@ export default function Tools() {
                 <Card key={index} className="overflow-hidden hover:shadow-card transition-all duration-300 hover:-translate-y-1 border border-border hover:border-primary/30 group">
                   {tool.screenshot && (
                     <div className="h-40 overflow-hidden bg-muted">
-                      <img src={tool.screenshot} alt={tool.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                      <img src={tool.screenshot} alt={tool.name} loading="lazy" decoding="async" width={900} height={560} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                     </div>
                   )}
                   <div className="p-6">

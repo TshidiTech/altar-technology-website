@@ -6,14 +6,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight, Search, Paintbrush, RefreshCw, Rocket } from "lucide-react";
-import tshidiMoepi from "@/assets/team/Confident_elegance_in_monochrome_fashion.png.asset.json";
-import boitumeloLatola from "@/assets/team/117340.jpg.asset.json";
-import katlegoMalaka from "@/assets/team/157629.jpg.asset.json";
-import milaniSani from "@/assets/team/157630.jpg.asset.json";
-import tshepoHanyane from "@/assets/team/157631.png.asset.json";
-import zusipheMvovo from "@/assets/team/157632.png.asset.json";
-import dingaanManjate from "@/assets/team/157633.jpg.asset.json";
-import kutlwanoTake from "@/assets/team/157634.jpg.asset.json";
+import tshidiMoepi from "@/assets/team/Confident_elegance_in_monochrome_fashion.webp.asset.json";
+import boitumeloLatola from "@/assets/team/117340.webp.asset.json";
+import katlegoMalaka from "@/assets/team/157629.webp.asset.json";
+import milaniSani from "@/assets/team/157630.webp.asset.json";
+import tshepoHanyane from "@/assets/team/157631.webp.asset.json";
+import zusipheMvovo from "@/assets/team/157632.webp.asset.json";
+import dingaanManjate from "@/assets/team/157633.webp.asset.json";
+import kutlwanoTake from "@/assets/team/157634.webp.asset.json";
 
 const team = [
   { name: "Tshidi Moepi", role: "CEO", img: tshidiMoepi.url, imageClass: "scale-[1.75] origin-top object-[center_8%]" },
