@@ -58,7 +58,7 @@ The site deploys to **Netlify** (https://altar.technology).
 
 ## Contact
 
-- **Email:** admin@brandhype.co.za
+- **Email:** hello@altar.technology
 - **WhatsApp:** 067 062 2953
 - **Book a call:** https://calendar.app.google/pkkvMSJBS3DQLPSW8
 

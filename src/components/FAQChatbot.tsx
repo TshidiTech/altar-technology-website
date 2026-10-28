@@ -29,7 +29,7 @@ const faqs: Record<string, { answer: string; relatedQuestions: string[] }> = {
     relatedQuestions: ["Start a project", "What's the payment process?", "View pricing calculator", "What services do you offer?"]
   },
   "How can I start a project?": {
-    answer: "Easy! Submit an enquiry on our Lead Capture page, email us at admin@brandhype.co.za, WhatsApp us on 067 062 2953, or schedule a call via our booking link. We'll respond within 24 hours.",
+    answer: "Easy! Submit an enquiry on our Lead Capture page, email us at hello@altar.technology, WhatsApp us on 067 062 2953, or schedule a call via our booking link. We'll respond within 24 hours.",
     relatedQuestions: ["Start a project", "What services do you offer?", "How much does it cost?", "What's the payment process?"]
   },
   "What's the payment process?": {

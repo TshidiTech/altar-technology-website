@@ -45,8 +45,8 @@ export const Footer = () => {
             <ul className="space-y-3 text-background/70">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:admin@brandhype.co.za" className="hover:text-primary transition-colors">
-                  admin@brandhype.co.za
+                <a href="mailto:hello@altar.technology" className="hover:text-primary transition-colors">
+                  hello@altar.technology
                 </a>
               </li>
               <li className="flex items-center gap-2">
@@ -57,7 +57,7 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <a href="https://calendar.app.google/pkkvMSJBS3DQLPSW8" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <a href="https://calendar.app.google/CHwnLitv6KtdDqK96" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                   Schedule a Call
                 </a>
               </li>

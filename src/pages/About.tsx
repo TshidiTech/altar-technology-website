@@ -154,7 +154,7 @@ export default function About() {
                 Start Project <ArrowRight className="h-5 w-5" />
               </Button>
             </Link>
-            <a href="https://calendar.app.google/pkkvMSJBS3DQLPSW8" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <a href="https://calendar.app.google/CHwnLitv6KtdDqK96" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <Button size="lg" variant="outline" className="w-full rounded-sm text-base sm:text-lg">
                 Schedule a Call
               </Button>
