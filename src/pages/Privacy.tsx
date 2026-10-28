@@ -133,7 +133,7 @@ export default function Privacy() {
                 <li>Lodge a complaint with the Information Regulator</li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                To exercise these rights, contact us at <a href="mailto:admin@brandhype.co.za" className="text-primary hover:underline">admin@brandhype.co.za</a>.
+                To exercise these rights, contact us at <a href="mailto:hello@altar.technology" className="text-primary hover:underline">hello@altar.technology</a>.
               </p>
             </section>
 
@@ -175,7 +175,7 @@ export default function Privacy() {
               <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
               <div className="space-y-2 text-muted-foreground">
                 <p><strong className="text-foreground">Altar Technology</strong></p>
-                <p>Email: <a href="mailto:admin@brandhype.co.za" className="text-primary hover:underline">admin@brandhype.co.za</a></p>
+                <p>Email: <a href="mailto:hello@altar.technology" className="text-primary hover:underline">hello@altar.technology</a></p>
                 <p>Phone: <a href="tel:+27816617013" className="text-primary hover:underline">081 661 7013</a></p>
                 <p>WhatsApp: <a href="https://wa.me/27816617013" className="text-primary hover:underline">081 661 7013</a></p>
               </div>

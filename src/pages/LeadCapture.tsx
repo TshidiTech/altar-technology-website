@@ -90,11 +90,11 @@ export default function LeadCapture() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary" />
-                <a href="mailto:admin@brandhype.co.za" className="text-primary hover:underline">admin@brandhype.co.za</a>
+                <a href="mailto:hello@altar.technology" className="text-primary hover:underline">hello@altar.technology</a>
               </div>
               <div className="flex items-center gap-3">
                 <Calendar className="h-5 w-5 text-primary" />
-                <a href="https://calendar.app.google/pkkvMSJBS3DQLPSW8" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Schedule a Call</a>
+                <a href="https://calendar.app.google/CHwnLitv6KtdDqK96" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Schedule a Call</a>
               </div>
             </div>
             <Button onClick={() => setShowSuccess(false)} className="w-full" size="lg">Close</Button>
@@ -153,7 +153,7 @@ export default function LeadCapture() {
 
           <div className="text-center mt-8">
             <p className="text-muted-foreground mb-3">Prefer to talk?</p>
-            <a href="https://calendar.app.google/pkkvMSJBS3DQLPSW8" target="_blank" rel="noopener noreferrer">
+            <a href="https://calendar.app.google/CHwnLitv6KtdDqK96" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="lg" className="w-full gap-2 rounded-sm sm:w-auto">
                 <Calendar className="h-5 w-5" />
                 Schedule a Call

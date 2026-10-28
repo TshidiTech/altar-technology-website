@@ -177,7 +177,7 @@ export default function Cookies() {
               <div className="space-y-2 text-muted-foreground">
                 <p>If you have questions about our use of cookies, please contact us:</p>
                 <p><strong className="text-foreground">Altar Technology</strong></p>
-                <p>Email: <a href="mailto:admin@brandhype.co.za" className="text-primary hover:underline">admin@brandhype.co.za</a></p>
+                <p>Email: <a href="mailto:hello@altar.technology" className="text-primary hover:underline">hello@altar.technology</a></p>
                 <p>Phone: <a href="tel:+27816617013" className="text-primary hover:underline">081 661 7013</a></p>
               </div>
               <p className="text-sm text-muted-foreground mt-6">
